@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
+import 'package:study_material_app/database/signupPageDatabase.dart';
 
-class SignUpPage extends StatefulWidget {
+class SignUpPage extends StatefulWidget{
   @override
   _SignUpPageState createState() => _SignUpPageState();
 }
 
+
 class _SignUpPageState extends State<SignUpPage> {
+
   String _yearValue;
   String _semValue;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -150,24 +154,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               child: DropdownButton<String>(
                                 isExpanded: true,
                                 focusColor: Color.fromRGBO(143, 148, 251, 1),
-                                items: [
-                                  DropdownMenuItem<String>(
-                                    child: Text('First'),
-                                    value: 'one',
-                                  ),
-                                  DropdownMenuItem<String>(
-                                    child: Text('Second'),
-                                    value: 'two',
-                                  ),
-                                  DropdownMenuItem<String>(
-                                    child: Text('Third'),
-                                    value: 'three',
-                                  ),
-                                  DropdownMenuItem<String>(
-                                    child: Text('Fourth'),
-                                    value: 'four',
-                                  ),
-                                ],
+                                items: yearDropdownList,
                                 onChanged: (String value) {
                                   setState(() {
                                     _yearValue = value;
@@ -198,40 +185,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               padding: EdgeInsets.all(8.0),
                               child: DropdownButton<String>(
                                 isExpanded: true,
-                                items: [
-                                  DropdownMenuItem<String>(
-                                    child: Text('I'),
-                                    value: 'one',
-                                  ),
-                                  DropdownMenuItem<String>(
-                                    child: Text('II'),
-                                    value: 'two',
-                                  ),
-                                  DropdownMenuItem<String>(
-                                    child: Text('III'),
-                                    value: 'three',
-                                  ),
-                                  DropdownMenuItem<String>(
-                                    child: Text('IV'),
-                                    value: 'four',
-                                  ),
-                                  DropdownMenuItem<String>(
-                                    child: Text('V'),
-                                    value: 'five',
-                                  ),
-                                  DropdownMenuItem<String>(
-                                    child: Text('VI'),
-                                    value: 'six',
-                                  ),
-                                  DropdownMenuItem<String>(
-                                    child: Text('VII'),
-                                    value: 'seven',
-                                  ),
-                                  DropdownMenuItem<String>(
-                                    child: Text('VIII'),
-                                    value: 'eight',
-                                  ),
-                                ],
+                                items: semDropdownList,
                                 onChanged: (String value) {
                                   setState(() {
                                     _semValue = value;
@@ -283,12 +237,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         height: 50,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          gradient: LinearGradient(
-                            colors: [
-                              Color.fromRGBO(143, 148, 251, 1),
-                              Color.fromRGBO(143, 148, 251, .7),
-                            ],
-                          ),
+                          color: Color(0xff8f94fb),
                         ),
                         child: Center(
                           child: GestureDetector(

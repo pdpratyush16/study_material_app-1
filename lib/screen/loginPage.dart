@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:study_material_app/screen/signUp.dart';
 
+
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
 }
+
 
 class _LoginPageState extends State<LoginPage> {
   @override
@@ -169,12 +171,7 @@ class _LoginPageState extends State<LoginPage> {
                         height: 50,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          gradient: LinearGradient(
-                            colors: [
-                              Color.fromRGBO(143, 148, 251, 1),
-                              Color.fromRGBO(143, 148, 251, .7),
-                            ],
-                          ),
+                          color: Color(0xff8f94fb),
                         ),
                         child: Center(
                           child: GestureDetector(

@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:study_material_app/screen/loginPage.dart';
 import 'package:study_material_app/screen/signUp.dart';
 
-void main() => runApp(
-      MyApp(),
-    );
+void main() {
+  //WidgetsFlutterBinding.ensureInitialized();
+  //await Firebase.initializeApp();
+  return runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
