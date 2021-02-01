@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:study_material_app/screen/TempPage.dart';
 import 'package:study_material_app/screen/loginPage.dart';
 import 'package:study_material_app/screen/signUp.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:study_material_app/screen/signUpDetails.dart';
 
-void main() {
-  //WidgetsFlutterBinding.ensureInitialized();
-  //await Firebase.initializeApp();
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   return runApp(MyApp());
 }
 
@@ -13,9 +16,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      routes: <String, WidgetBuilder>{
-        '/signUp': (BuildContext context) => new SignUpPage(),
-        'login': (BuildContext context) => new LoginPage(),
+      routes: {
+        SignUpPage.id : (context) => SignUpPage(),
+        LoginPage.id : (context) => LoginPage(),
+        TempPage.id : (context) => TempPage(),
+        SignupPageDetails.id : (context) => SignupPageDetails(),
       },
       home: HomePage(),
     );
