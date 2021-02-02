@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:study_material_app/database/signupPageDatabase.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:study_material_app/screen/TempPage.dart';
+import 'package:study_material_app/screen/FrontPage.dart';
 
 class SignupPageDetails extends StatefulWidget {
   static const String id = 'registerScreenDetails';
@@ -224,18 +224,21 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                           borderRadius: BorderRadius.circular(10),
                           color: Color(0xff8f94fb),
                         ),
-                        child: Center(
-                          child: FlatButton(
-                            onPressed: () {
-                              _firestore.collection('UserDatabase').add({
-                                'Branch': branchVal,
-                                'Email': loggedInUser.email,
-                                'RollNo': rollNoVal,
-                                'Semester': semesterVal,
-                                'Year': yearVal,
-                              });
-                              Navigator.pushNamed(context, TempPage.id);
-                            },
+                        child: TextButton(
+                          style: ButtonStyle(
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          ),
+                          onPressed: () {
+                            _firestore.collection('UserDatabase').add({
+                              'Branch': branchVal,
+                              'Email': loggedInUser.email,
+                              'RollNo': rollNoVal,
+                              'Semester': semesterVal,
+                              'Year': yearVal,
+                            });
+                            Navigator.pushNamed(context, FrontPage.id);
+                          },
+                          child: Center(
                             child: Text(
                               "Sign Up",
                               style: TextStyle(

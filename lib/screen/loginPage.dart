@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
-import 'package:study_material_app/screen/TempPage.dart';
+import 'package:study_material_app/screen/FrontPage.dart';
 import 'package:study_material_app/screen/signUp.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginPage extends StatefulWidget {
-
   static const String id = 'loginScreen';
 
   @override
   _LoginPageState createState() => _LoginPageState();
 }
 
-
 class _LoginPageState extends State<LoginPage> {
-
   String emailVal, passwordVal;
   bool showSpinner = false;
   final _auth = FirebaseAuth.instance;
@@ -173,7 +170,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
-                     /* FadeAnimation(
+                      /* FadeAnimation(
                           1.5,
                           Container(
                             child: InkWell(
@@ -196,24 +193,29 @@ class _LoginPageState extends State<LoginPage> {
                             borderRadius: BorderRadius.circular(10),
                             color: Color(0xff8f94fb),
                           ),
-                          child: Center(
-                            child: FlatButton(
-                              onPressed: () async{
-                                setState(() {
-                                  showSpinner = true;
-                                });
-                                try {
-                                  final oldUser = await _auth.signInWithEmailAndPassword(email: emailVal, password: passwordVal);
-                                  if(oldUser != null) {
-                                    Navigator.pushNamed(context, TempPage.id);
-                                  }
-                                  setState(() {
-                                    showSpinner = false;
-                                  });
-                                } catch(e) {
-                                  print(e);
+                          child: TextButton(
+                            style: ButtonStyle(
+                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            ),
+                            onPressed: () async {
+                              setState(() {
+                                showSpinner = true;
+                              });
+                              try {
+                                final oldUser =
+                                    await _auth.signInWithEmailAndPassword(
+                                        email: emailVal, password: passwordVal);
+                                if (oldUser != null) {
+                                  Navigator.pushNamed(context, FrontPage.id);
                                 }
-                              },
+                                setState(() {
+                                  showSpinner = false;
+                                });
+                              } catch (e) {
+                                print(e);
+                              }
+                            },
+                            child: Center(
                               child: Text(
                                 "Login",
                                 style: TextStyle(
