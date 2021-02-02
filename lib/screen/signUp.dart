@@ -12,7 +12,6 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-
   String emailVal, passwordVal, confirmPasswordVal;
   bool showSpinner = false;
   final _auth = FirebaseAuth.instance;
@@ -197,25 +196,30 @@ class _SignUpPageState extends State<SignUpPage> {
                             borderRadius: BorderRadius.circular(10),
                             color: Color(0xff8f94fb),
                           ),
-                          child: Center(
-                            child: FlatButton(
-                              onPressed: () async{
-                                setState(() {
-                                  showSpinner = true;
-                                });
-                                try {
-                                  final newUser = await _auth.createUserWithEmailAndPassword(
-                                      email: emailVal, password: passwordVal);
-                                  if (newUser != null) {
-                                    Navigator.pushNamed(context, SignupPageDetails.id);
-                                  }
-                                  setState(() {
-                                    showSpinner = false;
-                                  });
-                                } catch (e) {
-                                  print(e);
+                          child: TextButton(
+                            style: ButtonStyle(
+                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            ),
+                            onPressed: () async {
+                              setState(() {
+                                showSpinner = true;
+                              });
+                              try {
+                                final newUser =
+                                    await _auth.createUserWithEmailAndPassword(
+                                        email: emailVal, password: passwordVal);
+                                if (newUser != null) {
+                                  Navigator.pushNamed(
+                                      context, SignupPageDetails.id);
                                 }
-                              },
+                                setState(() {
+                                  showSpinner = false;
+                                });
+                              } catch (e) {
+                                print(e);
+                              }
+                            },
+                            child: Center(
                               child: Text(
                                 "Sign Up",
                                 style: TextStyle(
