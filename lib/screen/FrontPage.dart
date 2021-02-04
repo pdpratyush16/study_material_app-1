@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/attendanceHome.dart';
@@ -16,12 +15,9 @@ class FrontPage extends StatefulWidget {
 }
 
 class _FrontPageState extends State<FrontPage> {
-  bool showSpinner = false;
   @override
   Widget build(BuildContext context) {
-    return ModalProgressHUD(
-      inAsyncCall: showSpinner,
-      child: Scaffold(
+    return Scaffold(
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: Column(
@@ -144,6 +140,10 @@ class _FrontPageState extends State<FrontPage> {
                   ),
                 ],
               ),
+              SizedBox(
+                height: 20.0,
+                width: double.infinity,
+              ),
             ],
           ),
         ),
@@ -154,7 +154,6 @@ class _FrontPageState extends State<FrontPage> {
             FontAwesomeIcons.user,
           ),
         ),
-      ),
-    );
+      );
   }
 }

@@ -84,7 +84,15 @@ List<DropdownMenuItem<String>> branchDropdownList = [
     value: 'CPP',
   ),
   DropdownMenuItem<String>(
+    child: Text('CIV'),
+    value: 'CIV',
+  ),
+  DropdownMenuItem<String>(
     child: Text('PROD'),
     value: 'PROD',
+  ),
+  DropdownMenuItem<String>(
+    child: Text('BIO'),
+    value: 'BIO',
   ),
 ];
