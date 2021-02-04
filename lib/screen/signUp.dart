@@ -3,6 +3,7 @@ import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:study_material_app/screen/signUpDetails.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 class SignUpPage extends StatefulWidget {
   static const String id = 'registerScreen';
@@ -13,6 +14,7 @@ class SignUpPage extends StatefulWidget {
 
 class _SignUpPageState extends State<SignUpPage> {
   String emailVal, passwordVal, confirmPasswordVal;
+  String status;
   bool showSpinner = false;
   final _auth = FirebaseAuth.instance;
 
@@ -205,18 +207,44 @@ class _SignUpPageState extends State<SignUpPage> {
                                 showSpinner = true;
                               });
                               try {
-                                final newUser =
-                                    await _auth.createUserWithEmailAndPassword(
-                                        email: emailVal, password: passwordVal);
-                                if (newUser != null) {
-                                  Navigator.pushNamed(
-                                      context, SignupPageDetails.id);
+                                if (passwordVal == confirmPasswordVal) {
+                                  final newUser = await _auth
+                                      .createUserWithEmailAndPassword(
+                                          email: emailVal,
+                                          password: passwordVal);
+                                  if (newUser != null) {
+                                    Navigator.pushNamed(
+                                        context, SignupPageDetails.id);
+                                  }
+                                } else {
+                                  Alert(
+                                      context: context,
+                                      title: 'Re-enter Password',
+                                      desc: "Password and Confirm password do not match").show();
                                 }
                                 setState(() {
                                   showSpinner = false;
                                 });
-                              } catch (e) {
-                                print(e);
+                              } catch (error) {
+                                print(error.code);
+                                switch (error.code) {
+                                  case "invalid-email":
+                                    status = 'Invalid Email';
+                                    break;
+                                  case "email-already-in-use":
+                                    status = 'Email already in use';
+                                    break;
+                                  default:
+                                    status = 'Undefined error';
+                                }
+                                setState(() {
+                                  showSpinner = false;
+                                });
+                                Alert(
+                                  context: context,
+                                  title: status,
+                                  desc: "Please try again",
+                                ).show();
                               }
                             },
                             child: Center(
