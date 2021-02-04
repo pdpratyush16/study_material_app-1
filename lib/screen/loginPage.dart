@@ -4,16 +4,18 @@ import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:study_material_app/screen/FrontPage.dart';
 import 'package:study_material_app/screen/signUp.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 class LoginPage extends StatefulWidget {
   static const String id = 'loginScreen';
 
   @override
   _LoginPageState createState() => _LoginPageState();
-}
+}   
 
 class _LoginPageState extends State<LoginPage> {
   String emailVal, passwordVal;
+  String status;
   bool showSpinner = false;
   final _auth = FirebaseAuth.instance;
 
@@ -211,8 +213,31 @@ class _LoginPageState extends State<LoginPage> {
                                 setState(() {
                                   showSpinner = false;
                                 });
-                              } catch (e) {
-                                print(e);
+                              } catch (error) {
+                                print(error.code);
+                                switch (error.code) {
+                                  case "invalid-email":
+                                    status = 'Invalid Email';
+                                    break;
+                                  case "wrong-password":
+                                    status = 'Wrong password';
+                                    break;
+                                  case "user-not-found":
+                                    status = 'User not found';
+                                    break;
+                                  case "email-already-exists":
+                                    status = 'Email already in use';
+                                    break;
+                                  case "too-many-requests":
+                                    status = 'Too many request';
+                                    break;
+                                  default:
+                                    status = 'Undefined error';
+                                }
+                                setState(() {
+                                  showSpinner = false;
+                                });
+                                Alert(context: context, title: status, desc: "Please try again").show();
                               }
                             },
                             child: Center(
