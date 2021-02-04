@@ -20,7 +20,7 @@ class AttendanceHome extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff8f94fb),
+        backgroundColor: Color.cyan,
         title: Center(child: Text('ATTENDANCE MANAGER')),
       ),
       body:addSubjectButton(context) ,
