@@ -209,6 +209,9 @@ class _LoginPageState extends State<LoginPage> {
                                     await _auth.signInWithEmailAndPassword(
                                         email: emailVal, password: passwordVal);
                                 if (oldUser != null) {
+                                  final SharedPreferences sharedPref =
+                                      await SharedPreferences.getInstance();
+                                  sharedPref.setString('email', emailVal);
                                   Navigator.pushNamed(context, FrontPage.id);
                                 }
                                 setState(() {
@@ -244,9 +247,6 @@ class _LoginPageState extends State<LoginPage> {
                                         desc: "Please try again")
                                     .show();
                               }
-                              final SharedPreferences sharedPref =
-                                  await SharedPreferences.getInstance();
-                              sharedPref.setString('email', emailVal);
                             },
                             child: Center(
                               child: Text(
