@@ -17,7 +17,7 @@ import 'screen/FrontPage.dart';
 import 'screen/loginPage.dart';
 
 String finalEmail;
-dynamic home;
+Widget home;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -69,7 +69,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget build(BuildContext context) {
-    for (int i = 0; i < 1000000; i++);
     return home;
   }
 }

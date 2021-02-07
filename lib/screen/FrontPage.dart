@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/attendanceHome.dart';
 import 'package:study_material_app/Books/bookHome.dart';
 import 'package:study_material_app/Maps%20and%20erp/erpHome.dart';
 import 'package:study_material_app/Maps%20and%20erp/mapsHome.dart';
+import 'package:study_material_app/screen/loginPage.dart';
 
 class FrontPage extends StatefulWidget {
   static const String id = 'FrontPage';
@@ -148,7 +150,12 @@ class _FrontPageState extends State<FrontPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () async {
+          final SharedPreferences sharedPref =
+              await SharedPreferences.getInstance();
+          sharedPref.remove('email');
+          Navigator.pushNamed(context, LoginPage.id);
+        },
         backgroundColor: kPrimaryColor,
         child: Icon(
           FontAwesomeIcons.user,
