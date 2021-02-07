@@ -1,10 +1,8 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-class AttendanceHome extends StatelessWidget {
 
+class AttendanceHome extends StatelessWidget {
   List<String> _subjects = [];
   List<String> _subjectsVisible = [];
   String _subject = ' ';
@@ -17,13 +15,12 @@ class AttendanceHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.cyan,
+        backgroundColor: Colors.cyan,
         title: Center(child: Text('ATTENDANCE MANAGER')),
       ),
-      body:addSubjectButton(context) ,
+      body: addSubjectButton(context),
     );
   }
 
@@ -33,7 +30,7 @@ class AttendanceHome extends StatelessWidget {
       children: <Widget>[
         Expanded(
           child: GestureDetector(
-            onTap:() {
+            onTap: () {
               addSubjectForm(context);
             },
             child: Container(
@@ -46,11 +43,21 @@ class AttendanceHome extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Icon(Icons.add, color: Colors.white, size: 25,),
-                  SizedBox(width: 10,),
-                  Text('Add', style: TextStyle(color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18),)
+                  Icon(
+                    Icons.add,
+                    color: Colors.white,
+                    size: 25,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Add',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
+                  )
                 ],
               ),
             ),
@@ -67,11 +74,21 @@ class AttendanceHome extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Icon(Icons.remove, color: Colors.white, size: 25,),
-                SizedBox(width: 10,),
-                Text('Remove', style: TextStyle(color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18),)
+                Icon(
+                  Icons.remove,
+                  color: Colors.white,
+                  size: 25,
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  'Remove',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18),
+                )
               ],
             ),
           ),
@@ -79,76 +96,112 @@ class AttendanceHome extends StatelessWidget {
       ],
     );
   }
-  Future addSubjectForm(BuildContext context){
+
+  Future addSubjectForm(BuildContext context) {
     bool adding = false;
     return showDialog(
         context: context,
         builder: (BuildContext context) {
           return StatefulBuilder(
-            builder: (context, setState){
+            builder: (context, setState) {
               return Dialog(
                 shape: RoundedRectangleBorder(
-                    borderRadius:
-                    BorderRadius.circular(20.0)),
+                    borderRadius: BorderRadius.circular(20.0)),
                 child: Container(
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 20, horizontal: 10),
                     child: Form(
                         key: _formKey,
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: <Widget>[
-                            _error == ' ' ? Container() : Center(child: Text('$_error', style: TextStyle(color: Colors.red),)),
-                            _error == ' ' ? Container() : SizedBox(height: 15,),
+                            _error == ' '
+                                ? Container()
+                                : Center(
+                                    child: Text(
+                                    '$_error',
+                                    style: TextStyle(color: Colors.red),
+                                  )),
+                            _error == ' '
+                                ? Container()
+                                : SizedBox(
+                                    height: 15,
+                                  ),
                             Container(
                               padding: EdgeInsets.all(10),
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                borderRadius: BorderRadius.all(Radius.circular(20)),
-                                boxShadow: [BoxShadow(
-                                  color: Color.fromRGBO(51, 204, 255, 0.3),
-                                  blurRadius: 10,
-                                  offset: Offset(0, 10),
-                                )],
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20)),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Color.fromRGBO(51, 204, 255, 0.3),
+                                    blurRadius: 10,
+                                    offset: Offset(0, 10),
+                                  )
+                                ],
                               ),
                               child: TextFormField(
-                                  decoration: InputDecoration(
-                                    labelText: 'Add subject name',
-                                  ),
-                                validator: (val) => val.isEmpty ? 'Subject Name Can\'t Be Empty' : null,
+                                decoration: InputDecoration(
+                                  labelText: 'Add subject name',
+                                ),
+                                validator: (val) => val.isEmpty
+                                    ? 'Subject Name Can\'t Be Empty'
+                                    : null,
                                 onChanged: (val) => _subject = val,
                               ),
                             ),
-                            SizedBox(height: 15,),
-                            adding ? Center(child: Text("Adding ..."),) : 
-                            Row(
-                              children: <Widget>[
-                                Expanded(
-                                  child: Container(
-                                    padding: EdgeInsets.symmetric(horizontal: 45, vertical: 15),
-                                    decoration: BoxDecoration(
-                                      color: Color(0xff8f94fb),
-                                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                                    ),
-                                    child: Center(child: Text("Add", style: TextStyle(color: Colors.white),)),
-                                  ),
-                                ),
-                                SizedBox(width: 10,),
-                                Expanded(
-                                  child: Container(
-                                    padding: EdgeInsets.symmetric(horizontal: 45, vertical: 15),
-                                    decoration: BoxDecoration(
-                                      color: Color(0xff8f94fb),
-                                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                                    ),
-                                    child: Center(child: Text("Done", style: TextStyle(color: Colors.white),)),
-                                  ),
-                                )
-                              ],
+                            SizedBox(
+                              height: 15,
                             ),
+                            adding
+                                ? Center(
+                                    child: Text("Adding ..."),
+                                  )
+                                : Row(
+                                    children: <Widget>[
+                                      Expanded(
+                                        child: Container(
+                                          padding: EdgeInsets.symmetric(
+                                              horizontal: 45, vertical: 15),
+                                          decoration: BoxDecoration(
+                                            color: Color(0xff8f94fb),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(20)),
+                                          ),
+                                          child: Center(
+                                              child: Text(
+                                            "Add",
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          )),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Expanded(
+                                        child: Container(
+                                          padding: EdgeInsets.symmetric(
+                                              horizontal: 45, vertical: 15),
+                                          decoration: BoxDecoration(
+                                            color: Color(0xff8f94fb),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(20)),
+                                          ),
+                                          child: Center(
+                                              child: Text(
+                                            "Done",
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          )),
+                                        ),
+                                      )
+                                    ],
+                                  ),
                           ],
-                        )
-                    ),
+                        )),
                   ),
                 ),
               );
@@ -157,11 +210,3 @@ class AttendanceHome extends StatelessWidget {
         });
   }
 }
-
-
-
-
-  
-
-
-
