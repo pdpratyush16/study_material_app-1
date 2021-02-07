@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/attendanceHome.dart';
@@ -17,7 +16,7 @@ import 'screen/FrontPage.dart';
 import 'screen/loginPage.dart';
 
 String finalEmail;
-Widget home;
+Widget home = CircularProgressIndicator();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
