@@ -4,6 +4,7 @@ import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:study_material_app/screen/signUpDetails.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SignUpPage extends StatefulWidget {
   static const String id = 'registerScreen';
@@ -213,14 +214,19 @@ class _SignUpPageState extends State<SignUpPage> {
                                           email: emailVal,
                                           password: passwordVal);
                                   if (newUser != null) {
+                                    final SharedPreferences sharedPref =
+                                        await SharedPreferences.getInstance();
+                                    sharedPref.setString('email', emailVal);
                                     Navigator.pushNamed(
                                         context, SignupPageDetails.id);
                                   }
                                 } else {
                                   Alert(
-                                      context: context,
-                                      title: 'Re-enter Password',
-                                      desc: "Password and Confirm password do not match").show();
+                                          context: context,
+                                          title: 'Re-enter Password',
+                                          desc:
+                                              "Password and Confirm password do not match")
+                                      .show();
                                 }
                                 setState(() {
                                   showSpinner = false;
