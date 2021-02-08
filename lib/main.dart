@@ -4,8 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/attendanceHome.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/practiceHome.dart';
 import 'package:study_material_app/Books/bookHome.dart';
-import 'package:study_material_app/Maps%20and%20erp/erpHome.dart';
-import 'package:study_material_app/Maps%20and%20erp/mapsHome.dart';
+import 'package:study_material_app/Maps/mapsHome.dart';
 import 'package:study_material_app/Videos/videoHome.dart';
 import 'package:study_material_app/screen/FrontPage.dart';
 import 'package:study_material_app/screen/loginPage.dart';
@@ -36,7 +35,6 @@ class MyApp extends StatelessWidget {
         AttendanceHome.id: (context) => AttendanceHome(),
         PracticeHome.id: (context) => PracticeHome(),
         BookHome.id: (context) => BookHome(),
-        ErpHome.id: (context) => ErpHome(),
         MapsHome.id: (context) => MapsHome(),
         VideoHome.id: (context) => VideoHome(),
       },

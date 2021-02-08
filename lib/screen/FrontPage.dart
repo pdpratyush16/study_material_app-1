@@ -5,9 +5,9 @@ import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/attendanceHome.dart';
 import 'package:study_material_app/Books/bookHome.dart';
-import 'package:study_material_app/Maps%20and%20erp/erpHome.dart';
-import 'package:study_material_app/Maps%20and%20erp/mapsHome.dart';
-import 'package:study_material_app/screen/loginPage.dart';
+import 'package:study_material_app/Maps/mapsHome.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 class FrontPage extends StatefulWidget {
   static const String id = 'FrontPage';
@@ -17,6 +17,21 @@ class FrontPage extends StatefulWidget {
 }
 
 class _FrontPageState extends State<FrontPage> {
+  String _url =
+      'https://erp.bitmesra.ac.in/iitmsv4eGq0RuNHb0G5WbhLmTKLmTO7YBcJ4RHuXxCNPvuIw=?enc=EGbCGWnlHNJ/WdgJnKH8DA==';
+  Future<void> _launchInApp(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url,
+          forceSafariVC: true, forceWebView: true, enableJavaScript: true);
+    } else {
+      Alert(
+          context: context,
+          title: 'Error occured',
+          desc: "Check your connections")
+          .show();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -131,7 +146,7 @@ class _FrontPageState extends State<FrontPage> {
                   child: ReuseCard(
                     gesture: () {
                       setState(() {
-                        Navigator.pushNamed(context, ErpHome.id);
+                        _launchInApp(_url);
                       });
                     },
                     childCard: IconArea(
@@ -154,7 +169,7 @@ class _FrontPageState extends State<FrontPage> {
           final SharedPreferences sharedPref =
               await SharedPreferences.getInstance();
           sharedPref.remove('email');
-          Navigator.pushNamed(context, LoginPage.id);
+          Navigator.pop(context);
         },
         backgroundColor: kPrimaryColor,
         child: Icon(
