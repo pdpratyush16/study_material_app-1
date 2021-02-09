@@ -13,8 +13,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:study_material_app/screen/signUpDetails.dart';
 import 'screen/FrontPage.dart';
 import 'screen/loginPage.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 String finalEmail;
+
 Widget home = CircularProgressIndicator();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,6 +39,18 @@ class MyApp extends StatelessWidget {
         BookHome.id: (context) => BookHome(),
         MapsHome.id: (context) => MapsHome(),
         VideoHome.id: (context) => VideoHome(),
+        "/ERPHomeScreen": (_) => WebviewScaffold(
+              url: "https://erp.bitmesra.ac.in/iitmsv4eGq0RuNHb0G5WbhLmTKLmTO7YBcJ4RHuXxCNPvuIw=?enc=EGbCGWnlHNJ/WdgJnKH8DA==",
+              appBar: AppBar(
+                backgroundColor: Color.fromRGBO(143, 148, 251, 1),
+                centerTitle: true,
+                title: Text('ERP'),
+                shadowColor: Colors.white,
+              ),
+              withJavascript: true,
+              withLocalStorage: true,
+              withZoom: true,
+            )
       },
       home: HomePage(),
     );
@@ -49,12 +63,20 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final webView = FlutterWebviewPlugin();
+
   @override
   void initState() {
     getValidation().whenComplete(() {
       home = finalEmail == null ? LoginPage() : FrontPage();
     });
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    webView.dispose();
+    super.dispose();
   }
 
   Future getValidation() async {
