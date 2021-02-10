@@ -5,13 +5,14 @@ import 'package:study_material_app/screen/FrontPage.dart';
 import 'package:study_material_app/screen/signUp.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginPage extends StatefulWidget {
   static const String id = 'loginScreen';
 
   @override
   _LoginPageState createState() => _LoginPageState();
-}   
+}
 
 class _LoginPageState extends State<LoginPage> {
   String emailVal, passwordVal;
@@ -208,6 +209,9 @@ class _LoginPageState extends State<LoginPage> {
                                     await _auth.signInWithEmailAndPassword(
                                         email: emailVal, password: passwordVal);
                                 if (oldUser != null) {
+                                  final SharedPreferences sharedPref =
+                                      await SharedPreferences.getInstance();
+                                  sharedPref.setString('email', emailVal);
                                   Navigator.pushNamed(context, FrontPage.id);
                                 }
                                 setState(() {
@@ -237,7 +241,11 @@ class _LoginPageState extends State<LoginPage> {
                                 setState(() {
                                   showSpinner = false;
                                 });
-                                Alert(context: context, title: status, desc: "Please try again").show();
+                                Alert(
+                                        context: context,
+                                        title: status,
+                                        desc: "Please try again")
+                                    .show();
                               }
                             },
                             child: Center(
