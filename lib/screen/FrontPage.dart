@@ -6,8 +6,7 @@ import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/attendanceHome.dart';
 import 'package:study_material_app/Books/bookHome.dart';
 import 'package:study_material_app/Maps/mapsHome.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
+
 
 class FrontPage extends StatefulWidget {
   static const String id = 'FrontPage';
@@ -17,21 +16,6 @@ class FrontPage extends StatefulWidget {
 }
 
 class _FrontPageState extends State<FrontPage> {
-  String _url =
-      'https://erp.bitmesra.ac.in/iitmsv4eGq0RuNHb0G5WbhLmTKLmTO7YBcJ4RHuXxCNPvuIw=?enc=EGbCGWnlHNJ/WdgJnKH8DA==';
-  Future<void> _launchInApp(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url,
-          forceSafariVC: true, forceWebView: true, enableJavaScript: true);
-    } else {
-      Alert(
-          context: context,
-          title: 'Error occured',
-          desc: "Check your connections")
-          .show();
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -146,7 +130,7 @@ class _FrontPageState extends State<FrontPage> {
                   child: ReuseCard(
                     gesture: () {
                       setState(() {
-                        _launchInApp(_url);
+                        Navigator.of(context).pushNamed("/ERPHomeScreen");
                       });
                     },
                     childCard: IconArea(
@@ -161,6 +145,7 @@ class _FrontPageState extends State<FrontPage> {
               height: 20.0,
               width: double.infinity,
             ),
+
           ],
         ),
       ),
