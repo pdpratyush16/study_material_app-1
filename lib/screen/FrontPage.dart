@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/attendanceHome.dart';
 import 'package:study_material_app/Books/bookHome.dart';
 import 'package:study_material_app/Maps/mapsHome.dart';
-
 
 class FrontPage extends StatefulWidget {
   static const String id = 'FrontPage';
@@ -23,63 +21,11 @@ class _FrontPageState extends State<FrontPage> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Container(
-              height: 280,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/images/background.png'),
-                    fit: BoxFit.fill),
-              ),
-              child: Stack(
-                children: <Widget>[
-                  Positioned(
-                    left: 30,
-                    width: 80,
-                    height: 150,
-                    child: FadeAnimation(
-                      1,
-                      Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('assets/images/light-1.png'),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 140,
-                    width: 80,
-                    height: 100,
-                    child: FadeAnimation(
-                      1.3,
-                      Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('assets/images/light-2.png'),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    right: 40,
-                    top: 40,
-                    width: 80,
-                    height: 100,
-                    child: FadeAnimation(
-                      1.5,
-                      Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('assets/images/clock.png'),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+            Background(
+              height1: 280.0,
+              height2: 150.0,
+              height3: 100.0,
+              height4: 100.0,
             ),
             Row(
               children: <Widget>[
@@ -145,7 +91,6 @@ class _FrontPageState extends State<FrontPage> {
               height: 20.0,
               width: double.infinity,
             ),
-
           ],
         ),
       ),

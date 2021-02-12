@@ -1,11 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:async';
+import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/user.dart';
 import 'package:study_material_app/forms.dart';
 import 'package:study_material_app/empty_state.dart';
-import 'package:study_material_app/roundiconbutton.dart';
-import 'package:study_material_app/roundiconbutton1.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class AttendanceHome extends StatefulWidget {

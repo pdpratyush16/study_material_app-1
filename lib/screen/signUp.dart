@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
+import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:study_material_app/screen/signUpDetails.dart';
@@ -29,80 +30,11 @@ class _SignUpPageState extends State<SignUpPage> {
           child: Container(
             child: Column(
               children: <Widget>[
-                Container(
-                  height: 400,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/background.png'),
-                        fit: BoxFit.fill),
-                  ),
-                  child: Stack(
-                    children: <Widget>[
-                      Positioned(
-                        left: 30,
-                        width: 80,
-                        height: 200,
-                        child: FadeAnimation(
-                          1,
-                          Container(
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage('assets/images/light-1.png'),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 140,
-                        width: 80,
-                        height: 150,
-                        child: FadeAnimation(
-                          1.3,
-                          Container(
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage('assets/images/light-2.png'),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        right: 40,
-                        top: 40,
-                        width: 80,
-                        height: 150,
-                        child: FadeAnimation(
-                          1.5,
-                          Container(
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage('assets/images/clock.png'),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        child: FadeAnimation(
-                          1.6,
-                          Container(
-                            margin: EdgeInsets.only(top: 50),
-                            child: Center(
-                              child: Text(
-                                "Sign Up",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 40,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
+                Background(
+                  height1: 400.0,
+                  height2: 200.0,
+                  height3: 150.0,
+                  height4: 150.0,
                 ),
                 Padding(
                   padding: EdgeInsets.all(30.0),
