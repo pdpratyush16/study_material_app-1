@@ -10,12 +10,12 @@ import 'package:study_material_app/Maps/mapsHome.dart';
 import 'package:study_material_app/Videos/videoHome.dart';
 import 'package:study_material_app/forms.dart';
 import 'package:study_material_app/screen/FrontPage.dart';
-import 'package:study_material_app/screen/loginPage.dart';
-import 'package:study_material_app/screen/signUp.dart';
+import 'package:study_material_app/screen/pre_home/loginPage.dart';
+import 'package:study_material_app/screen/pre_home/signUp.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:study_material_app/screen/signUpDetails.dart';
+import 'package:study_material_app/screen/pre_home/signUpDetails.dart';
 import 'screen/FrontPage.dart';
-import 'screen/loginPage.dart';
+import 'screen/pre_home/loginPage.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 import 'user.dart';

@@ -2,20 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
+import 'package:study_material_app/screen/FrontPage.dart';
+import 'package:study_material_app/screen/pre_home/signUp.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:study_material_app/screen/signUpDetails.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class SignUpPage extends StatefulWidget {
-  static const String id = 'registerScreen';
+class LoginPage extends StatefulWidget {
+  static const String id = 'loginScreen';
 
   @override
-  _SignUpPageState createState() => _SignUpPageState();
+  _LoginPageState createState() => _LoginPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
-  String emailVal, passwordVal, confirmPasswordVal;
+class _LoginPageState extends State<LoginPage> {
+  String emailVal, passwordVal;
   String status;
   bool showSpinner = false;
   final _auth = FirebaseAuth.instance;
@@ -81,7 +82,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                     emailVal = value;
                                   },
                                 ),
-                              ), // Email...
+                              ),
                               Container(
                                 padding: EdgeInsets.all(8.0),
                                 child: TextField(
@@ -99,30 +100,26 @@ class _SignUpPageState extends State<SignUpPage> {
                                     passwordVal = value;
                                   },
                                 ),
-                              ), // Password...
-                              Container(
-                                padding: EdgeInsets.all(8.0),
-                                child: TextField(
-                                  decoration: InputDecoration(
-                                    border: InputBorder.none,
-                                    labelText: "Confirm Password",
-                                    hintText: 'Re-enter your password',
-                                    hintStyle: TextStyle(color: Colors.grey),
-                                    labelStyle: TextStyle(
-                                      color: Colors.grey[400],
-                                    ),
-                                  ),
-                                  obscureText: true,
-                                  onChanged: (value) {
-                                    confirmPasswordVal = value;
-                                  },
-                                ),
-                              ), //Confirm Password...
+                              )
                             ],
                           ),
                         ),
                       ),
-                      SizedBox(height: 40),
+                      /* FadeAnimation(
+                          1.5,
+                          Container(
+                            child: InkWell(
+                              child: Text(
+                                "Forgot Password?",
+                                style: TextStyle(
+                                  color: Color.fromRGBO(143, 148, 251, 1),
+                                ),
+                              ),
+                            ),
+                          )),*/
+                      SizedBox(
+                        height: 70,
+                      ),
                       FadeAnimation(
                         2,
                         Container(
@@ -140,25 +137,14 @@ class _SignUpPageState extends State<SignUpPage> {
                                 showSpinner = true;
                               });
                               try {
-                                if (passwordVal == confirmPasswordVal) {
-                                  final newUser = await _auth
-                                      .createUserWithEmailAndPassword(
-                                          email: emailVal,
-                                          password: passwordVal);
-                                  if (newUser != null) {
-                                    final SharedPreferences sharedPref =
-                                        await SharedPreferences.getInstance();
-                                    sharedPref.setString('email', emailVal);
-                                    Navigator.pushNamed(
-                                        context, SignupPageDetails.id);
-                                  }
-                                } else {
-                                  Alert(
-                                          context: context,
-                                          title: 'Re-enter Password',
-                                          desc:
-                                              "Password and Confirm password do not match")
-                                      .show();
+                                final oldUser =
+                                    await _auth.signInWithEmailAndPassword(
+                                        email: emailVal, password: passwordVal);
+                                if (oldUser != null) {
+                                  final SharedPreferences sharedPref =
+                                      await SharedPreferences.getInstance();
+                                  sharedPref.setString('email', emailVal);
+                                  Navigator.pushNamed(context, FrontPage.id);
                                 }
                                 setState(() {
                                   showSpinner = false;
@@ -169,8 +155,17 @@ class _SignUpPageState extends State<SignUpPage> {
                                   case "invalid-email":
                                     status = 'Invalid Email';
                                     break;
-                                  case "email-already-in-use":
+                                  case "wrong-password":
+                                    status = 'Wrong password';
+                                    break;
+                                  case "user-not-found":
+                                    status = 'User not found';
+                                    break;
+                                  case "email-already-exists":
                                     status = 'Email already in use';
+                                    break;
+                                  case "too-many-requests":
+                                    status = 'Too many request';
                                     break;
                                   default:
                                     status = 'Undefined error';
@@ -179,15 +174,15 @@ class _SignUpPageState extends State<SignUpPage> {
                                   showSpinner = false;
                                 });
                                 Alert(
-                                  context: context,
-                                  title: status,
-                                  desc: "Please try again",
-                                ).show();
+                                        context: context,
+                                        title: status,
+                                        desc: "Please try again")
+                                    .show();
                               }
                             },
                             child: Center(
                               child: Text(
-                                "Sign Up",
+                                "Login",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),
@@ -196,36 +191,43 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 30),
+                      SizedBox(
+                        height: 40,
+                      ),
                       FadeAnimation(
-                          2.2,
-                          Container(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  'Have an account?', //TODO: might have to change a/c to app name
-                                ),
-                                SizedBox(
-                                  width: 5.0,
-                                ),
-                                InkWell(
-                                  highlightColor: Colors.deepPurple,
-                                  onTap: () {
-                                    Navigator.pop(context);
-                                  },
-                                  child: Text(
-                                    'Login',
-                                    style: TextStyle(
-                                      color: Color.fromRGBO(143, 148, 251, 1),
-                                      fontWeight: FontWeight.bold,
-                                      decoration: TextDecoration.underline,
+                        2,
+                        Container(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'New to App?', //TODO: might have to change a/c to app name
+                              ),
+                              SizedBox(
+                                width: 5.0,
+                              ),
+                              InkWell(
+                                highlightColor: Colors.deepPurple,
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (context) => SignUpPage(),
                                     ),
+                                  );
+                                },
+                                child: Text(
+                                  'Register',
+                                  style: TextStyle(
+                                    color: Color.fromRGBO(143, 148, 251, 1),
+                                    fontWeight: FontWeight.bold,
+                                    decoration: TextDecoration.underline,
                                   ),
-                                )
-                              ],
-                            ),
-                          ))
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
                     ],
                   ),
                 )
