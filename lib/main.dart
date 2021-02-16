@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart';
-import 'package:sqflite/sqflite.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/graphPage.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/practiceHome.dart';
 import 'package:study_material_app/Books/bookHome.dart';

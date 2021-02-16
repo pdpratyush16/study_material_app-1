@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:url_launcher/url_launcher.dart';
