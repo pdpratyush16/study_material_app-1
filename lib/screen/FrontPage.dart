@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
-import 'package:study_material_app/Attendance%20and%20Practice/attendanceHome.dart';
+import 'package:study_material_app/Attendance%20and%20Practice/graphPage.dart';
 import 'package:study_material_app/Books/bookHome.dart';
 import 'package:study_material_app/Maps/mapsHome.dart';
 
@@ -46,7 +46,7 @@ class _FrontPageState extends State<FrontPage> {
                   child: ReuseCard(
                     gesture: () {
                       setState(() {
-                        Navigator.pushNamed(context, AttendanceHome.id);
+                        Navigator.pushNamed(context, GraphPage.id);
                       });
                     },
                     childCard: IconArea(
