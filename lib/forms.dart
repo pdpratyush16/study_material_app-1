@@ -11,8 +11,6 @@ class UserForm extends StatefulWidget {
   UserForm(this.user);
   @override
   _UserFormState createState() => state;
-
-  bool isValid() => state.validate();
 }
 
 class _UserFormState extends State<UserForm> {
@@ -35,11 +33,20 @@ class _UserFormState extends State<UserForm> {
 
   void onSave() async {
     int result;
-    result = await helper.insert(widget.user);
-    if (result != 0) {
-      _showAlertDialog('Status', 'Note Saved Successfully');
+    if (widget.user.id == null) {
+      result = await helper.insert(widget.user);
+      if (result != 0) {
+        _showAlertDialog('Status', 'Note Saved Successfully');
+      } else {
+        _showAlertDialog('Status', 'Problem Saving Note');
+      }
     } else {
-      _showAlertDialog('Status', 'Problem Saving Note');
+      result = await helper.update(widget.user);
+      if (result > 0) {
+        _showAlertDialog('Status', 'Note updated Successfully');
+      } else {
+        _showAlertDialog('Status', 'Problem updating Note');
+      }
     }
   }
 
@@ -90,10 +97,6 @@ class _UserFormState extends State<UserForm> {
                                     widget.user.subject = value;
                                   });
                                 },
-                                validator: (val) => val.length > 3
-                                    ? null
-                                    : 'subject name is invalid',
-                                //TODO: Add validator
                                 decoration: InputDecoration(
                                   labelText: 'Subject Name',
                                   hintText: 'Enter your subject name',
@@ -107,8 +110,11 @@ class _UserFormState extends State<UserForm> {
                             ),
                             IconButton(
                               icon: Icon(Icons.delete),
-                              onPressed: () {
+                              onPressed: () async {
+                                await helper.delete(widget.user.id);
                                 moveBack();
+                                _showAlertDialog(
+                                    'Status', 'Subject deleted successfully.');
                               },
                             ),
                           ]),
@@ -119,7 +125,7 @@ class _UserFormState extends State<UserForm> {
                             children: <Widget>[
                               Expanded(
                                 child: TextFormField(
-                                  //initialValue: '0',
+                                  initialValue: widget.user.present.toString(),
                                   onChanged: (String value) {
                                     setState(() {
                                       widget.user.present = int.parse(value);
@@ -127,6 +133,7 @@ class _UserFormState extends State<UserForm> {
                                   },
                                   decoration: InputDecoration(
                                     labelText: 'Present',
+                                    hintText: 'Total no. of present',
                                     icon: Icon(Icons.copy),
                                     isDense: true,
                                   ),
@@ -137,14 +144,15 @@ class _UserFormState extends State<UserForm> {
                               ),
                               Expanded(
                                 child: TextFormField(
-                                  //initialValue: '0',
+                                  initialValue: widget.user.total.toString(),
                                   onChanged: (String value) {
                                     setState(() {
                                       widget.user.total = int.parse(value);
                                     });
                                   },
                                   decoration: InputDecoration(
-                                    labelText: 'Total initial classes',
+                                    labelText: 'Total classes',
+                                    hintText: 'Number of classes occured',
                                     isDense: true,
                                   ),
                                 ),
@@ -173,12 +181,5 @@ class _UserFormState extends State<UserForm> {
         child: Icon(Icons.save),
       ),
     );
-  }
-
-  ///form validator
-  bool validate() {
-    var valid = form.currentState.validate();
-    if (valid) form.currentState.save();
-    return valid;
   }
 }
