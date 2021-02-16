@@ -210,13 +210,12 @@ class EmptyState extends StatelessWidget {
 }
 
 class CustomTileDesign extends StatelessWidget {
-  final String name;
-  final Function press;
-
-  const CustomTileDesign({
-    this.name,
+  CustomTileDesign({
+    @required this.name,
     this.press,
   });
+  final String name;
+  final Function press;
 
   @override
   Widget build(BuildContext context) {
@@ -238,30 +237,14 @@ class CustomTileDesign extends StatelessWidget {
       ),
       child: Row(
         children: <Widget>[
-          RichText(
-            text: TextSpan(
-              children: [
-                TextSpan(
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                TextSpan(
-                  style: TextStyle(color: Colors.black38),
-                ),
-              ],
+          Text(
+            name,
+            style: TextStyle(
+              fontSize: 16,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
             ),
           ),
-          Spacer(),
-          IconButton(
-            icon: Icon(
-              Icons.arrow_forward_ios,
-              size: 18,
-            ),
-            onPressed: press,
-          )
         ],
       ),
     );
