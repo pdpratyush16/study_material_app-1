@@ -161,7 +161,7 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                           ),
                           onPressed: () {
-                            _firestore.collection('UserDatabase').add({
+                            _firestore.collection('UserDatabase').doc(FirebaseAuth.instance.currentUser.uid).set({
                               'Branch': branchVal,
                               'Email': loggedInUser.email,
                               'RollNo': rollNoVal,
