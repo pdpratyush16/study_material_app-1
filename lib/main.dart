@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart';
+import 'Holiday Calendar/HolidayPage.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/graphPage.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/practiceHome.dart';
 import 'package:study_material_app/Books/aids.dart';
@@ -51,6 +52,7 @@ class MyApp extends StatelessWidget {
         MapsHome.id: (context) => MapsHome(),
         VideoHome.id: (context) => VideoHome(),
         GraphPage.id: (context) => GraphPage(),
+        HolidayPage.id: (context) => HolidayPage(),
         UserForm.id: (context) => UserForm(User('', 0, 0)),
         Aids.id: (context) => Aids(),
         "/ERPHomeScreen": (_) => WebviewScaffold(

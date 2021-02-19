@@ -5,6 +5,7 @@ import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/graphPage.dart';
 import 'package:study_material_app/Books/bookHome.dart';
 import 'package:study_material_app/Maps/mapsHome.dart';
+import 'package:study_material_app/Holiday%20Calendar/HolidayPage.dart';
 import 'package:study_material_app/screen/profilePage.dart';
 
 class FrontPage extends StatefulWidget {
@@ -83,6 +84,23 @@ class _FrontPageState extends State<FrontPage> {
                     childCard: IconArea(
                       ic: FontAwesomeIcons.laptop,
                       s: 'ERP',
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: ReuseCard(
+                    gesture: () {
+                      setState(() {
+                        Navigator.pushNamed(context, HolidayPage.id);
+                      });
+                    },
+                    childCard: IconArea(
+                      ic: FontAwesomeIcons.calendarAlt,
+                      s: 'Holiday Calendar',
                     ),
                   ),
                 ),
