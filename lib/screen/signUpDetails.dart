@@ -39,7 +39,7 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: kBgColor,
       body: SingleChildScrollView(
         child: Container(
           child: Column(
@@ -59,13 +59,13 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                       Container(
                         padding: EdgeInsets.all(5),
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: kSecondColor,
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.grey,
+                              color: kPrimaryColor,
                               blurRadius: 30.0,
-                              offset: Offset(0, 10),
+                              //offset: Offset(0, 10),
                             )
                           ],
                         ),
@@ -75,6 +75,7 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                               alignment: Alignment.topLeft,
                               padding: EdgeInsets.all(8.0),
                               child: TextField(
+                                cursorColor: kPrimaryColor,
                                 decoration: InputDecoration(
                                   border: InputBorder.none,
                                   labelText: "Name",
@@ -92,6 +93,7 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                             Container(
                               padding: EdgeInsets.all(8.0),
                               child: TextField(
+                                cursorColor: kPrimaryColor,
                                 decoration: InputDecoration(
                                   border: InputBorder.none,
                                   labelText: "Roll No",
@@ -110,6 +112,7 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                               alignment: Alignment.topLeft,
                               padding: EdgeInsets.all(8.0),
                               child: DropdownButton<String>(
+                                dropdownColor: kSecondColor,
                                 isExpanded: true,
                                 focusColor: Color.fromRGBO(143, 148, 251, 1),
                                 items: branchDropdownList,
@@ -128,6 +131,8 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                             Container(
                               padding: EdgeInsets.all(8.0),
                               child: DropdownButton<String>(
+                                dropdownColor: kSecondColor,
+                                focusColor: Colors.white,
                                 isExpanded: true,
                                 items: semDropdownList,
                                 onChanged: (String value) {

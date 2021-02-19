@@ -24,10 +24,11 @@ class _MapsHomeState extends State<MapsHome> {
           .show();
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: kBgColor,
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[

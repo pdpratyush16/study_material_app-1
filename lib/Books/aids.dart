@@ -12,23 +12,30 @@ class Aids extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CustomTileDesign(
-              name: "VIDEO LINK",
-            ),
-            CustomTileDesign(
-              name: "E-BOOK",
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Background(
+                height1: 280.0,
+                height2: 150.0,
+                height3: 100.0,
+                height4: 100.0,
+              ),
+              CustomTileDesign(
+                name: "VIDEO LINK",
+              ),
+              CustomTileDesign(
+                name: "E-BOOK",
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 }
-
 
 class ScreenArguments {
   final String subject;

@@ -25,7 +25,7 @@ class _SignUpPageState extends State<SignUpPage> {
     return ModalProgressHUD(
       inAsyncCall: showSpinner,
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: kBgColor,
         body: SingleChildScrollView(
           child: Container(
             child: Column(
@@ -45,13 +45,13 @@ class _SignUpPageState extends State<SignUpPage> {
                         Container(
                           padding: EdgeInsets.all(5),
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: kSecondColor,
                             borderRadius: BorderRadius.circular(10),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.grey,
+                                color: kPrimaryColor,
                                 blurRadius: 30.0,
-                                offset: Offset(0, 10),
+                                //offset: Offset(0, 10),
                               )
                             ],
                           ),
@@ -59,14 +59,15 @@ class _SignUpPageState extends State<SignUpPage> {
                             children: [
                               Container(
                                 padding: EdgeInsets.all(8.0),
-                                decoration: BoxDecoration(
-                                  border: Border(
-                                    bottom: BorderSide(
-                                      color: Colors.grey[100],
-                                    ),
-                                  ),
-                                ),
+                                // decoration: BoxDecoration(
+                                //   border: Border(
+                                //     bottom: BorderSide(
+                                //       color: Colors.grey[100],
+                                //     ),
+                                //   ),
+                                // ),
                                 child: TextField(
+                                  cursorColor: kPrimaryColor,
                                   keyboardType: TextInputType.emailAddress,
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
@@ -85,6 +86,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               Container(
                                 padding: EdgeInsets.all(8.0),
                                 child: TextField(
+                                  cursorColor: kPrimaryColor,
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
                                     labelText: "Password",
@@ -103,6 +105,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               Container(
                                 padding: EdgeInsets.all(8.0),
                                 child: TextField(
+                                  cursorColor: kPrimaryColor,
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
                                     labelText: "Confirm Password",
@@ -205,6 +208,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               children: [
                                 Text(
                                   'Have an account?', //TODO: might have to change a/c to app name
+                                  style: TextStyle(color: Colors.white),
                                 ),
                                 SizedBox(
                                   width: 5.0,

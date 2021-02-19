@@ -55,6 +55,7 @@ class _UserFormState extends State<UserForm> {
     presentController.text = widget.user.present.toString();
     totalController.text = widget.user.total.toString();
     return Scaffold(
+      backgroundColor: kBgColor,
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -67,6 +68,7 @@ class _UserFormState extends State<UserForm> {
             Padding(
               padding: EdgeInsets.all(16),
               child: Material(
+                color: kSecondColor,
                 elevation: 1,
                 clipBehavior: Clip.antiAlias,
                 borderRadius: BorderRadius.circular(8),
@@ -91,6 +93,7 @@ class _UserFormState extends State<UserForm> {
                           child: Row(children: <Widget>[
                             Expanded(
                               child: TextFormField(
+                                //cursorColor: kBgColor,
                                 initialValue: widget.user.subject,
                                 onChanged: (String value) {
                                   setState(() {
@@ -98,8 +101,11 @@ class _UserFormState extends State<UserForm> {
                                   });
                                 },
                                 decoration: InputDecoration(
+                                  fillColor: kBgColor,
+                                  focusColor: kBgColor,
+                                  hoverColor: kBgColor,
                                   labelText: 'Subject Name',
-                                  hintText: 'Enter your subject name',
+                                  hintText: 'Enter subject name',
                                   icon: Icon(Icons.copy),
                                   isDense: true,
                                 ),
@@ -133,7 +139,7 @@ class _UserFormState extends State<UserForm> {
                                   },
                                   decoration: InputDecoration(
                                     labelText: 'Present',
-                                    hintText: 'Total no. of present',
+                                    hintText: 'Days present',
                                     icon: Icon(Icons.copy),
                                     isDense: true,
                                   ),
@@ -152,7 +158,7 @@ class _UserFormState extends State<UserForm> {
                                   },
                                   decoration: InputDecoration(
                                     labelText: 'Total classes',
-                                    hintText: 'Number of classes occured',
+                                    hintText: 'Total days so far',
                                     isDense: true,
                                   ),
                                 ),

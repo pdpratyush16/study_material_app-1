@@ -101,6 +101,7 @@ class _GraphPageState extends State<GraphPage> {
               });
             },
             child: Material(
+              color: kSecondColor,
               elevation: 2,
               clipBehavior: Clip.antiAlias,
               borderRadius: BorderRadius.circular(8),
@@ -228,11 +229,11 @@ class _GraphPageState extends State<GraphPage> {
                                       databaseHelper.update(userList[position]);
                                     });
                                   }),
-                              SizedBox(
-                                width: 2.0,
-                              ),
+                              // SizedBox(
+                              //   width: 0.0,
+                              // ),
                               RoundIconButton1(
-                                  icon: Icons.cancel_rounded,
+                                  icon: Icons.cancel_sharp,
                                   onPressed: () {
                                     setState(() {
                                       userList[position].total++;
@@ -267,6 +268,7 @@ class _GraphPageState extends State<GraphPage> {
     }
 
     return Scaffold(
+      backgroundColor: kBgColor,
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[

@@ -9,14 +9,11 @@ class HolidayPage extends StatefulWidget {
 }
 
 class _HolidayPageState extends State<HolidayPage> {
-
-int count=0;
-Calendar calendar=Calendar();
+  int count = 0;
+  Calendar calendar = Calendar();
   @override
-
   Widget build(BuildContext context) {
-    Widget calendarBody(){
-
+    Widget calendarBody() {
       return ListView.builder(
         physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
@@ -37,6 +34,7 @@ Calendar calendar=Calendar();
                     spreadRadius: 10.0, //extend the shadow
                   )
                 ],
+                color: kSecondColor,
               ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -45,39 +43,39 @@ Calendar calendar=Calendar();
                     Expanded(
                       flex: 5,
                       child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10.0),//or 15.0
-                      child: Container(
-                        height: 70.0,
-                        width: 70.0,
-                        color:  Color(0xff8f94fb),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-
-                          children:<Widget> [
-                            Text(
-                              calendar.holidays[i].date,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 25.0,
-                                fontWeight: FontWeight.bold,
-                              ),
+                          borderRadius: BorderRadius.circular(10.0), //or 15.0
+                          child: Container(
+                            height: 70.0,
+                            width: 70.0,
+                            color: Color(0xff8f94fb),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Text(
+                                  calendar.holidays[i].date,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 25.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  calendar.holidays[i].month,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 25.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
                             ),
-                            Text(
-                              calendar.holidays[i].month,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 25.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                      ),
-                        )
-                        //Icon(Icons.volume_up, color: Colors.white, size: 50.0),
-                      ),
+                          )
+                          //Icon(Icons.volume_up, color: Colors.white, size: 50.0),
+                          ),
                     ),
-
-                    SizedBox(width: 30,),
+                    SizedBox(
+                      width: 30,
+                    ),
                     Expanded(
                       flex: 11,
                       child: Column(
@@ -88,21 +86,23 @@ Calendar calendar=Calendar();
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w600,
+                              color: Colors.white,
                             ),
                           ),
-                          SizedBox(height: 10,),
+                          SizedBox(
+                            height: 10,
+                          ),
                           Text(
                             calendar.holidays[i].day,
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w300,
-
+                              color: Colors.white,
                             ),
                           ),
                         ],
                       ),
                     ),
-
                   ],
                 ),
               ),
@@ -110,10 +110,9 @@ Calendar calendar=Calendar();
           ),
         ),
       );
-
     }
-    Widget restrictedBody(){
 
+    Widget restrictedBody() {
       return ListView.builder(
         physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
@@ -134,6 +133,7 @@ Calendar calendar=Calendar();
                     spreadRadius: 10.0, //extend the shadow
                   )
                 ],
+                color: kSecondColor,
               ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -142,15 +142,14 @@ Calendar calendar=Calendar();
                     Expanded(
                       flex: 5,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.circular(10.0),//or 15.0
+                          borderRadius: BorderRadius.circular(10.0), //or 15.0
                           child: Container(
                             height: 70.0,
                             width: 70.0,
-                            color:  Color(0xff8f94fb),
+                            color: Color(0xff8f94fb),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
-
-                              children:<Widget> [
+                              children: <Widget>[
                                 Text(
                                   calendar.restrictedHolidays[i].date,
                                   style: TextStyle(
@@ -170,11 +169,12 @@ Calendar calendar=Calendar();
                               ],
                             ),
                           )
-                        //Icon(Icons.volume_up, color: Colors.white, size: 50.0),
-                      ),
+                          //Icon(Icons.volume_up, color: Colors.white, size: 50.0),
+                          ),
                     ),
-
-                    SizedBox(width: 30,),
+                    SizedBox(
+                      width: 30,
+                    ),
                     Expanded(
                       flex: 11,
                       child: Column(
@@ -185,21 +185,23 @@ Calendar calendar=Calendar();
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w600,
+                              color: Colors.white,
                             ),
                           ),
-                          SizedBox(height: 10,),
+                          SizedBox(
+                            height: 10,
+                          ),
                           Text(
                             calendar.restrictedHolidays[i].day,
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w300,
-
+                              color: Colors.white,
                             ),
                           ),
                         ],
                       ),
                     ),
-
                   ],
                 ),
               ),
@@ -207,9 +209,10 @@ Calendar calendar=Calendar();
           ),
         ),
       );
-
     }
+
     return Scaffold(
+      backgroundColor: kBgColor,
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -224,7 +227,7 @@ Calendar calendar=Calendar();
                 'Holidays',
                 style: TextStyle(
                   fontSize: 40.0,
-                  color: Colors.purple,
+                  color: Colors.deepPurpleAccent,
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -235,7 +238,7 @@ Calendar calendar=Calendar();
                 'Restricted Holidays',
                 style: TextStyle(
                   fontSize: 40.0,
-                  color: Colors.purple,
+                  color: Colors.deepPurpleAccent,
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -245,9 +248,6 @@ Calendar calendar=Calendar();
           ],
         ),
       ),
-      
     );
   }
-
-
 }

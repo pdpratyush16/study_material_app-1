@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
 
-const kActiveCol = Color(0xFF1D1E33);
-const kInactiveCol = Color(0xFF111328);
-const kBottomColor = Color(0xFFEB1555);
-const kShadow = Color(0xFF4C4F5E);
 const kPrimaryColor = Color(0xff8f94fb);
+const kBgColor = Colors.black;
+const kSecondColor = Color(0xff30363D);
 const kText = TextStyle(
-  color: Colors.black,
+  color: Colors.white,
   fontSize: 18.0,
 );
 
@@ -23,17 +21,17 @@ class ReuseCard extends StatelessWidget {
         child: childCard,
         margin: EdgeInsets.all(18.0),
         decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(12.0),
+          color: kSecondColor,
+          borderRadius: BorderRadius.circular(6.0),
           boxShadow: [
             BoxShadow(
               color: kPrimaryColor,
-              blurRadius: 20.0, // soften the shadow
+              blurRadius: 15.0, // soften the shadow
               spreadRadius: 0.0, //extend the shadow
-              offset: Offset(
-                5.0, // Move to right 10  horizontally
-                5.0, // Move to bottom 10 Vertically
-              ),
+              // offset: Offset(
+              //   5.0, // Move to right 10  horizontally
+              //   5.0, // Move to bottom 10 Vertically
+              // ),
             )
           ],
         ),
@@ -151,7 +149,7 @@ class RoundIconButton extends StatelessWidget {
         height: 36.0,
       ),
       shape: CircleBorder(),
-      fillColor: Colors.green.shade700,
+      fillColor: Colors.green,
     );
   }
 }
@@ -176,7 +174,7 @@ class RoundIconButton1 extends StatelessWidget {
         height: 36.0,
       ),
       shape: CircleBorder(),
-      fillColor: Colors.redAccent.shade700,
+      fillColor: Colors.red,
     );
   }
 }
@@ -188,19 +186,25 @@ class EmptyState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.circular(16.0),
       elevation: 16,
-      color: Theme.of(context).cardColor.withOpacity(.95),
-      shadowColor: Theme.of(context).accentColor.withOpacity(.5),
+      color: kSecondColor,
+      shadowColor: Colors.white,
       child: Padding(
         padding: EdgeInsets.all(16),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text(title, style: Theme.of(context).textTheme.headline5),
+            Text(
+              title,
+              style: TextStyle(color: Colors.white, fontSize: 26.0),
+            ),
             Padding(
               padding: EdgeInsets.all(8.0),
-              child: Text(message),
+              child: Text(
+                message,
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ],
         ),
@@ -228,27 +232,30 @@ class CustomTileDesign extends StatelessWidget {
         margin: EdgeInsets.only(bottom: 16),
         width: size.width - 48,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: kSecondColor,
           borderRadius: BorderRadius.circular(38.5),
           boxShadow: [
             BoxShadow(
               offset: Offset(0, 10),
-              blurRadius: 33,
-              color: Color(0xFFD3D3D3).withOpacity(.84),
+              blurRadius: 30,
+              color: Color(0xFFD3D3D3).withOpacity(.75),
             ),
           ],
         ),
-        child: Row(
-          children: <Widget>[
-            Text(
-              name,
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: <Widget>[
+              Text(
+                name,
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
