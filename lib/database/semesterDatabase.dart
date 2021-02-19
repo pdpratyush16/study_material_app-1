@@ -8,6 +8,14 @@ class CSE {
   List<String> sem3 = ['BIC', 'BSE', 'DISCRETE MATHEMATICS', 'DIGITAL SYSTEM DESIGN', 'DATA STRUCTURE'];
 
   List<String> sem4 = ['COA', 'DAA', 'ENVIRONMENTAL SCIENCE', 'NUMERICAL METHODS', 'OOPDP', 'OPERATING SYSTEM'];
+
+  List<String> sem5 = [];
+
+  List<String> sem6 = [];
+
+  List<String> sem7 = [];
+
+  List<String> sem8 = [];
 }
 
 class IT {
@@ -19,6 +27,14 @@ class IT {
 
   List<String> sem4 = ['COA', 'DAA', 'ENVIRONMENTAL SCIENCE', 'NUMERICAL METHODS',
     'OOPDP', 'OPERATING SYSTEM',];
+
+  List<String> sem5 = [];
+
+  List<String> sem6 = [];
+
+  List<String> sem7 = [];
+
+  List<String> sem8 = [];
 }
 
 class ECE {
@@ -30,6 +46,14 @@ class ECE {
 
   List<String> sem4 = ['ANALOG CIRCUITS', 'ANALOG COMMUNICATION', 'EMF AND WAVES', 'ENVIRONMENTAL SCIENCE',
     'NUMERICAL METHODS', 'PROBABILITY & RANDOM PROCESSES'];
+
+  List<String> sem5 = [];
+
+  List<String> sem6 = [];
+
+  List<String> sem7 = [];
+
+  List<String> sem8 = [];
 }
 
 class EEE {
@@ -43,6 +67,14 @@ class EEE {
   List<String> sem4 = [
     'DC MACHINES AND TRANSFORMERS', 'ENGINEERING ELECTROMAGNETICS', 'ENVIRONMENTAL SCIENCE', 'NUMERICAL METHODS',
     /*'OPEN ELECTIVE - I'*/];
+
+  List<String> sem5 = [];
+
+  List<String> sem6 = [];
+
+  List<String> sem7 = [];
+
+  List<String> sem8 = [];
 }
 
 // NON CIRCUITAL...
@@ -56,6 +88,14 @@ class MECH {
 
   List<String> sem4 = ['BIC', 'BSE', 'ENERGY CONVERSION SYSTEM', 'KINEMATICS & DYNAMICS OF MACHINES',
     'MACHINE DESIGN', /*'PROGRAM ELECTIVE - I'*/];
+
+  List<String> sem5 = [];
+
+  List<String> sem6 = [];
+
+  List<String> sem7 = [];
+
+  List<String> sem8 = [];
 }
 
 class CIV {
@@ -68,6 +108,14 @@ class CIV {
 
   List<String> sem4 = ['BIC', 'BSE', 'CONSTRUCTION ENGINEERING AND MANAGEMENT',
     'EARTHQUAKE AND DISASTER MANAGEMENT', 'STRUCTURAL ANALYSIS - II', 'SURVEYING'];
+
+  List<String> sem5 = [];
+
+  List<String> sem6 = [];
+
+  List<String> sem7 = [];
+
+  List<String> sem8 = [];
 }
 
 class CHEM {
@@ -80,6 +128,14 @@ class CHEM {
 
   List<String> sem4 = ['BIC', 'BSE', 'HEAT TRANSFER OPERATIONS', 'MASS TRANSFER OPERATIONS - I',
   'PROCESS TECHNOLOGY & ECONOMICS',  'TRANSPORT PHENOMENA' /*'OPEN ELECTIVE - I'*/];
+
+  List<String> sem5 = [];
+
+  List<String> sem6 = [];
+
+  List<String> sem7 = [];
+
+  List<String> sem8 = [];
 }
 
 class CPP {
@@ -92,6 +148,15 @@ class CPP {
 
   List<String> sem4 = ['BIC', 'BSE', 'PROCESS TECHNOLOGY & ECONOMICS - I', 'HEAT TRANSFER OPERATIONS',
     'MASS TRANSFER OPERATIONS', 'POLYMER TECHNOLOGY', /*'OPEN ELECTIVE - I'*/];
+
+
+  List<String> sem5 = [];
+
+  List<String> sem6 = [];
+
+  List<String> sem7 = [];
+
+  List<String> sem8 = [];
 }
 
 class PROD {
@@ -104,6 +169,14 @@ class PROD {
 
   List<String> sem4 = ['BIC', 'BSE', 'MANUFACTURING PROCESS - I', 'METROLOGY AND MEASUREMENT',
     'KINEMATICS AND DYNAMICS OF MACHINES', /*'PROGRAM ELECTIVE - I'*/];
+
+  List<String> sem5 = [];
+
+  List<String> sem6 = [];
+
+  List<String> sem7 = [];
+
+  List<String> sem8 = [];
 }
 
 class BIO {
@@ -117,4 +190,12 @@ class BIO {
 
   List<String> sem4 = ['BIC', 'BSE', 'BIOLOGY OF IMUNE SYSTEM', 'FLUID MECHANICS AND HEAT TRANSFER',
     'THERMO OF CHEMICAL AND BIOLOGICAL SYSTEMS', /*Text('PROGRAMME ELECTIVE - I'), 'OPEN ELECTIVE - I'*/];
+
+  List<String> sem5 = [];
+
+  List<String> sem6 = [];
+
+  List<String> sem7 = [];
+
+  List<String> sem8 = [];
 }

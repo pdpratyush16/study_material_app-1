@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/graphPage.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/practiceHome.dart';
+import 'package:study_material_app/Books/aids.dart';
 import 'package:study_material_app/Books/bookHome.dart';
 import 'package:study_material_app/Maps/mapsHome.dart';
 import 'package:study_material_app/Videos/videoHome.dart';
@@ -51,6 +52,7 @@ class MyApp extends StatelessWidget {
         VideoHome.id: (context) => VideoHome(),
         GraphPage.id: (context) => GraphPage(),
         UserForm.id: (context) => UserForm(User('', 0, 0)),
+        Aids.id: (context) => Aids(),
         "/ERPHomeScreen": (_) => WebviewScaffold(
               url:
                   "https://erp.bitmesra.ac.in/iitmsv4eGq0RuNHb0G5WbhLmTKLmTO7YBcJ4RHuXxCNPvuIw=?enc=EGbCGWnlHNJ/WdgJnKH8DA==",

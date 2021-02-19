@@ -210,42 +210,46 @@ class EmptyState extends StatelessWidget {
 }
 
 class CustomTileDesign extends StatelessWidget {
+  final String name;
+  final Function onPressed;
+
   CustomTileDesign({
     @required this.name,
-    this.press,
+    this.onPressed,
   });
-  final String name;
-  final Function press;
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return Container(
-      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-      margin: EdgeInsets.only(bottom: 16),
-      width: size.width - 48,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(38.5),
-        boxShadow: [
-          BoxShadow(
-            offset: Offset(0, 10),
-            blurRadius: 33,
-            color: Color(0xFFD3D3D3).withOpacity(.84),
-          ),
-        ],
-      ),
-      child: Row(
-        children: <Widget>[
-          Text(
-            name,
-            style: TextStyle(
-              fontSize: 16,
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
+    return RawMaterialButton(
+      onPressed: onPressed,
+      child: Container(
+        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+        margin: EdgeInsets.only(bottom: 16),
+        width: size.width - 48,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(38.5),
+          boxShadow: [
+            BoxShadow(
+              offset: Offset(0, 10),
+              blurRadius: 33,
+              color: Color(0xFFD3D3D3).withOpacity(.84),
             ),
-          ),
-        ],
+          ],
+        ),
+        child: Row(
+          children: <Widget>[
+            Text(
+              name,
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

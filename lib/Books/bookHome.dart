@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
+import 'package:study_material_app/database/semesterDatabase.dart';
+import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'aids.dart';
 
 class BookHome extends StatefulWidget {
@@ -12,6 +14,7 @@ class BookHome extends StatefulWidget {
 
 class _BookHomeState extends State<BookHome> {
   String branch, semester;
+  var subjectList = [];
 
   Future<void> _getUserDetails() async {
     String uid = FirebaseAuth.instance.currentUser.uid;
@@ -29,9 +32,199 @@ class _BookHomeState extends State<BookHome> {
         semester = 'User is not available';
       });
     }
+    _getSubjectList();
+    _getTileList();
+  }
 
-    print(semester);
-    print(branch);
+  void _getSubjectList() {
+    //Circuital...
+    if (branch == 'CSE') {
+      CSE ob = new CSE();
+      if (semester == '1')
+        subjectList = ob.sem1;
+      else if (semester == '2')
+        subjectList = ob.sem2;
+      else if (semester == '3')
+        subjectList = ob.sem3;
+      else if (semester == '4')
+        subjectList = ob.sem4;
+      else if (semester == '5')
+        subjectList = ob.sem5;
+      else if (semester == '6')
+        subjectList = ob.sem6;
+      else if (semester == '7')
+        subjectList = ob.sem7;
+      else if (semester == '8') subjectList = ob.sem8;
+    } else if (branch == 'IT') {
+      IT ob = new IT();
+      if (semester == '1')
+        subjectList = ob.sem1;
+      else if (semester == '2')
+        subjectList = ob.sem2;
+      else if (semester == '3')
+        subjectList = ob.sem3;
+      else if (semester == '4')
+        subjectList = ob.sem4;
+      else if (semester == '5')
+        subjectList = ob.sem5;
+      else if (semester == '6')
+        subjectList = ob.sem6;
+      else if (semester == '7')
+        subjectList = ob.sem7;
+      else if (semester == '8') subjectList = ob.sem8;
+    } else if (branch == 'ECE') {
+      ECE ob = new ECE();
+      if (semester == '1')
+        subjectList = ob.sem1;
+      else if (semester == '2')
+        subjectList = ob.sem2;
+      else if (semester == '3')
+        subjectList = ob.sem3;
+      else if (semester == '4')
+        subjectList = ob.sem4;
+      else if (semester == '5')
+        subjectList = ob.sem5;
+      else if (semester == '6')
+        subjectList = ob.sem6;
+      else if (semester == '7')
+        subjectList = ob.sem7;
+      else if (semester == '8') subjectList = ob.sem8;
+    } else if (branch == 'EEE') {
+      EEE ob = new EEE();
+      if (semester == '1')
+        subjectList = ob.sem1;
+      else if (semester == '2')
+        subjectList = ob.sem2;
+      else if (semester == '3')
+        subjectList = ob.sem3;
+      else if (semester == '4')
+        subjectList = ob.sem4;
+      else if (semester == '5')
+        subjectList = ob.sem5;
+      else if (semester == '6')
+        subjectList = ob.sem6;
+      else if (semester == '7')
+        subjectList = ob.sem7;
+      else if (semester == '8') subjectList = ob.sem8;
+    }
+
+    //Non - Circuital...
+    else if (branch == 'MECH') {
+      MECH ob = new MECH();
+      if (semester == '1')
+        subjectList = ob.sem1;
+      else if (semester == '2')
+        subjectList = ob.sem2;
+      else if (semester == '3')
+        subjectList = ob.sem3;
+      else if (semester == '4')
+        subjectList = ob.sem4;
+      else if (semester == '5')
+        subjectList = ob.sem5;
+      else if (semester == '6')
+        subjectList = ob.sem6;
+      else if (semester == '7')
+        subjectList = ob.sem7;
+      else if (semester == '8') subjectList = ob.sem8;
+    } else if (branch == 'CIV') {
+      CIV ob = new CIV();
+      if (semester == '1')
+        subjectList = ob.sem1;
+      else if (semester == '2')
+        subjectList = ob.sem2;
+      else if (semester == '3')
+        subjectList = ob.sem3;
+      else if (semester == '4')
+        subjectList = ob.sem4;
+      else if (semester == '5')
+        subjectList = ob.sem5;
+      else if (semester == '6')
+        subjectList = ob.sem6;
+      else if (semester == '7')
+        subjectList = ob.sem7;
+      else if (semester == '8') subjectList = ob.sem8;
+    } else if (branch == 'CHEM') {
+      CHEM ob = new CHEM();
+      if (semester == '1')
+        subjectList = ob.sem1;
+      else if (semester == '2')
+        subjectList = ob.sem2;
+      else if (semester == '3')
+        subjectList = ob.sem3;
+      else if (semester == '4')
+        subjectList = ob.sem4;
+      else if (semester == '5')
+        subjectList = ob.sem5;
+      else if (semester == '6')
+        subjectList = ob.sem6;
+      else if (semester == '7')
+        subjectList = ob.sem7;
+      else if (semester == '8') subjectList = ob.sem8;
+    } else if (branch == 'CPP') {
+      CPP ob = new CPP();
+      if (semester == '1')
+        subjectList = ob.sem1;
+      else if (semester == '2')
+        subjectList = ob.sem2;
+      else if (semester == '3')
+        subjectList = ob.sem3;
+      else if (semester == '4')
+        subjectList = ob.sem4;
+      else if (semester == '5')
+        subjectList = ob.sem5;
+      else if (semester == '6')
+        subjectList = ob.sem6;
+      else if (semester == '7')
+        subjectList = ob.sem7;
+      else if (semester == '8') subjectList = ob.sem8;
+    } else if (branch == 'PROD') {
+      PROD ob = new PROD();
+      if (semester == '1')
+        subjectList = ob.sem1;
+      else if (semester == '2')
+        subjectList = ob.sem2;
+      else if (semester == '3')
+        subjectList = ob.sem3;
+      else if (semester == '4')
+        subjectList = ob.sem4;
+      else if (semester == '5')
+        subjectList = ob.sem5;
+      else if (semester == '6')
+        subjectList = ob.sem6;
+      else if (semester == '7')
+        subjectList = ob.sem7;
+      else if (semester == '8') subjectList = ob.sem8;
+    } else {
+      BIO ob = new BIO();
+      if (semester == '1')
+        subjectList = ob.sem1;
+      else if (semester == '2')
+        subjectList = ob.sem2;
+      else if (semester == '3')
+        subjectList = ob.sem3;
+      else if (semester == '4')
+        subjectList = ob.sem4;
+      else if (semester == '5')
+        subjectList = ob.sem5;
+      else if (semester == '6')
+        subjectList = ob.sem6;
+      else if (semester == '7')
+        subjectList = ob.sem7;
+      else if (semester == '8') subjectList = ob.sem8;
+    }
+  }
+
+  Widget _getTileList() {
+    List<Widget> tileList = new List<Widget>();
+    for (int i = 0; i < subjectList.length; i++) {
+      tileList.add(CustomTileDesign(
+        name: subjectList[i],
+        onPressed: () => Navigator.pushNamed(context, Aids.id, arguments: ScreenArguments(subjectList[i])),
+      ));
+    }
+    return Center(
+      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: tileList),
+    );
   }
 
   @override
@@ -42,19 +235,6 @@ class _BookHomeState extends State<BookHome> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Background(
-            height1: 280.0,
-            height2: 150.0,
-            height3: 100.0,
-            height4: 100.0,
-          ),
-          Text('Branch : $branch'),
-          Text('Semester : $semester'),
-        ],
-      ),
-    );
+    return Scaffold(backgroundColor: Colors.black, body: _getTileList());
   }
 }
