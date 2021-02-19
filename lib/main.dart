@@ -10,6 +10,7 @@ import 'package:study_material_app/Videos/videoHome.dart';
 import 'package:study_material_app/forms.dart';
 import 'package:study_material_app/screen/FrontPage.dart';
 import 'package:study_material_app/screen/loginPage.dart';
+import 'package:study_material_app/screen/profilePage.dart';
 import 'package:study_material_app/screen/signUp.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:study_material_app/screen/signUpDetails.dart';
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
         SignUpPage.id: (context) => SignUpPage(),
         LoginPage.id: (context) => LoginPage(),
         FrontPage.id: (context) => FrontPage(),
+        ProfilePage.id: (context) => ProfilePage(),
         SignupPageDetails.id: (context) => SignupPageDetails(),
         // AttendanceHome.id: (context) => AttendanceHome(),
         PracticeHome.id: (context) => PracticeHome(),

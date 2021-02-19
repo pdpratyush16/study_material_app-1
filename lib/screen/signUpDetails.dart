@@ -14,7 +14,7 @@ class SignupPageDetails extends StatefulWidget {
 }
 
 class _SignupPageDetailsState extends State<SignupPageDetails> {
-  String branchVal, yearVal, rollNoVal, semesterVal;
+  String branchVal, nameVal, rollNoVal, semesterVal;
   final _firestore = FirebaseFirestore.instance;
   final _auth = FirebaseAuth.instance;
   User loggedInUser;
@@ -72,6 +72,24 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                         child: Column(
                           children: [
                             Container(
+                              alignment: Alignment.topLeft,
+                              padding: EdgeInsets.all(8.0),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  border: InputBorder.none,
+                                  labelText: "Name",
+                                  // hintText: "10XXX",
+                                  hintStyle: TextStyle(color: Colors.grey),
+                                  labelStyle: TextStyle(
+                                    color: Colors.grey[400],
+                                  ),
+                                ),
+                                onChanged: (value) {
+                                  nameVal = value;
+                                },
+                              ),
+                            ), // Name...
+                            Container(
                               padding: EdgeInsets.all(8.0),
                               child: TextField(
                                 decoration: InputDecoration(
@@ -108,25 +126,6 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                               ),
                             ), // Branch...
                             Container(
-                              alignment: Alignment.topLeft,
-                              padding: EdgeInsets.all(8.0),
-                              child: DropdownButton<String>(
-                                isExpanded: true,
-                                focusColor: Color.fromRGBO(143, 148, 251, 1),
-                                items: yearDropdownList,
-                                onChanged: (String value) {
-                                  setState(() {
-                                    yearVal = value;
-                                  });
-                                },
-                                hint: Text(
-                                  'Year',
-                                  style: TextStyle(color: Colors.grey[400]),
-                                ),
-                                value: yearVal,
-                              ),
-                            ), // Year...
-                            Container(
                               padding: EdgeInsets.all(8.0),
                               child: DropdownButton<String>(
                                 isExpanded: true,
@@ -161,12 +160,15 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                           ),
                           onPressed: () {
-                            _firestore.collection('UserDatabase').doc(FirebaseAuth.instance.currentUser.uid).set({
+                            _firestore
+                                .collection('UserDatabase')
+                                .doc(FirebaseAuth.instance.currentUser.uid)
+                                .set({
                               'Branch': branchVal,
                               'Email': loggedInUser.email,
                               'RollNo': rollNoVal,
                               'Semester': semesterVal,
-                              'Year': yearVal,
+                              'Name': nameVal,
                             });
                             Navigator.pushNamed(context, FrontPage.id);
                           },

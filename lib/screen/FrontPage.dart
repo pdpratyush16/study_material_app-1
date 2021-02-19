@@ -5,6 +5,7 @@ import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/graphPage.dart';
 import 'package:study_material_app/Books/bookHome.dart';
 import 'package:study_material_app/Maps/mapsHome.dart';
+import 'package:study_material_app/screen/profilePage.dart';
 
 class FrontPage extends StatefulWidget {
   static const String id = 'FrontPage';
@@ -95,11 +96,14 @@ class _FrontPageState extends State<FrontPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          final SharedPreferences sharedPref =
-              await SharedPreferences.getInstance();
-          sharedPref.remove('email');
-          Navigator.pop(context);
+        onPressed: () {
+          // final SharedPreferences sharedPref =
+          //     await SharedPreferences.getInstance();
+          // sharedPref.remove('email');
+          // Navigator.pop(context);
+          setState(() {
+            Navigator.pushNamed(context, ProfilePage.id);
+          });
         },
         backgroundColor: kPrimaryColor,
         child: Icon(
