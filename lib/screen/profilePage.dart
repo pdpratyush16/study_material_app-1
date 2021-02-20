@@ -1,8 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
+import 'package:study_material_app/screen/loginPage.dart';
 
 class ProfilePage extends StatefulWidget {
   static const String id = 'profileScreen';
@@ -98,6 +100,24 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ],
           ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // final SharedPreferences sharedPref =
+          //     await SharedPreferences.getInstance();
+          // sharedPref.remove('email');
+          // Navigator.pop(context);
+          setState(() {
+            Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                    builder: (BuildContext context) => LoginPage()));
+          });
+        },
+        backgroundColor: kPrimaryColor,
+        child: Icon(
+          FontAwesomeIcons.signOutAlt,
         ),
       ),
     );
