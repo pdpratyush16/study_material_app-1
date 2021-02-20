@@ -236,9 +236,9 @@ class CustomTileDesign extends StatelessWidget {
           borderRadius: BorderRadius.circular(38.5),
           boxShadow: [
             BoxShadow(
-              offset: Offset(0, 10),
-              blurRadius: 30,
-              color: Color(0xFFD3D3D3).withOpacity(.75),
+              offset: Offset(5, 5),
+              blurRadius: 5,
+              color: Color(0xFFD3D3D3).withOpacity(.45),
             ),
           ],
         ),

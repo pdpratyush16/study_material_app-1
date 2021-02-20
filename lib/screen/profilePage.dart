@@ -70,7 +70,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 height4: 150.0,
               ),
               Padding(
-                padding: EdgeInsets.all(30.0),
+                padding: EdgeInsets.all(0.0),
                 child: Column(
                   children: <Widget>[
                     FadeAnimation(
