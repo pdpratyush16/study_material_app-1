@@ -19,7 +19,7 @@ class _FrontPageState extends State<FrontPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: kBgColor,
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[

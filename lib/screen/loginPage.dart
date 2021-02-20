@@ -26,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
     return ModalProgressHUD(
       inAsyncCall: showSpinner,
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: kBgColor,
         body: SingleChildScrollView(
           child: Container(
             child: Column(
@@ -46,13 +46,13 @@ class _LoginPageState extends State<LoginPage> {
                         Container(
                           padding: EdgeInsets.all(5),
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: kSecondColor,
                             borderRadius: BorderRadius.circular(10),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.grey,
+                                color: kPrimaryColor,
                                 blurRadius: 30.0,
-                                offset: Offset(0, 10),
+                                //offset: Offset(0, 10),
                               )
                             ],
                           ),
@@ -63,11 +63,12 @@ class _LoginPageState extends State<LoginPage> {
                                 decoration: BoxDecoration(
                                   border: Border(
                                     bottom: BorderSide(
-                                      color: Colors.grey[100],
+                                      color: kSecondColor,
                                     ),
                                   ),
                                 ),
                                 child: TextField(
+                                  cursorColor: kPrimaryColor,
                                   keyboardType: TextInputType.emailAddress,
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
@@ -86,6 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                               Container(
                                 padding: EdgeInsets.all(8.0),
                                 child: TextField(
+                                  cursorColor: kPrimaryColor,
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
                                     labelText: "Password",
@@ -202,6 +204,7 @@ class _LoginPageState extends State<LoginPage> {
                             children: [
                               Text(
                                 'New to App?', //TODO: might have to change a/c to app name
+                                style: TextStyle(color: Colors.white),
                               ),
                               SizedBox(
                                 width: 5.0,
