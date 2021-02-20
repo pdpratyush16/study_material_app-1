@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_material_app/database/branchCodeDatabase.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
 
 class Aids extends StatelessWidget {
@@ -8,7 +9,8 @@ class Aids extends StatelessWidget {
     final ScreenArguments args = ModalRoute.of(context).settings.arguments;
     String subject = args.subject;
 
-    print(subject);
+    SubjectCode ob = new SubjectCode();
+    String subjectCode = ob.subjectCode[subject];
 
     return Scaffold(
       backgroundColor: Colors.black,
@@ -28,6 +30,12 @@ class Aids extends StatelessWidget {
               ),
               CustomTileDesign(
                 name: "E-BOOK",
+              ),
+
+              //Temporary Display....
+              SizedBox(height: 20.0),
+              CustomTileDesign(
+                name: subjectCode,
               ),
             ],
           ),

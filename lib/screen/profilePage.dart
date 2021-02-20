@@ -76,20 +76,20 @@ class _ProfilePageState extends State<ProfilePage> {
                       Column(
                         children: [
                           CustomTileDesign(
-                            name: 'Name:  $name',
+                            name: 'Name  :  $name',
                           ),
                           CustomTileDesign(
-                            name: 'Semester:  $semester',
+                            name: 'Semester  :  $semester',
                           ),
                           CustomTileDesign(
-                            name: 'Branch:  $branch',
+                            name: 'Branch  :  $branch',
                           ),
                           CustomTileDesign(
-                            name: 'Roll No:  $rollNo',
+                            name: 'Roll No  :  $rollNo',
                           ),
                           CustomTileDesign(
-                            name: 'E-mail:  $email',
-                          )
+                            name: 'E-mail  :  $email',
+                          ),
                         ],
                       ),
                     ),
