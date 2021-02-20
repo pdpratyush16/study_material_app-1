@@ -139,53 +139,55 @@ class _SignUpPageState extends State<SignUpPage> {
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             ),
                             onPressed: () async {
-                              setState(() {
-                                showSpinner = true;
-                              });
-                              try {
-                                if (passwordVal == confirmPasswordVal) {
-                                  final newUser = await _auth
-                                      .createUserWithEmailAndPassword(
-                                          email: emailVal,
-                                          password: passwordVal);
-                                  if (newUser != null) {
-                                    final SharedPreferences sharedPref =
-                                        await SharedPreferences.getInstance();
-                                    sharedPref.setString('email', emailVal);
-                                    Navigator.pushNamed(
-                                        context, SignupPageDetails.id);
+                              if(emailVal != null && passwordVal != null && confirmPasswordVal != null) {
+                                setState(() {
+                                  showSpinner = true;
+                                });
+                                try {
+                                  if (passwordVal == confirmPasswordVal) {
+                                    final newUser = await _auth
+                                        .createUserWithEmailAndPassword(
+                                        email: emailVal,
+                                        password: passwordVal);
+                                    if (newUser != null) {
+                                      final SharedPreferences sharedPref =
+                                      await SharedPreferences.getInstance();
+                                      sharedPref.setString('email', emailVal);
+                                      Navigator.pushNamed(
+                                          context, SignupPageDetails.id);
+                                    }
+                                  } else {
+                                    Alert(
+                                        context: context,
+                                        title: 'Re-enter Password',
+                                        desc:
+                                        "Password and Confirm password do not match")
+                                        .show();
                                   }
-                                } else {
+                                  setState(() {
+                                    showSpinner = false;
+                                  });
+                                } catch (error) {
+                                  print(error.code);
+                                  switch (error.code) {
+                                    case "invalid-email":
+                                      status = 'Invalid Email';
+                                      break;
+                                    case "email-already-in-use":
+                                      status = 'Email already in use';
+                                      break;
+                                    default:
+                                      status = 'Undefined error';
+                                  }
+                                  setState(() {
+                                    showSpinner = false;
+                                  });
                                   Alert(
-                                          context: context,
-                                          title: 'Re-enter Password',
-                                          desc:
-                                              "Password and Confirm password do not match")
-                                      .show();
+                                    context: context,
+                                    title: status,
+                                    desc: "Please try again",
+                                  ).show();
                                 }
-                                setState(() {
-                                  showSpinner = false;
-                                });
-                              } catch (error) {
-                                print(error.code);
-                                switch (error.code) {
-                                  case "invalid-email":
-                                    status = 'Invalid Email';
-                                    break;
-                                  case "email-already-in-use":
-                                    status = 'Email already in use';
-                                    break;
-                                  default:
-                                    status = 'Undefined error';
-                                }
-                                setState(() {
-                                  showSpinner = false;
-                                });
-                                Alert(
-                                  context: context,
-                                  title: status,
-                                  desc: "Please try again",
-                                ).show();
                               }
                             },
                             child: Center(

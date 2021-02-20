@@ -165,24 +165,27 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                           ),
                           onPressed: () {
-                            _firestore
-                                .collection('UserDatabase')
-                                .doc(FirebaseAuth.instance.currentUser.uid)
-                                .set({
-                              'Branch': branchVal,
-                              'Email': loggedInUser.email,
-                              'RollNo': rollNoVal,
-                              'Semester': semesterVal,
-                              'Name': nameVal,
-                            });
-                            Navigator.pushNamed(context, FrontPage.id);
+                            if (nameVal != null &&
+                                branchVal != null &&
+                                rollNoVal != null &&
+                                semesterVal != null) {
+                              _firestore
+                                  .collection('UserDatabase')
+                                  .doc(FirebaseAuth.instance.currentUser.uid)
+                                  .set({
+                                'Branch': branchVal,
+                                'Email': loggedInUser.email,
+                                'RollNo': rollNoVal,
+                                'Semester': semesterVal,
+                                'Name': nameVal,
+                              });
+                              Navigator.pushNamed(context, FrontPage.id);
+                            }
                           },
                           child: Center(
                             child: Text(
                               "Sign Up",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
+                              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),

@@ -17,10 +17,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
   Future<void> _getUserDetails() async {
     String uid = FirebaseAuth.instance.currentUser.uid;
-    DocumentSnapshot doc = await FirebaseFirestore.instance
-        .collection('UserDatabase')
-        .doc(uid)
-        .get();
+    DocumentSnapshot doc = await FirebaseFirestore.instance.collection('UserDatabase').doc(uid).get();
 
     if (doc.exists) {
       // this will check availability of document
@@ -92,6 +89,28 @@ class _ProfilePageState extends State<ProfilePage> {
                           CustomTileDesign(
                             name: 'E-mail  :  $email',
                           ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              FloatingActionButton(
+                                onPressed: () {
+                                  // final SharedPreferences sharedPref =
+                                  //     await SharedPreferences.getInstance();
+                                  // sharedPref.remove('email');
+                                  // Navigator.pop(context);
+                                  setState(() {
+                                    Navigator.pushReplacement(context,
+                                        MaterialPageRoute(builder: (BuildContext context) => LoginPage()));
+                                  });
+                                },
+                                backgroundColor: kPrimaryColor,
+                                child: Icon(
+                                  FontAwesomeIcons.signOutAlt,
+                                ),
+                              ),
+                              SizedBox(width: 20.0)
+                            ],
+                          )
                         ],
                       ),
                     ),
@@ -100,24 +119,6 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ],
           ),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // final SharedPreferences sharedPref =
-          //     await SharedPreferences.getInstance();
-          // sharedPref.remove('email');
-          // Navigator.pop(context);
-          setState(() {
-            Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                    builder: (BuildContext context) => LoginPage()));
-          });
-        },
-        backgroundColor: kPrimaryColor,
-        child: Icon(
-          FontAwesomeIcons.signOutAlt,
         ),
       ),
     );
