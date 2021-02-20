@@ -6,7 +6,7 @@ class VideoHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Text('Video Tutorials Here'),
+        child: Text('Video Tutorials Links Here'),
       ),
     );
   }
