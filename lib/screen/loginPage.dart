@@ -135,59 +135,54 @@ class _LoginPageState extends State<LoginPage> {
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             ),
                             onPressed: () async {
-                              setState(() {
-                                showSpinner = true;
-                              });
-                              try {
-                                final oldUser =
-                                    await _auth.signInWithEmailAndPassword(
-                                        email: emailVal, password: passwordVal);
-                                if (oldUser != null) {
-                                  final SharedPreferences sharedPref =
-                                      await SharedPreferences.getInstance();
-                                  sharedPref.setString('email', emailVal);
-                                  Navigator.pushNamed(context, FrontPage.id);
-                                }
+                              if (emailVal != null && passwordVal != null) {
                                 setState(() {
-                                  showSpinner = false;
+                                  showSpinner = true;
                                 });
-                              } catch (error) {
-                                print(error.code);
-                                switch (error.code) {
-                                  case "invalid-email":
-                                    status = 'Invalid Email';
-                                    break;
-                                  case "wrong-password":
-                                    status = 'Wrong password';
-                                    break;
-                                  case "user-not-found":
-                                    status = 'User not found';
-                                    break;
-                                  case "email-already-exists":
-                                    status = 'Email already in use';
-                                    break;
-                                  case "too-many-requests":
-                                    status = 'Too many request';
-                                    break;
-                                  default:
-                                    status = 'Undefined error';
+                                try {
+                                  final oldUser = await _auth.signInWithEmailAndPassword(
+                                      email: emailVal, password: passwordVal);
+                                  if (oldUser != null) {
+                                    final SharedPreferences sharedPref =
+                                        await SharedPreferences.getInstance();
+                                    sharedPref.setString('email', emailVal);
+                                    Navigator.pushNamed(context, FrontPage.id);
+                                  }
+                                  setState(() {
+                                    showSpinner = false;
+                                  });
+                                } catch (error) {
+                                  print(error.code);
+                                  switch (error.code) {
+                                    case "invalid-email":
+                                      status = 'Invalid Email';
+                                      break;
+                                    case "wrong-password":
+                                      status = 'Wrong password';
+                                      break;
+                                    case "user-not-found":
+                                      status = 'User not found';
+                                      break;
+                                    case "email-already-exists":
+                                      status = 'Email already in use';
+                                      break;
+                                    case "too-many-requests":
+                                      status = 'Too many request';
+                                      break;
+                                    default:
+                                      status = 'Undefined error';
+                                  }
+                                  setState(() {
+                                    showSpinner = false;
+                                  });
+                                  Alert(context: context, title: status, desc: "Please try again").show();
                                 }
-                                setState(() {
-                                  showSpinner = false;
-                                });
-                                Alert(
-                                        context: context,
-                                        title: status,
-                                        desc: "Please try again")
-                                    .show();
                               }
                             },
                             child: Center(
                               child: Text(
                                 "Login",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
+                                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                               ),
                             ),
                           ),
