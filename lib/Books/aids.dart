@@ -25,11 +25,15 @@ class Aids extends StatelessWidget {
                 height3: 100.0,
                 height4: 100.0,
               ),
+
               CustomTileDesign(
-                name: "VIDEO LINK",
+                name: "SYLLABUS",
               ),
               CustomTileDesign(
                 name: "E-BOOK",
+              ),
+              CustomTileDesign(
+                name: "VIDEO LINK",
               ),
 
               //Temporary Display....
