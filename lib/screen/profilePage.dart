@@ -6,6 +6,9 @@ import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:study_material_app/screen/loginPage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:study_material_app/screen/updateDetails.dart';
+
+import '../Animation/CustomWidgets.dart';
 
 class ProfilePage extends StatefulWidget {
   static const String id = 'profileScreen';
@@ -42,9 +45,6 @@ class _ProfilePageState extends State<ProfilePage> {
         },
       );
     }
-
-    // print(semester);
-    // print(branch);
   }
 
   @override
@@ -91,21 +91,20 @@ class _ProfilePageState extends State<ProfilePage> {
                             name: 'E-mail  :  $email',
                           ),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-                              FloatingActionButton(
-                                onPressed: () async{
-                                  SharedPreferences sharedPreference = await SharedPreferences.getInstance();
-                                  sharedPreference.remove('email');
-                                  Navigator.pushReplacement(context,
-                                      MaterialPageRoute(builder: (BuildContext context) => LoginPage()));
-                                },
-                                backgroundColor: kPrimaryColor,
-                                child: Icon(
-                                  FontAwesomeIcons.signOutAlt,
-                                ),
-                              ),
-                              SizedBox(width: 20.0)
+
+                              ProfileIconButton(icon: FontAwesomeIcons.userEdit, onPressed: () async{
+                                Navigator.pushNamed(context, UpdateScreen.id);
+                              }),
+
+                              ProfileIconButton(icon: FontAwesomeIcons.signOutAlt, onPressed: () async{
+                                SharedPreferences sharedPreference = await SharedPreferences.getInstance();
+                                sharedPreference.remove('email');
+                                Navigator.pushReplacement(context,
+                                    MaterialPageRoute(builder: (BuildContext context) => LoginPage()));
+                              }),
+                              //SizedBox(width: 20.0)
                             ],
                           )
                         ],

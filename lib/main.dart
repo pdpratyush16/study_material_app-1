@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart';
+import 'package:study_material_app/screen/updateDetails.dart';
 import 'Holiday Calendar/HolidayPage.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/graphPage.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/practiceHome.dart';
@@ -55,6 +56,7 @@ class MyApp extends StatelessWidget {
         HolidayPage.id: (context) => HolidayPage(),
         UserForm.id: (context) => UserForm(User('', 0, 0)),
         Aids.id: (context) => Aids(),
+        UpdateScreen.id: (context) => UpdateScreen(),
       },
       home: HomePage(),
     );

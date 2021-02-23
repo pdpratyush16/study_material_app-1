@@ -261,3 +261,28 @@ class CustomTileDesign extends StatelessWidget {
     );
   }
 }
+
+class ProfileIconButton extends StatelessWidget {
+  final IconData icon;
+  final Function onPressed;
+
+  ProfileIconButton({@required this.icon, @required this.onPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding:  EdgeInsets.fromLTRB(30, 5, 30, 10),
+      child: RawMaterialButton(
+        child: Icon(icon, color: Colors.white),
+        onPressed: onPressed,
+        elevation: 0.0,
+        constraints: BoxConstraints.tightFor(
+          width: 56.0,
+          height: 56.0,
+        ),
+        shape: CircleBorder(),
+        fillColor: kPrimaryColor,
+      ),
+    );
+  }
+}
