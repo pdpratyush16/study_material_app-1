@@ -8,6 +8,7 @@ const kText = TextStyle(
   color: Colors.white,
   fontSize: 18.0,
 );
+const kTextFieldColor = Colors.tealAccent;
 
 class ReuseCard extends StatelessWidget {
   final Widget childCard;
@@ -271,7 +272,7 @@ class ProfileIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.fromLTRB(30, 5, 30, 10),
+      padding: EdgeInsets.fromLTRB(30, 5, 30, 10),
       child: RawMaterialButton(
         child: Icon(icon, color: Colors.white),
         onPressed: onPressed,

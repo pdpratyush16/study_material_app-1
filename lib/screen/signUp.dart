@@ -67,6 +67,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                 //   ),
                                 // ),
                                 child: TextField(
+                                  style: TextStyle(color: kTextFieldColor),
                                   cursorColor: kPrimaryColor,
                                   keyboardType: TextInputType.emailAddress,
                                   decoration: InputDecoration(
@@ -86,6 +87,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               Container(
                                 padding: EdgeInsets.all(8.0),
                                 child: TextField(
+                                  style: TextStyle(color: kTextFieldColor),
                                   cursorColor: kPrimaryColor,
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
@@ -105,6 +107,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               Container(
                                 padding: EdgeInsets.all(8.0),
                                 child: TextField(
+                                  style: TextStyle(color: kTextFieldColor),
                                   cursorColor: kPrimaryColor,
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
@@ -139,7 +142,9 @@ class _SignUpPageState extends State<SignUpPage> {
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             ),
                             onPressed: () async {
-                              if(emailVal != null && passwordVal != null && confirmPasswordVal != null) {
+                              if (emailVal != null &&
+                                  passwordVal != null &&
+                                  confirmPasswordVal != null) {
                                 setState(() {
                                   showSpinner = true;
                                 });
@@ -147,21 +152,21 @@ class _SignUpPageState extends State<SignUpPage> {
                                   if (passwordVal == confirmPasswordVal) {
                                     final newUser = await _auth
                                         .createUserWithEmailAndPassword(
-                                        email: emailVal,
-                                        password: passwordVal);
+                                            email: emailVal,
+                                            password: passwordVal);
                                     if (newUser != null) {
                                       final SharedPreferences sharedPref =
-                                      await SharedPreferences.getInstance();
+                                          await SharedPreferences.getInstance();
                                       sharedPref.setString('email', emailVal);
                                       Navigator.pushNamed(
                                           context, SignupPageDetails.id);
                                     }
                                   } else {
                                     Alert(
-                                        context: context,
-                                        title: 'Re-enter Password',
-                                        desc:
-                                        "Password and Confirm password do not match")
+                                            context: context,
+                                            title: 'Re-enter Password',
+                                            desc:
+                                                "Password and Confirm password do not match")
                                         .show();
                                   }
                                   setState(() {

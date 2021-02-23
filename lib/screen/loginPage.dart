@@ -68,6 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                                   ),
                                 ),
                                 child: TextField(
+                                  style: TextStyle(color: kTextFieldColor),
                                   cursorColor: kPrimaryColor,
                                   keyboardType: TextInputType.emailAddress,
                                   decoration: InputDecoration(
@@ -87,6 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                               Container(
                                 padding: EdgeInsets.all(8.0),
                                 child: TextField(
+                                  style: TextStyle(color: kTextFieldColor),
                                   cursorColor: kPrimaryColor,
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
@@ -140,8 +142,10 @@ class _LoginPageState extends State<LoginPage> {
                                   showSpinner = true;
                                 });
                                 try {
-                                  final oldUser = await _auth.signInWithEmailAndPassword(
-                                      email: emailVal, password: passwordVal);
+                                  final oldUser =
+                                      await _auth.signInWithEmailAndPassword(
+                                          email: emailVal,
+                                          password: passwordVal);
                                   if (oldUser != null) {
                                     final SharedPreferences sharedPref =
                                         await SharedPreferences.getInstance();
@@ -175,14 +179,20 @@ class _LoginPageState extends State<LoginPage> {
                                   setState(() {
                                     showSpinner = false;
                                   });
-                                  Alert(context: context, title: status, desc: "Please try again").show();
+                                  Alert(
+                                          context: context,
+                                          title: status,
+                                          desc: "Please try again")
+                                      .show();
                                 }
                               }
                             },
                             child: Center(
                               child: Text(
                                 "Login",
-                                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
                               ),
                             ),
                           ),

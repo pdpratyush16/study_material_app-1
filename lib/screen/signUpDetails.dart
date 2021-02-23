@@ -75,6 +75,7 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                               alignment: Alignment.topLeft,
                               padding: EdgeInsets.all(8.0),
                               child: TextField(
+                                style: TextStyle(color: kTextFieldColor),
                                 cursorColor: kPrimaryColor,
                                 decoration: InputDecoration(
                                   border: InputBorder.none,
@@ -93,6 +94,7 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                             Container(
                               padding: EdgeInsets.all(8.0),
                               child: TextField(
+                                style: TextStyle(color: kTextFieldColor),
                                 cursorColor: kPrimaryColor,
                                 decoration: InputDecoration(
                                   border: InputBorder.none,
@@ -112,6 +114,7 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                               alignment: Alignment.topLeft,
                               padding: EdgeInsets.all(8.0),
                               child: DropdownButton<String>(
+                                style: TextStyle(color: kTextFieldColor),
                                 dropdownColor: kSecondColor,
                                 isExpanded: true,
                                 focusColor: Color.fromRGBO(143, 148, 251, 1),
@@ -132,6 +135,7 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                               padding: EdgeInsets.all(8.0),
                               child: DropdownButton<String>(
                                 dropdownColor: kSecondColor,
+                                style: TextStyle(color: kTextFieldColor),
                                 focusColor: Colors.white,
                                 isExpanded: true,
                                 items: semDropdownList,
@@ -185,7 +189,9 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                           child: Center(
                             child: Text(
                               "Sign Up",
-                              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),
