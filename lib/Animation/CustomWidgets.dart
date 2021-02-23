@@ -8,7 +8,7 @@ const kText = TextStyle(
   color: Colors.white,
   fontSize: 18.0,
 );
-const kTextFieldColor = Colors.tealAccent;
+final kTextFieldColor = Colors.grey[400];
 
 class ReuseCard extends StatelessWidget {
   final Widget childCard;
