@@ -4,7 +4,6 @@ import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:study_material_app/database/signupPageDatabase.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:study_material_app/screen/profilePage.dart';
 
 class UpdateScreen extends StatefulWidget {
   static const String id = 'UpdateScreenDetails';
@@ -176,9 +175,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
                                   'Semester': semesterVal,
                                   'Name': nameVal,
                                 });
-                                Navigator.of(context)
-                                    .pushNamed(ProfilePage.id)
-                                    .then((value) => setState(() {}));
+                                Navigator.pop(context);
                               }
                             });
                           },

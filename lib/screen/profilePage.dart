@@ -7,7 +7,6 @@ import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:study_material_app/screen/loginPage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:study_material_app/screen/updateDetails.dart';
-
 import '../Animation/CustomWidgets.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -25,25 +24,29 @@ class _ProfilePageState extends State<ProfilePage> {
 
     if (doc.exists) {
       // this will check availability of document
-      setState(
-        () {
-          branch = doc.data()['Branch'];
-          semester = doc.data()['Semester'];
-          name = doc.data()['Name'];
-          rollNo = doc.data()['RollNo'];
-          email = doc.data()['Email'];
-        },
-      );
+      if(mounted) {
+        setState(
+              () {
+            branch = doc.data()['Branch'];
+            semester = doc.data()['Semester'];
+            name = doc.data()['Name'];
+            rollNo = doc.data()['RollNo'];
+            email = doc.data()['Email'];
+          },
+        );
+      }
     } else {
-      setState(
-        () {
-          branch = 'User is not available';
-          semester = 'User is not available';
-          name = 'User is not available';
-          rollNo = 'User is not available';
-          email = 'User is not available';
-        },
-      );
+      if(mounted) {
+        setState(
+              () {
+            branch = 'User is not available';
+            semester = 'User is not available';
+            name = 'User is not available';
+            rollNo = 'User is not available';
+            email = 'User is not available';
+          },
+        );
+      }
     }
   }
 
@@ -55,6 +58,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
   @override
   Widget build(BuildContext context) {
+    _getUserDetails();
     return Scaffold(
       backgroundColor: kBgColor,
       body: SingleChildScrollView(
