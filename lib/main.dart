@@ -55,19 +55,6 @@ class MyApp extends StatelessWidget {
         HolidayPage.id: (context) => HolidayPage(),
         UserForm.id: (context) => UserForm(User('', 0, 0)),
         Aids.id: (context) => Aids(),
-        "/ERPHomeScreen": (_) => WebviewScaffold(
-              url:
-                  "https://erp.bitmesra.ac.in/iitmsv4eGq0RuNHb0G5WbhLmTKLmTO7YBcJ4RHuXxCNPvuIw=?enc=EGbCGWnlHNJ/WdgJnKH8DA==",
-              appBar: AppBar(
-                backgroundColor: Color.fromRGBO(143, 148, 251, 1),
-                centerTitle: true,
-                title: Text('ERP'),
-                shadowColor: Colors.white,
-              ),
-              withJavascript: true,
-              withLocalStorage: true,
-              withZoom: true,
-            )
       },
       home: HomePage(),
     );
