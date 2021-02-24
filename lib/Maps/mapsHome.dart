@@ -38,14 +38,10 @@ class _MapsHomeState extends State<MapsHome> {
               height3: 100.0,
               height4: 100.0,
             ),
-            Center(
-              child: FloatingActionButton(
-                onPressed: () {
-                  setState(() {
-                    _launchInApp(_mainBuilding);
-                  });
-                },
-              ),
+            Tile(
+              title: 'Main Building Plan',
+              url: _mainBuilding,
+              type: 0,
             ),
           ],
         ),
