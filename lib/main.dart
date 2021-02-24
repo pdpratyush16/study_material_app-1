@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart';
 import 'package:study_material_app/Videos/module.dart';
+import 'package:study_material_app/screen/updateDetails.dart';
 import 'Holiday Calendar/HolidayPage.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/graphPage.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/practiceHome.dart';

@@ -4,22 +4,49 @@ import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:study_material_app/database/signupPageDatabase.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:study_material_app/screen/FrontPage.dart';
 
-class SignupPageDetails extends StatefulWidget {
-  static const String id = 'registerScreenDetails';
-
+class UpdateScreen extends StatefulWidget {
+  static const String id = 'UpdateScreenDetails';
   @override
-  _SignupPageDetailsState createState() => _SignupPageDetailsState();
+  _UpdateScreenState createState() => _UpdateScreenState();
 }
 
-class _SignupPageDetailsState extends State<SignupPageDetails> {
+class _UpdateScreenState extends State<UpdateScreen> {
   String branchVal, nameVal, rollNoVal, semesterVal;
   final _firestore = FirebaseFirestore.instance;
   final _auth = FirebaseAuth.instance;
   User loggedInUser;
 
-  void getCurrentUser() async {
+  Future<void> _getUserDetails() async {
+    String uid = FirebaseAuth.instance.currentUser.uid;
+    DocumentSnapshot doc = await FirebaseFirestore.instance
+        .collection('UserDatabase')
+        .doc(uid)
+        .get();
+
+    if (doc.exists) {
+      // this will check availability of document
+      setState(
+        () {
+          nameVal = doc.data()['Name'];
+          rollNoVal = doc.data()['RollNo'];
+          branchVal = doc.data()['Branch'];
+          semesterVal = doc.data()['Semester'];
+        },
+      );
+    } else {
+      setState(
+        () {
+          nameVal = null;
+          rollNoVal = null;
+          branchVal = null;
+          semesterVal = null;
+        },
+      );
+    }
+  }
+
+  void _getCurrentUser() async {
     try {
       final user = _auth.currentUser;
       if (user != null) {
@@ -32,8 +59,9 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
 
   @override
   void initState() {
+    _getCurrentUser();
+    _getUserDetails();
     super.initState();
-    getCurrentUser();
   }
 
   @override
@@ -54,6 +82,7 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                 padding: EdgeInsets.all(30.0),
                 child: Column(
                   children: <Widget>[
+                    SizedBox(height: 80),
                     FadeAnimation(
                       1.8,
                       Container(
@@ -70,52 +99,14 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                           ],
                         ),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Container(
                               alignment: Alignment.topLeft,
                               padding: EdgeInsets.all(8.0),
-                              child: TextField(
-                                style: TextStyle(color: kTextFieldColor),
-                                cursorColor: kPrimaryColor,
-                                decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  labelText: "Name",
-                                  // hintText: "10XXX",
-                                  hintStyle: TextStyle(color: Colors.grey),
-                                  labelStyle: TextStyle(
-                                    color: Colors.grey[400],
-                                  ),
-                                ),
-                                onChanged: (value) {
-                                  nameVal = value;
-                                },
-                              ),
-                            ), // Name...
-                            Container(
-                              padding: EdgeInsets.all(8.0),
-                              child: TextField(
-                                style: TextStyle(color: kTextFieldColor),
-                                cursorColor: kPrimaryColor,
-                                decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  labelText: "Roll No",
-                                  hintText: "10XXX",
-                                  hintStyle: TextStyle(color: Colors.grey),
-                                  labelStyle: TextStyle(
-                                    color: Colors.grey[400],
-                                  ),
-                                ),
-                                onChanged: (value) {
-                                  rollNoVal = value;
-                                },
-                              ),
-                            ), // Roll No...
-                            Container(
-                              alignment: Alignment.topLeft,
-                              padding: EdgeInsets.all(8.0),
                               child: DropdownButton<String>(
-                                style: TextStyle(color: kTextFieldColor),
                                 dropdownColor: kSecondColor,
+                                style: TextStyle(color: kTextFieldColor),
                                 isExpanded: true,
                                 focusColor: Color.fromRGBO(143, 148, 251, 1),
                                 items: branchDropdownList,
@@ -169,26 +160,28 @@ class _SignupPageDetailsState extends State<SignupPageDetails> {
                             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                           ),
                           onPressed: () {
-                            if (nameVal != null &&
-                                branchVal != null &&
-                                rollNoVal != null &&
-                                semesterVal != null) {
-                              _firestore
-                                  .collection('UserDatabase')
-                                  .doc(FirebaseAuth.instance.currentUser.uid)
-                                  .set({
-                                'Branch': branchVal,
-                                'Email': loggedInUser.email,
-                                'RollNo': rollNoVal,
-                                'Semester': semesterVal,
-                                'Name': nameVal,
-                              });
-                              Navigator.pushNamed(context, FrontPage.id);
-                            }
+                            setState(() {
+                              if (nameVal != null &&
+                                  branchVal != null &&
+                                  rollNoVal != null &&
+                                  semesterVal != null) {
+                                _firestore
+                                    .collection('UserDatabase')
+                                    .doc(FirebaseAuth.instance.currentUser.uid)
+                                    .update({
+                                  'Branch': branchVal,
+                                  'Email': loggedInUser.email,
+                                  'RollNo': rollNoVal,
+                                  'Semester': semesterVal,
+                                  'Name': nameVal,
+                                });
+                                Navigator.pop(context);
+                              }
+                            });
                           },
                           child: Center(
                             child: Text(
-                              "Sign Up",
+                              "Update",
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold),

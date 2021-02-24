@@ -6,6 +6,7 @@ import 'package:study_material_app/Books/bookHome.dart';
 import 'package:study_material_app/Maps/mapsHome.dart';
 import 'package:study_material_app/Holiday%20Calendar/HolidayPage.dart';
 import 'package:study_material_app/screen/profilePage.dart';
+import 'package:flutter_web_browser/flutter_web_browser.dart';
 
 class FrontPage extends StatefulWidget {
   static const String id = 'FrontPage';
@@ -15,6 +16,17 @@ class FrontPage extends StatefulWidget {
 }
 
 class _FrontPageState extends State<FrontPage> {
+  void _openErp() async{
+    await FlutterWebBrowser.openWebPage(
+      url: 'https://erp.bitmesra.ac.in/iitmsv4eGq0RuNHb0G5WbhLmTKLmTO7YBcJ4RHuXxCNPvuIw=?enc=EGbCGWnlHNJ/WdgJnKH8DA==',
+      customTabsOptions: CustomTabsOptions(
+        toolbarColor: kSecondColor,
+        instantAppsEnabled: true,
+      )
+    );
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,7 +89,7 @@ class _FrontPageState extends State<FrontPage> {
                   child: ReuseCard(
                     gesture: () {
                       setState(() {
-                        Navigator.of(context).pushNamed("/ERPHomeScreen");
+                        _openErp();
                       });
                     },
                     childCard: IconArea(
@@ -114,10 +126,6 @@ class _FrontPageState extends State<FrontPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // final SharedPreferences sharedPref =
-          //     await SharedPreferences.getInstance();
-          // sharedPref.remove('email');
-          // Navigator.pop(context);
           setState(() {
             Navigator.pushNamed(context, ProfilePage.id);
           });
