@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_material_app/Videos/module.dart';
 import 'package:study_material_app/database/subjectCodeDatabase.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
 
@@ -27,7 +28,12 @@ class Aids extends StatelessWidget {
               ),
 
               CustomTileDesign(
-                name: "SYLLABUS",
+                name: "VIDEO LINK",
+                onPressed: () {
+                  Navigator.pushNamed(context, ModulePage.id, arguments: {
+                    'Subject': subject,
+                  });
+                },
               ),
               CustomTileDesign(
                 name: "E-BOOK",
