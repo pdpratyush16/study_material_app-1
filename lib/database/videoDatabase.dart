@@ -2,7 +2,7 @@ class VideoDatabase {
   List<Map<String, String>> BECE1 = [
     {
       'Neso Academy':
-          'https://www.youtube.com/playlist?list=PLBlnK6fEyqRiw-GZRqfnlVIBz9dxrqHJS'
+          'https://www.youtube.com/watch?v=7jaa1rlW7Ak&list=PLBlnK6fEyqRiw-GZRqfnlVIBz9dxrqHJS&index=1'
     },
     {
       'All about Electronics':
@@ -14,7 +14,7 @@ class VideoDatabase {
   List<Map<String, String>> BECE2 = [
     {
       'Neso Academy':
-          'https://www.youtube.com/playlist?list=PLG99TJz7QrIWjqJwfaKYb_T8Qqqls-KiN'
+          'https://www.youtube.com/watch?v=KFCgeI4j-Ig&list=PLBlnK6fEyqRiw-GZRqfnlVIBz9dxrqHJS&index=64'
     },
     {
       'All about Electronics':

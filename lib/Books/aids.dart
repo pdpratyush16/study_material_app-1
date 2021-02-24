@@ -27,25 +27,23 @@ class Aids extends StatelessWidget {
                 height4: 100.0,
               ),
 
+              SizedBox(height: 50.0),
               CustomTileDesign(
-                name: "SYLLABUS",
+                name: 'SYLLABUS',
               ),
               CustomTileDesign(
-                name: "E-BOOK",
+                name: 'NOTES',
               ),
               CustomTileDesign(
-                name: "VIDEO LINK",
+                name: 'E-BOOK',
+              ),
+              CustomTileDesign(
+                name: 'VIDEO LINK',
                 onPressed: () {
                   Navigator.pushNamed(context, ModulePage.id, arguments: {
                     'Subject': subject,
                   });
                 },
-              ),
-
-              //Temporary Display....
-              SizedBox(height: 20.0),
-              CustomTileDesign(
-                name: subjectCode,
               ),
             ],
           ),

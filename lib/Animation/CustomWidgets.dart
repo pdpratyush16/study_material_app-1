@@ -4,6 +4,7 @@ import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 const kPrimaryColor = Color(0xff8f94fb);
+const kPrimaryColorActive = Color(0xffbdc0fc);
 const kBgColor = Colors.black;
 const kSecondColor = Color(0xff30363D);
 const kText = TextStyle(
