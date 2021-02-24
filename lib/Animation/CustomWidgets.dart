@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 const kPrimaryColor = Color(0xff8f94fb);
 const kBgColor = Colors.black;
@@ -255,6 +257,89 @@ class CustomTileDesign extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Tile extends StatelessWidget {
+  final String title, url;
+  final int type;
+  Tile({@required this.title, @required this.url, this.type});
+  Future<void> _launchInApp(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url,
+          forceSafariVC: true, forceWebView: true, enableJavaScript: true);
+    }
+    // else {
+    //   Alert(
+    //           context: context,
+    //           title: 'Error occured',
+    //           desc: "Check your connections")
+    //       .show();
+    // }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(16.0),
+      child: GestureDetector(
+        onTap: () {
+          _launchInApp(url);
+        },
+        child: Material(
+          elevation: 2,
+          clipBehavior: Clip.antiAlias,
+          borderRadius: BorderRadius.circular(8),
+          child: Container(
+            decoration: new BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.shade400.withOpacity(0.5),
+                  blurRadius: 25.0, // soften the shadow
+                  spreadRadius: 10.0, //extend the shadow
+                )
+              ],
+              color: kSecondColor,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    flex: 5,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10.0), //or 15.0
+                      child: Container(
+                        height: 70.0,
+                        width: 70.0,
+                        color: Color(0xff8f94fb),
+                        // TODO: choose proper icon
+                        child: (type == 1)
+                            ? Icon(
+                                FontAwesomeIcons.youtube,
+                                size: 35.0,
+                              )
+                            : Icon(
+                                FontAwesomeIcons.filePdf,
+                                size: 35.0,
+                              ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Expanded(
+                    flex: 11,
+                    child: Text(title),
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
       ),

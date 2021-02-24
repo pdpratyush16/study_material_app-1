@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart';
+import 'package:study_material_app/Videos/module.dart';
 import 'Holiday Calendar/HolidayPage.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/graphPage.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/practiceHome.dart';
@@ -46,7 +47,6 @@ class MyApp extends StatelessWidget {
         FrontPage.id: (context) => FrontPage(),
         ProfilePage.id: (context) => ProfilePage(),
         SignupPageDetails.id: (context) => SignupPageDetails(),
-        // AttendanceHome.id: (context) => AttendanceHome(),
         PracticeHome.id: (context) => PracticeHome(),
         BookHome.id: (context) => BookHome(),
         MapsHome.id: (context) => MapsHome(),
@@ -55,6 +55,7 @@ class MyApp extends StatelessWidget {
         HolidayPage.id: (context) => HolidayPage(),
         UserForm.id: (context) => UserForm(User('', 0, 0)),
         Aids.id: (context) => Aids(),
+        ModulePage.id: (context) => ModulePage(),
         "/ERPHomeScreen": (_) => WebviewScaffold(
               url:
                   "https://erp.bitmesra.ac.in/iitmsv4eGq0RuNHb0G5WbhLmTKLmTO7YBcJ4RHuXxCNPvuIw=?enc=EGbCGWnlHNJ/WdgJnKH8DA==",
