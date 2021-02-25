@@ -5,6 +5,7 @@ import 'package:study_material_app/Attendance%20and%20Practice/graphPage.dart';
 import 'package:study_material_app/Books/bookHome.dart';
 import 'package:study_material_app/Maps/mapsHome.dart';
 import 'package:study_material_app/Holiday%20Calendar/HolidayPage.dart';
+import 'package:study_material_app/BIT_Bus/bus.dart';
 import 'package:study_material_app/screen/profilePage.dart';
 import 'package:flutter_web_browser/flutter_web_browser.dart';
 
@@ -76,12 +77,12 @@ class _FrontPageState extends State<FrontPage> {
                   child: ReuseCard(
                     gesture: () {
                       setState(() {
-                        Navigator.pushNamed(context, MapsHome.id);
+                        _openErp();
                       });
                     },
                     childCard: IconArea(
-                      ic: FontAwesomeIcons.mapMarkedAlt,
-                      s: 'Maps',
+                      ic: FontAwesomeIcons.laptop,
+                      s: 'ERP',
                     ),
                   ),
                 ),
@@ -89,12 +90,12 @@ class _FrontPageState extends State<FrontPage> {
                   child: ReuseCard(
                     gesture: () {
                       setState(() {
-                        _openErp();
+                          Navigator.pushNamed(context, Bus.id);
                       });
                     },
                     childCard: IconArea(
-                      ic: FontAwesomeIcons.laptop,
-                      s: 'ERP',
+                      ic: FontAwesomeIcons.bus,
+                      s: 'BIT BUS',
                     ),
                   ),
                 ),
@@ -112,6 +113,19 @@ class _FrontPageState extends State<FrontPage> {
                     childCard: IconArea(
                       ic: FontAwesomeIcons.calendarAlt,
                       s: 'Holiday Calendar',
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: ReuseCard(
+                    gesture: () {
+                      setState(() {
+                        Navigator.pushNamed(context, MapsHome.id);
+                      });
+                    },
+                    childCard: IconArea(
+                      ic: FontAwesomeIcons.mapMarkedAlt,
+                      s: 'Maps',
                     ),
                   ),
                 ),

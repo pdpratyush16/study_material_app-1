@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart';
+import 'package:study_material_app/BIT_Bus/bus.dart';
 import 'package:study_material_app/Videos/module.dart';
 import 'package:study_material_app/screen/updateDetails.dart';
 import 'Holiday Calendar/HolidayPage.dart';
@@ -21,7 +22,6 @@ import 'package:study_material_app/screen/signUpDetails.dart';
 import 'screen/FrontPage.dart';
 import 'screen/loginPage.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
-
 import 'user.dart';
 
 String finalEmail;
@@ -58,6 +58,7 @@ class MyApp extends StatelessWidget {
         Aids.id: (context) => Aids(),
         ModulePage.id: (context) => ModulePage(),
         UpdateScreen.id: (context) => UpdateScreen(),
+        Bus.id: (context) => Bus(),
       },
       home: HomePage(),
     );
