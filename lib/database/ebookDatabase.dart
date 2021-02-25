@@ -4,6 +4,8 @@ class EC101 {
     {
       'MILLMAN - HALKIAS':
           'https://drive.google.com/file/d/1rM7rdxGcPrLI2ddtksYE9Bmt4qeWgv0N/view?usp=sharing',
+    },
+    {
       'ROBERT - BOYLSTEAD':
           'https://drive.google.com/file/d/1dYDYYyd1zgjNCzEm2qCvjujbAbIKl0aI/view?usp=sharing',
     }
@@ -13,7 +15,7 @@ class EC101 {
 class ME101 {
   List<Map<String, String>> books = [
     {
-      'Engineering - Mechanics: IRVIN H SHAMES':
+      'Engineering - Mechanics: \nIRVIN H SHAMES':
           'https://drive.google.com/file/d/1Bso4KteKbrNGaRtxlB93KPZx8KPC_AFA/view?usp=sharing',
     }
   ];
@@ -22,7 +24,7 @@ class ME101 {
 class CH101 {
   List<Map<String, String>> books = [
     {
-      'Organic - Chemistry: MORRISON BOYD':
+      'Organic - Chemistry: \nMORRISON BOYD':
           'https://drive.google.com/file/d/1jvVW8pecOdNw8Phm9WCNN5ZrkIq58t6j/view?usp=sharing',
     },
     {
@@ -53,7 +55,7 @@ class MA103 {
 class EE101 {
   List<Map<String, String>> books = [
     {
-      'HUGHES : Electrical & Electronics Tech':
+      ' Electrical & Electronics Tech: \nHUGHES':
           'https://drive.google.com/file/d/1utSZdP-t1uNISekKv_FlMiTukgC4ZlZm/view?usp=sharing',
     },
     {
@@ -72,6 +74,15 @@ class MA107 {
   ];
 }
 
+class PH113 {
+  List<Map<String, String>> books = [
+    {
+      'OPTICS - \nAjoy Ghatak':
+          'https://drive.google.com/file/d/1BWtxSFRZ67XKKJN3tiXMXp4E65yttC81/view?usp=sharing',
+    }
+  ];
+}
+
 class CS101 {
   List<Map<String, String>> books = [
     {
@@ -85,13 +96,7 @@ class CS101 {
   ];
 }
 
-class PH113 {
-  List<Map<String, String>> books = [
-    {
-      'OPTICS - Ajoy Ghatak':
-          'https://drive.google.com/file/d/1BWtxSFRZ67XKKJN3tiXMXp4E65yttC81/view?usp=sharing',
-    }
-  ];
-}
-
 //! to access------------>>>> BECE.forEach((element) => print(element["THOMAS-CALCULUS"]));
+// List getList(String subject) {
+//   if (subject == 'BECE') return EC101().books;
+// }

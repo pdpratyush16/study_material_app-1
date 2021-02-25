@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_material_app/Books/ebookHome.dart';
 import 'package:study_material_app/Videos/module.dart';
 import 'package:study_material_app/database/subjectCodeDatabase.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
@@ -26,7 +27,6 @@ class Aids extends StatelessWidget {
                 height3: 100.0,
                 height4: 100.0,
               ),
-
               SizedBox(height: 50.0),
               CustomTileDesign(
                 name: 'SYLLABUS',
@@ -36,6 +36,11 @@ class Aids extends StatelessWidget {
               ),
               CustomTileDesign(
                 name: 'E-BOOK',
+                onPressed: () {
+                  Navigator.pushNamed(context, EbookHome.id, arguments: {
+                    'Subject': subject,
+                  });
+                },
               ),
               CustomTileDesign(
                 name: 'VIDEO LINK',

@@ -101,7 +101,7 @@ class _GraphPageState extends State<GraphPage> {
               });
             },
             child: Material(
-              color: kSecondColor,
+              color: Colors.white,
               elevation: 2,
               clipBehavior: Clip.antiAlias,
               borderRadius: BorderRadius.circular(8),

@@ -68,7 +68,7 @@ class _UserFormState extends State<UserForm> {
             Padding(
               padding: EdgeInsets.all(16),
               child: Material(
-                color: kSecondColor,
+                color: Colors.white,
                 elevation: 1,
                 clipBehavior: Clip.antiAlias,
                 borderRadius: BorderRadius.circular(8),

@@ -297,8 +297,12 @@ class Tile extends StatelessWidget {
   Tile({@required this.title, @required this.url, this.type});
   Future<void> _launchInApp(String url) async {
     if (await canLaunch(url)) {
-      await launch(url,
-          forceSafariVC: true, forceWebView: true, enableJavaScript: true);
+      await launch(
+        url,
+        forceSafariVC: true,
+        forceWebView: true,
+        enableJavaScript: true,
+      );
     }
     // else {
     //   Alert(
@@ -306,6 +310,17 @@ class Tile extends StatelessWidget {
     //           title: 'Error occured',
     //           desc: "Check your connections")
     //       .show();
+    // }
+
+    // if (await canLaunch(url)) {
+    //   await launch(
+    //     url,
+    //     forceSafariVC: true,
+    //     forceWebView: true,
+    //     enableDomStorage: true,
+    //   );
+    // } else {
+    //   throw 'Could not launch $url';
     // }
   }
 
@@ -330,7 +345,7 @@ class Tile extends StatelessWidget {
                   spreadRadius: 10.0, //extend the shadow
                 )
               ],
-              color: kSecondColor,
+              color: Colors.white,
             ),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -343,8 +358,7 @@ class Tile extends StatelessWidget {
                       child: Container(
                         height: 70.0,
                         width: 70.0,
-                        color: Color(0xff8f94fb),
-                        // TODO: choose proper icon
+                        color: Color(0xaa8f94fb),
                         child: (type == 1)
                             ? Icon(
                                 FontAwesomeIcons.youtube,
@@ -362,7 +376,13 @@ class Tile extends StatelessWidget {
                   ),
                   Expanded(
                     flex: 11,
-                    child: Text(title),
+                    child: Text(
+                      title,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        // fontSize: 18,
+                      ),
+                    ),
                   ),
                 ],
               ),

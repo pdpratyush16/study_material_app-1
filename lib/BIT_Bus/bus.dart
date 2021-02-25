@@ -49,7 +49,9 @@ class _BusState extends State<Bus> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(6.0),
                               ),
-                              fillColor: (day == 'SUNDAY') ? kPrimaryColorActive : kPrimaryColor,
+                              fillColor: (day == 'SUNDAY')
+                                  ? kPrimaryColorActive
+                                  : kPrimaryColor,
                             ),
                             RawMaterialButton(
                               child: Text('MON'),
@@ -66,7 +68,9 @@ class _BusState extends State<Bus> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(6.5),
                               ),
-                              fillColor: (day == 'MONDAY') ? kPrimaryColorActive : kPrimaryColor,
+                              fillColor: (day == 'MONDAY')
+                                  ? kPrimaryColorActive
+                                  : kPrimaryColor,
                             ),
                             RawMaterialButton(
                               child: Text('TUE'),
@@ -83,7 +87,9 @@ class _BusState extends State<Bus> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(6.5),
                               ),
-                              fillColor: (day == 'TUESDAY') ? kPrimaryColorActive : kPrimaryColor,
+                              fillColor: (day == 'TUESDAY')
+                                  ? kPrimaryColorActive
+                                  : kPrimaryColor,
                             ),
                             RawMaterialButton(
                               child: Text('WED'),
@@ -100,7 +106,9 @@ class _BusState extends State<Bus> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(6.5),
                               ),
-                              fillColor: (day == 'WEDESDAY') ? kPrimaryColorActive : kPrimaryColor,
+                              fillColor: (day == 'WEDESDAY')
+                                  ? kPrimaryColorActive
+                                  : kPrimaryColor,
                             ),
                             RawMaterialButton(
                               child: Text('THU'),
@@ -117,7 +125,9 @@ class _BusState extends State<Bus> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(6.5),
                               ),
-                              fillColor: (day == 'THURSDAY') ? kPrimaryColorActive : kPrimaryColor,
+                              fillColor: (day == 'THURSDAY')
+                                  ? kPrimaryColorActive
+                                  : kPrimaryColor,
                             ),
                             RawMaterialButton(
                               child: Text('FRI'),
@@ -134,7 +144,9 @@ class _BusState extends State<Bus> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(6.5),
                               ),
-                              fillColor: (day == 'FRIDAY') ? kPrimaryColorActive : kPrimaryColor,
+                              fillColor: (day == 'FRIDAY')
+                                  ? kPrimaryColorActive
+                                  : kPrimaryColor,
                             ),
                             RawMaterialButton(
                               child: Text('SAT'),
@@ -151,7 +163,9 @@ class _BusState extends State<Bus> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(6.5),
                               ),
-                              fillColor: (day == 'SATURDAY') ? kPrimaryColorActive : kPrimaryColor,
+                              fillColor: (day == 'SATURDAY')
+                                  ? kPrimaryColorActive
+                                  : kPrimaryColor,
                             ),
                           ],
                         ),
@@ -180,7 +194,9 @@ class _BusState extends State<Bus> {
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(6.0),
                                 ),
-                                fillColor: (destination == 'BIT') ? kPrimaryColorActive : kPrimaryColor,
+                                fillColor: (destination == 'BIT')
+                                    ? kPrimaryColorActive
+                                    : kPrimaryColor,
                               ),
                               SizedBox(width: 7.5),
                               RawMaterialButton(
@@ -198,7 +214,9 @@ class _BusState extends State<Bus> {
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(6.5),
                                 ),
-                                fillColor: (destination == 'RANCHI') ? kPrimaryColorActive : kPrimaryColor,
+                                fillColor: (destination == 'RANCHI')
+                                    ? kPrimaryColorActive
+                                    : kPrimaryColor,
                               ),
                             ],
                           ),
@@ -222,7 +240,9 @@ class _BusState extends State<Bus> {
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(6.0),
                                 ),
-                                fillColor: (busType == 'STUDENT') ? kPrimaryColorActive : kPrimaryColor,
+                                fillColor: (busType == 'STUDENT')
+                                    ? kPrimaryColorActive
+                                    : kPrimaryColor,
                               ),
                               SizedBox(width: 7.5),
                               RawMaterialButton(
@@ -240,7 +260,9 @@ class _BusState extends State<Bus> {
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(6.0),
                                 ),
-                                fillColor: (busType == 'STAFF') ? kPrimaryColorActive : kPrimaryColor,
+                                fillColor: (busType == 'STAFF')
+                                    ? kPrimaryColorActive
+                                    : kPrimaryColor,
                               ),
                             ],
                           ),
