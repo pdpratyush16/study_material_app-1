@@ -24,6 +24,8 @@ class CH101 {
     {
       'Organic - Chemistry: MORRISON BOYD':
           'https://drive.google.com/file/d/1jvVW8pecOdNw8Phm9WCNN5ZrkIq58t6j/view?usp=sharing',
+    },
+    {
       'INORGANIC - CHEMISTRY':
           'https://drive.google.com/file/d/1p1MFrC53GX8ma97qOB4JJ3IeojSGLv8u/view?usp=sharing',
     }
@@ -35,11 +37,15 @@ class MA103 {
     {
       'THOMAS - CALCULAS':
           'https://drive.google.com/file/d/1OXRiGBlS8BkFrhDExUGdE6WuvzExd8Re/view?usp=sharing',
+    },
+    {
       'B.S - GREWAL':
           'https://drive.google.com/file/d/1vYQZX4NIgWfocXNZkE97yvuWTQwFYFyA/view?usp=sharing',
+    },
+    {
       'B.V - RAMANA':
           'https://drive.google.com/file/d/1vpWze5w3ADo_rVdvjqpmHgbWN69D-JGB/view?usp=sharing',
-    }
+    },
   ];
 }
 
@@ -49,6 +55,8 @@ class EE101 {
     {
       'HUGHES : Electrical & Electronics Tech':
           'https://drive.google.com/file/d/1utSZdP-t1uNISekKv_FlMiTukgC4ZlZm/view?usp=sharing',
+    },
+    {
       'Dictionary Of EE':
           'https://drive.google.com/file/d/1GXrOcG0ck0LpH82S_pB2mJsgWkznLdeV/view?usp=sharing',
     }
@@ -69,6 +77,8 @@ class CS101 {
     {
       'Prog in ANSI - C':
           'https://drive.google.com/file/d/1a5NGFN-RbM2TX6Vxqd_Vq5-3YXWTAl2G/view?usp=sharing',
+    },
+    {
       'C Notes for Professionals':
           'https://drive.google.com/file/d/1tKt6aoz-vu3PuxauAcDmh25tP2WcPndw/view?usp=sharing',
     }
