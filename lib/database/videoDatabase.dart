@@ -64,6 +64,117 @@ class VideoDatabase {
     },
   ];
 
+  List<Map<String, String>> BME1 = [
+    {
+      'Last Moment Tutions':
+          'https://www.youtube.com/watch?v=x2CukrtOnTY&list=PL0s3O6GgLL5cTyibHXZEBFD4zQeR_HrGG&index=2'
+    },
+    {
+      'Truss: Last Moment Tutions':
+          'https://www.youtube.com/watch?v=dG5ZyEIuGe0&list=PL0s3O6GgLL5cTyibHXZEBFD4zQeR_HrGG&index=11'
+    },
+    {
+      'Strength of Material: EKEEDA':
+          'https://www.youtube.com/watch?v=cMdVzMRWZTk&list=PLCiOuVdcDqQVwqV6CDAo_CHyc5hSwW76j&index=1'
+    }
+  ];
+  List<Map<String, String>> BME2 = [
+    {
+      'Kinematics of rigid body: EKEEDA':
+          'https://www.youtube.com/watch?v=0TaXcG32Pss&list=PLm_MSClsnwm9qiBqxSGtOgc5smMbdCBqn&index=93'
+    },
+  ];
+  List<Map<String, String>> BME3 = [
+    {'Friction: Manas Patnayak': 'https://www.youtube.com/watch?v=5UKhI1sGIX8'},
+    {
+      'Vibrations: Tutorial Point':
+          'https://www.youtube.com/watch?v=cmTbQ-P-DHo&list=PLU9_Se3FdhnooCa9qAf2GvZ3JvDTn0V4s&index=1'
+    },
+  ];
+  List<Map<String, String>> BME4 = [
+    {
+      'Boilers':
+          'https://www.youtube.com/watch?v=Sg0-TatDxkU&list=PLjk-OqI4WmPKvHbIDXJ-BnCzghRE7c8bE&index=1'
+    },
+    {
+      'IC Engine':
+          'https://www.youtube.com/watch?v=cT9UN1XENNk&list=PLjk-OqI4WmPLWH6QnBSdUbwiqlOA6LAZQ&index=1'
+    },
+  ];
+  List<Map<String, String>> BME5 = [
+    {
+      'Energy Sources: UNACADEMY': 'https://www.youtube.com/watch?v=gKvq0ECLUpk'
+    },
+  ];
+
+  List<Map<String, String>> CHE1 = [
+    {
+      'Chemical Bonding':
+          'https://www.youtube.com/playlist?list=PL4BETMztLJZbw5PUGSH8u4GiZOt4NG64x'
+    },
+  ];
+  List<Map<String, String>> CHE2 = [
+    {'Stereochemistry': 'https://www.youtube.com/watch?v=ze8vOcb8clY'},
+  ];
+  List<Map<String, String>> CHE3 = [
+    {
+      'Chemical Kinetics':
+          'https://www.youtube.com/playlist?list=PLQVGcyFvFGFP0AQfRrqSNigiU_KpS_uY_'
+    },
+  ];
+  List<Map<String, String>> CHE4 = [
+    {'Spectroscopic Techniques': 'https://www.youtube.com/watch?v=a2trGykVkgc'},
+  ];
+  List<Map<String, String>> CHE5 = [
+    {
+      'Phase Rule': 'https://www.youtube.com/watch?v=UvHd5cBZBnM',
+    },
+    {
+      'Chemical Equilibrium':
+          'https://www.youtube.com/playlist?list=PLHWPZcIu1IxDH4XC6TZ-753wkjSS44q9R'
+    },
+  ];
+
+  List<Map<String, String>> MAI1 = [
+    {
+      'Gajendra Purohit':
+          'https://www.youtube.com/playlist?list=PLU6SqdYcYsfJqbZvQECrwnlQrp4fg6isX',
+    },
+  ];
+  List<Map<String, String>> MAI2 = [
+    {
+      'Gajendra Purohit':
+          'https://www.youtube.com/playlist?list=PLU6SqdYcYsfI34zVjDYDCZ6KLAifHmN1v',
+    },
+  ];
+  List<Map<String, String>> MAI3 = [
+    {
+      'LIMITS: Gajendra Purohit':
+          'https://www.youtube.com/playlist?list=PLU6SqdYcYsfKqEg7zbrek8fh8TbxayiGr',
+    },
+    {
+      'Maxima-Minima: Gajendra Purohit':
+          'https://www.youtube.com/watch?v=NpR91wexqHA&list=PLU6SqdYcYsfIJRl8mo2Rv1MpdvmVD0YyI&index=9',
+    },
+    {
+      'Jacobian: Gajendra Purohit':
+          'https://www.youtube.com/watch?v=YXmeH1yevkk&list=PLU6SqdYcYsfIIEY1wEAsVWdW-R_A1-KBJ&index=14'
+    },
+  ];
+  List<Map<String, String>> MAI4 = [
+    {
+      'Gajendra Purohit':
+          'https://www.youtube.com/playlist?list=PLU6SqdYcYsfLoKyzF_dwxAQf8lIi6VC54',
+    },
+  ];
+  List<Map<String, String>> MAI5 = [
+    {
+      'Gajendra Purohit':
+          'https://www.youtube.com/playlist?list=PLU6SqdYcYsfJz9FAzbgocIjlkw4NXAar-',
+    },
+  ];
+
+//SEMESTER---2
   List<Map<String, String>> BEE1 = [
     {
       'Lecturs in Electrical engineering':
@@ -220,6 +331,7 @@ class VideoDatabase {
           'https://www.youtube.com/watch?v=PK4yFaGHSFc&list=PLU0oJASIjGxdZMtypwhvGrnmuzNnNdcKt&index=1'
     }
   ];
+
   List<Map<String, String>> MAII1 = [
     {
       'Gajendra Purohit':
@@ -270,6 +382,7 @@ class VideoDatabase {
           'https://www.youtube.com/playlist?list=PLyqSpQzTE6M_JcleDbrVyPnE0PixKs2JE'
     }
   ];
+
   List getList(String subject, int module) {
     if (subject == 'BECE') {
       if (module == 1) return BECE1;
@@ -280,12 +393,30 @@ class VideoDatabase {
     }
     if (subject == 'BME') {
       // For testing purpose
-      if (module == 1) return BECE1;
-      if (module == 2) return BECE2;
-      if (module == 3) return BECE3;
-      if (module == 4) return BECE4;
-      if (module == 5) return BECE5;
+      if (module == 1) return BME1;
+      if (module == 2) return BME2;
+      if (module == 3) return BME3;
+      if (module == 4) return BME4;
+      if (module == 5) return BME5;
     }
+    if (subject == 'CHEMISTRY') {
+      // For testing purpose
+      if (module == 1) return CHE1;
+      if (module == 2) return CHE2;
+      if (module == 3) return CHE3;
+      if (module == 4) return CHE4;
+      if (module == 5) return CHE5;
+    }
+    if (subject == 'MATHEMATICS - I') {
+      // For testing purpose
+      if (module == 1) return MAI1;
+      if (module == 2) return MAI2;
+      if (module == 3) return MAI3;
+      if (module == 4) return MAI4;
+      if (module == 5) return MAI5;
+    }
+
+    //SEMESTER---2
     if (subject == 'PPS') {
       if (module == 1) return PPS1;
       if (module == 2) return PPS2;
@@ -314,5 +445,7 @@ class VideoDatabase {
       if (module == 4) return MAII4;
       if (module == 5) return MAII5;
     }
+    List<Map<String, String>> l = [];
+    return l;
   }
 }
