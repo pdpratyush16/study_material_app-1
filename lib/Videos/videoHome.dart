@@ -18,18 +18,24 @@ class _VideoHomeState extends State<VideoHome> {
     List<Map<String, String>> list = ob.getList(subject, module);
 
     Widget data() {
-      // print(list);
-      return ListView.builder(
-        physics: NeverScrollableScrollPhysics(),
-        shrinkWrap: true,
-        addAutomaticKeepAlives: true,
-        itemCount: list.length,
-        itemBuilder: (BuildContext context, int position) => Tile(
-          title: list[position].keys.elementAt(0),
-          url: list[position].values.elementAt(0),
-          type: 1,
-        ),
-      );
+      if (list.isEmpty == true) {
+        return EmptyState(
+          title: 'Coming soon',
+          message: '.',
+        );
+      } else {
+        return ListView.builder(
+          physics: NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          addAutomaticKeepAlives: true,
+          itemCount: list.length,
+          itemBuilder: (BuildContext context, int position) => Tile(
+            title: list[position].keys.elementAt(0),
+            url: list[position].values.elementAt(0),
+            type: 1,
+          ),
+        );
+      }
     }
 
     return Scaffold(
