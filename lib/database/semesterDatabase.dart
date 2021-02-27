@@ -200,7 +200,7 @@ class CHEM {
     'FLUID MECHANICS',
     'MECHANICAL OPERATIONS',
     'NUMERICAL METHODS',
-    'THERMODYNAMICS'
+    'THERMO'
   ];
 
   List<String> sem4 = [
@@ -233,7 +233,7 @@ class CPP {
     'MACROMOLECULAR SCIENCE',
     'MECHANICAL OPERATIONS',
     'NUMERICAL METHODS',
-    'THERMODYNAMICS'
+    'THERMO'
   ];
 
   List<String> sem4 = [
