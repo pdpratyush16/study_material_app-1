@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:study_material_app/BIT_Bus/busclass.dart';
 import '../Animation/CustomWidgets.dart';
 import 'package:study_material_app/BIT_Bus/buslist.dart';
 
@@ -914,7 +913,7 @@ class _BusState extends State<Bus> {
                       )
                     ],
                     borderRadius: BorderRadius.circular(8),
-                    color: Colors.orange,
+                    color: kPrimaryColor,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(3.0, 0.0, 8.0, 0.0),

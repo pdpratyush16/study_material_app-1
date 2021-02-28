@@ -345,7 +345,7 @@ class Tile extends StatelessWidget {
                   spreadRadius: 10.0, //extend the shadow
                 )
               ],
-              color: Colors.white,
+              color: kSecondColor,
             ),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -362,10 +362,12 @@ class Tile extends StatelessWidget {
                         child: (type == 1)
                             ? Icon(
                                 FontAwesomeIcons.youtube,
+                                color: Colors.white,
                                 size: 35.0,
                               )
                             : Icon(
                                 FontAwesomeIcons.filePdf,
+                                color: Colors.white,
                                 size: 35.0,
                               ),
                       ),
@@ -380,6 +382,7 @@ class Tile extends StatelessWidget {
                       title,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
+                        color: Colors.white,
                         // fontSize: 18,
                       ),
                     ),

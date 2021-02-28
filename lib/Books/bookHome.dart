@@ -227,13 +227,14 @@ class _BookHomeState extends State<BookHome> {
       height4: 100.0,
     ));
     tileList.add(SizedBox(height: 50.0));
-
     for (int i = 0; i < subjectList.length; i++) {
-      tileList.add(CustomTileDesign(
-        name: subjectList[i],
-        onPressed: () => Navigator.pushNamed(context, Aids.id,
-            arguments: ScreenArguments(subjectList[i])),
-      ));
+      tileList.add(
+        CustomTileDesign(
+          name: subjectList[i],
+          onPressed: () => Navigator.pushNamed(context, Aids.id,
+              arguments: ScreenArguments(subjectList[i])),
+        ),
+      );
     }
     int l = tileList.length;
     if (l == 2) {

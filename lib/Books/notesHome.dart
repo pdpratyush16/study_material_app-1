@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/database/notesDatabase.dart';
-import 'package:study_material_app/database/videoDatabase.dart';
 
 class NotesHome extends StatefulWidget {
   static const String id = 'NotesHome';
@@ -21,7 +20,7 @@ class _NotesHomeState extends State<NotesHome> {
       if (list.isEmpty == true) {
         return EmptyState(
           title: 'Coming soon',
-          message: '.',
+          message: 'The notes for your subject are not available.',
         );
       } else {
         return ListView.builder(

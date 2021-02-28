@@ -21,7 +21,7 @@ class _VideoHomeState extends State<VideoHome> {
       if (list.isEmpty == true) {
         return EmptyState(
           title: 'Coming soon',
-          message: '.',
+          message: 'The videos for your subject are not available.',
         );
       } else {
         return ListView.builder(

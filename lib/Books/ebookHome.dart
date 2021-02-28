@@ -30,7 +30,7 @@ class _EbookHomeState extends State<EbookHome> {
       if (list.isEmpty) {
         return EmptyState(
           title: 'Coming soon',
-          message: 'The database for your subject is not available.',
+          message: 'The e-books for your subject are not available.',
         );
       }
       return ListView.builder(

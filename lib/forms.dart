@@ -68,20 +68,21 @@ class _UserFormState extends State<UserForm> {
             Padding(
               padding: EdgeInsets.all(16),
               child: Material(
-                color: Colors.white,
+                // color: Colors.white,
+                color: kSecondColor,
                 elevation: 1,
                 clipBehavior: Clip.antiAlias,
                 borderRadius: BorderRadius.circular(8),
                 child: Container(
-                  decoration: new BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.shade400.withOpacity(0.5),
-                        blurRadius: 25.0, // soften the shadow
-                        spreadRadius: 10.0, //extend the shadow
-                      )
-                    ],
-                  ),
+                  // decoration: new BoxDecoration(
+                  //   boxShadow: [
+                  //     BoxShadow(
+                  //       color: Colors.grey.shade400.withOpacity(0.5),
+                  //       blurRadius: 25.0, // soften the shadow
+                  //       spreadRadius: 10.0, //extend the shadow
+                  //     )
+                  //   ],
+                  // ),
                   child: Form(
                     key: form,
                     child: Column(
@@ -93,6 +94,9 @@ class _UserFormState extends State<UserForm> {
                           child: Row(children: <Widget>[
                             Expanded(
                               child: TextFormField(
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
                                 //cursorColor: kBgColor,
                                 initialValue: widget.user.subject,
                                 onChanged: (String value) {
@@ -106,7 +110,17 @@ class _UserFormState extends State<UserForm> {
                                   hoverColor: kBgColor,
                                   labelText: 'Subject Name',
                                   hintText: 'Enter subject name',
-                                  icon: Icon(Icons.copy),
+                                  hintStyle: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12.0,
+                                  ),
+                                  labelStyle: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                  icon: Icon(
+                                    Icons.copy,
+                                    color: Colors.white,
+                                  ),
                                   isDense: true,
                                 ),
                               ),
@@ -115,7 +129,10 @@ class _UserFormState extends State<UserForm> {
                               width: 60,
                             ),
                             IconButton(
-                              icon: Icon(Icons.delete),
+                              icon: Icon(
+                                Icons.delete,
+                                color: Colors.white,
+                              ),
                               onPressed: () async {
                                 await helper.delete(widget.user.id);
                                 moveBack();
@@ -131,6 +148,9 @@ class _UserFormState extends State<UserForm> {
                             children: <Widget>[
                               Expanded(
                                 child: TextFormField(
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
                                   initialValue: widget.user.present.toString(),
                                   onChanged: (String value) {
                                     setState(() {
@@ -140,7 +160,17 @@ class _UserFormState extends State<UserForm> {
                                   decoration: InputDecoration(
                                     labelText: 'Present',
                                     hintText: 'Days present',
-                                    icon: Icon(Icons.copy),
+                                    hintStyle: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12.0,
+                                    ),
+                                    labelStyle: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                    icon: Icon(
+                                      Icons.copy,
+                                      color: Colors.white,
+                                    ),
                                     isDense: true,
                                   ),
                                 ),
@@ -150,6 +180,9 @@ class _UserFormState extends State<UserForm> {
                               ),
                               Expanded(
                                 child: TextFormField(
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
                                   initialValue: widget.user.total.toString(),
                                   onChanged: (String value) {
                                     setState(() {
@@ -159,6 +192,13 @@ class _UserFormState extends State<UserForm> {
                                   decoration: InputDecoration(
                                     labelText: 'Total classes',
                                     hintText: 'Total days so far',
+                                    hintStyle: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12.0,
+                                    ),
+                                    labelStyle: TextStyle(
+                                      color: Colors.white,
+                                    ),
                                     isDense: true,
                                   ),
                                 ),
@@ -179,7 +219,7 @@ class _UserFormState extends State<UserForm> {
         backgroundColor: kPrimaryColor,
         onPressed: () {
           setState(() {
-            print(widget.user);
+            //print(widget.user);
             onSave();
             moveBack();
           });

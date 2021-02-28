@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_material_app/Animation/ComingSoon.dart';
 import 'package:study_material_app/Books/notesHome.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
@@ -50,7 +51,9 @@ class Aids extends StatelessWidget {
                 onPressed: () {
                   Syllabus ob = new Syllabus();
                   String url = ob.getSyllabus(subjectCode);
-                  if (url != '') {
+                  if (url == '') {
+                    Navigator.pushNamed(context, ComingSoon.id);
+                  } else {
                     _launchInApp(url);
                   }
                 },
