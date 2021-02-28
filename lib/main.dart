@@ -2,8 +2,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart';
+import 'package:study_material_app/Animation/ComingSoon.dart';
 import 'package:study_material_app/BIT_Bus/bus.dart';
 import 'package:study_material_app/Books/ebookHome.dart';
+import 'package:study_material_app/Books/notesHome.dart';
 import 'package:study_material_app/Videos/module.dart';
 import 'package:study_material_app/screen/updateDetails.dart';
 import 'Holiday Calendar/HolidayPage.dart';
@@ -61,6 +63,8 @@ class MyApp extends StatelessWidget {
         UpdateScreen.id: (context) => UpdateScreen(),
         Bus.id: (context) => Bus(),
         EbookHome.id: (context) => EbookHome(),
+        NotesHome.id: (context) => NotesHome(),
+        ComingSoon.id: (context) => ComingSoon(),
       },
       home: HomePage(),
     );

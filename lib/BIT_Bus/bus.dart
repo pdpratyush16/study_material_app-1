@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:study_material_app/BIT_Bus/busclass.dart';
 import '../Animation/CustomWidgets.dart';
 import 'package:study_material_app/BIT_Bus/buslist.dart';
+
 class Bus extends StatefulWidget {
   static const String id = 'Bus';
   @override
@@ -11,7 +11,7 @@ class Bus extends StatefulWidget {
 
 class _BusState extends State<Bus> {
   String day = 'SUNDAY', busType = 'STUDENT';
-BusList list=BusList();
+  BusList list = BusList();
   @override
   Widget build(BuildContext context) {
     Widget busBody11() {
@@ -21,11 +21,10 @@ BusList list=BusList();
         addAutomaticKeepAlives: true,
         itemCount: list.weekDayBusesStudent.length,
         itemBuilder: (_, i) => Padding(
-          padding: EdgeInsets.fromLTRB(16.0,8.0, 16.0, 8.0),
+          padding: EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
           child: Material(
-
             clipBehavior: Clip.antiAlias,
-           // borderRadius: BorderRadius.circular(8),
+            // borderRadius: BorderRadius.circular(8),
             child: Padding(
               padding: const EdgeInsets.all(1.0),
               child: Container(
@@ -44,7 +43,7 @@ BusList list=BusList();
                   child: Row(
                     children: <Widget>[
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.weekDayBusesStudent[i].bmd,
                           style: TextStyle(
                             fontSize: 15,
@@ -54,11 +53,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.weekDayBusesStudent[i].dd,
                           style: TextStyle(
                             fontSize: 15,
@@ -68,11 +71,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.weekDayBusesStudent[i].xd,
                           style: TextStyle(
                             fontSize: 15,
@@ -82,11 +89,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.weekDayBusesStudent[i].ld,
                           style: TextStyle(
                             fontSize: 15,
@@ -96,11 +107,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.weekDayBusesStudent[i].ba,
                           style: TextStyle(
                             fontSize: 15,
@@ -118,6 +133,7 @@ BusList list=BusList();
         ),
       );
     }
+
     Widget busBody12() {
       return ListView.builder(
         physics: NeverScrollableScrollPhysics(),
@@ -125,9 +141,8 @@ BusList list=BusList();
         addAutomaticKeepAlives: true,
         itemCount: list.weekDayBusesStudentAndStaff.length,
         itemBuilder: (_, i) => Padding(
-          padding: EdgeInsets.fromLTRB(16.0,8.0, 16.0, 8.0),
+          padding: EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
           child: Material(
-
             clipBehavior: Clip.antiAlias,
             // borderRadius: BorderRadius.circular(8),
             child: Padding(
@@ -148,7 +163,7 @@ BusList list=BusList();
                   child: Row(
                     children: <Widget>[
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.weekDayBusesStudentAndStaff[i].bmd,
                           style: TextStyle(
                             fontSize: 15,
@@ -158,11 +173,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.weekDayBusesStudentAndStaff[i].dd,
                           style: TextStyle(
                             fontSize: 15,
@@ -172,11 +191,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.weekDayBusesStudentAndStaff[i].xd,
                           style: TextStyle(
                             fontSize: 15,
@@ -186,11 +209,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.weekDayBusesStudentAndStaff[i].ld,
                           style: TextStyle(
                             fontSize: 15,
@@ -200,11 +227,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.weekDayBusesStudentAndStaff[i].ba,
                           style: TextStyle(
                             fontSize: 15,
@@ -222,6 +253,7 @@ BusList list=BusList();
         ),
       );
     }
+
     Widget busBody21() {
       return ListView.builder(
         physics: NeverScrollableScrollPhysics(),
@@ -229,9 +261,8 @@ BusList list=BusList();
         addAutomaticKeepAlives: true,
         itemCount: list.saturdayBusesStudent.length,
         itemBuilder: (_, i) => Padding(
-          padding: EdgeInsets.fromLTRB(16.0,8.0, 16.0, 8.0),
+          padding: EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
           child: Material(
-
             clipBehavior: Clip.antiAlias,
             // borderRadius: BorderRadius.circular(8),
             child: Padding(
@@ -252,7 +283,7 @@ BusList list=BusList();
                   child: Row(
                     children: <Widget>[
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.saturdayBusesStudent[i].bmd,
                           style: TextStyle(
                             fontSize: 15,
@@ -262,11 +293,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.saturdayBusesStudent[i].dd,
                           style: TextStyle(
                             fontSize: 15,
@@ -276,11 +311,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.saturdayBusesStudent[i].xd,
                           style: TextStyle(
                             fontSize: 15,
@@ -290,11 +329,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.saturdayBusesStudent[i].ld,
                           style: TextStyle(
                             fontSize: 15,
@@ -304,11 +347,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.saturdayBusesStudent[i].ba,
                           style: TextStyle(
                             fontSize: 15,
@@ -326,6 +373,7 @@ BusList list=BusList();
         ),
       );
     }
+
     Widget busBody22() {
       return ListView.builder(
         physics: NeverScrollableScrollPhysics(),
@@ -333,9 +381,8 @@ BusList list=BusList();
         addAutomaticKeepAlives: true,
         itemCount: list.saturdayBusesStaffAndStudent.length,
         itemBuilder: (_, i) => Padding(
-          padding: EdgeInsets.fromLTRB(16.0,8.0, 16.0, 8.0),
+          padding: EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
           child: Material(
-
             clipBehavior: Clip.antiAlias,
             // borderRadius: BorderRadius.circular(8),
             child: Padding(
@@ -356,7 +403,7 @@ BusList list=BusList();
                   child: Row(
                     children: <Widget>[
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.saturdayBusesStaffAndStudent[i].bmd,
                           style: TextStyle(
                             fontSize: 15,
@@ -366,11 +413,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.saturdayBusesStaffAndStudent[i].dd,
                           style: TextStyle(
                             fontSize: 15,
@@ -380,11 +431,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.saturdayBusesStaffAndStudent[i].xd,
                           style: TextStyle(
                             fontSize: 15,
@@ -394,11 +449,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.saturdayBusesStaffAndStudent[i].ld,
                           style: TextStyle(
                             fontSize: 15,
@@ -408,11 +467,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.saturdayBusesStaffAndStudent[i].ba,
                           style: TextStyle(
                             fontSize: 15,
@@ -430,6 +493,7 @@ BusList list=BusList();
         ),
       );
     }
+
     Widget busBody31() {
       return ListView.builder(
         physics: NeverScrollableScrollPhysics(),
@@ -437,9 +501,8 @@ BusList list=BusList();
         addAutomaticKeepAlives: true,
         itemCount: list.sundayBusesStudents.length,
         itemBuilder: (_, i) => Padding(
-          padding: EdgeInsets.fromLTRB(16.0,8.0, 16.0, 8.0),
+          padding: EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
           child: Material(
-
             clipBehavior: Clip.antiAlias,
             // borderRadius: BorderRadius.circular(8),
             child: Padding(
@@ -460,7 +523,7 @@ BusList list=BusList();
                   child: Row(
                     children: <Widget>[
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.sundayBusesStudents[i].bmd,
                           style: TextStyle(
                             fontSize: 15,
@@ -470,11 +533,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.sundayBusesStudents[i].dd,
                           style: TextStyle(
                             fontSize: 15,
@@ -484,11 +551,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.sundayBusesStudents[i].xd,
                           style: TextStyle(
                             fontSize: 15,
@@ -498,11 +569,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.sundayBusesStudents[i].ld,
                           style: TextStyle(
                             fontSize: 15,
@@ -512,11 +587,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.sundayBusesStudents[i].ba,
                           style: TextStyle(
                             fontSize: 15,
@@ -534,6 +613,7 @@ BusList list=BusList();
         ),
       );
     }
+
     Widget busBody32() {
       return ListView.builder(
         physics: NeverScrollableScrollPhysics(),
@@ -541,9 +621,8 @@ BusList list=BusList();
         addAutomaticKeepAlives: true,
         itemCount: list.sundayBusesStaffAndStudents.length,
         itemBuilder: (_, i) => Padding(
-          padding: EdgeInsets.fromLTRB(16.0,8.0, 16.0, 8.0),
+          padding: EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
           child: Material(
-
             clipBehavior: Clip.antiAlias,
             // borderRadius: BorderRadius.circular(8),
             child: Padding(
@@ -564,7 +643,7 @@ BusList list=BusList();
                   child: Row(
                     children: <Widget>[
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.sundayBusesStaffAndStudents[i].bmd,
                           style: TextStyle(
                             fontSize: 15,
@@ -574,11 +653,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.sundayBusesStaffAndStudents[i].dd,
                           style: TextStyle(
                             fontSize: 15,
@@ -588,11 +671,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.sundayBusesStaffAndStudents[i].xd,
                           style: TextStyle(
                             fontSize: 15,
@@ -602,11 +689,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.sundayBusesStaffAndStudents[i].ld,
                           style: TextStyle(
                             fontSize: 15,
@@ -616,11 +707,15 @@ BusList list=BusList();
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right:6.0),
-                        child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                        padding: const EdgeInsets.only(right: 6.0),
+                        child: Container(
+                          color: Colors.grey.shade700,
+                          height: 50,
+                          width: 2,
+                        ),
                       ),
                       Expanded(
-                        child:   Text(
+                        child: Text(
                           list.sundayBusesStaffAndStudents[i].ba,
                           style: TextStyle(
                             fontSize: 15,
@@ -638,6 +733,7 @@ BusList list=BusList();
         ),
       );
     }
+
     return Scaffold(
       backgroundColor: kBgColor,
       body: SingleChildScrollView(
@@ -645,10 +741,10 @@ BusList list=BusList();
           child: Column(
             children: <Widget>[
               Background(
-                height1: 400.0,
-                height2: 200.0,
-                height3: 150.0,
-                height4: 150.0,
+                height1: 280.0,
+                height2: 150.0,
+                height3: 100.0,
+                height4: 100.0,
               ),
               Padding(
                 padding: EdgeInsets.all(15.0),
@@ -674,9 +770,13 @@ BusList list=BusList();
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(6.0),
                               ),
-                              fillColor: (day == 'MONDAY') ? kPrimaryColorActive : kPrimaryColor,
+                              fillColor: (day == 'MONDAY')
+                                  ? kPrimaryColorActive
+                                  : kPrimaryColor,
                             ),
-                            SizedBox(width: 10,),
+                            SizedBox(
+                              width: 10,
+                            ),
                             RawMaterialButton(
                               child: Text('SATURDAY'),
                               onPressed: () {
@@ -687,14 +787,18 @@ BusList list=BusList();
                               elevation: 6.5,
                               constraints: BoxConstraints.tightFor(
                                 height: 30.0,
-                                width:80.0,
+                                width: 80.0,
                               ),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(6.5),
                               ),
-                              fillColor: (day == 'SATURDAY') ? kPrimaryColorActive : kPrimaryColor,
+                              fillColor: (day == 'SATURDAY')
+                                  ? kPrimaryColorActive
+                                  : kPrimaryColor,
                             ),
-                            SizedBox(width: 10,),
+                            SizedBox(
+                              width: 10,
+                            ),
                             RawMaterialButton(
                               child: Text('SUNDAY'),
                               onPressed: () {
@@ -710,9 +814,13 @@ BusList list=BusList();
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(6.5),
                               ),
-                              fillColor: (day == 'SUNDAY') ? kPrimaryColorActive : kPrimaryColor,
+                              fillColor: (day == 'SUNDAY')
+                                  ? kPrimaryColorActive
+                                  : kPrimaryColor,
                             ),
-                            SizedBox(width: 10,),
+                            SizedBox(
+                              width: 10,
+                            ),
                             RawMaterialButton(
                               child: Text('HOLIDAY'),
                               onPressed: () {
@@ -728,7 +836,9 @@ BusList list=BusList();
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(6.5),
                               ),
-                              fillColor: (day == 'HOLIDAY') ? kPrimaryColorActive : kPrimaryColor,
+                              fillColor: (day == 'HOLIDAY')
+                                  ? kPrimaryColorActive
+                                  : kPrimaryColor,
                             ),
                           ],
                         ),
@@ -739,7 +849,6 @@ BusList list=BusList();
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-
                           SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: Row(
@@ -759,7 +868,9 @@ BusList list=BusList();
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(6.0),
                                   ),
-                                  fillColor: (busType == 'STUDENT') ? kPrimaryColorActive : kPrimaryColor,
+                                  fillColor: (busType == 'STUDENT')
+                                      ? kPrimaryColorActive
+                                      : kPrimaryColor,
                                 ),
                                 SizedBox(width: 7.5),
                                 RawMaterialButton(
@@ -777,7 +888,9 @@ BusList list=BusList();
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(6.0),
                                   ),
-                                  fillColor: (busType == 'STAFF') ? kPrimaryColorActive : kPrimaryColor,
+                                  fillColor: (busType == 'STAFF')
+                                      ? kPrimaryColorActive
+                                      : kPrimaryColor,
                                 ),
                               ],
                             ),
@@ -788,27 +901,27 @@ BusList list=BusList();
                   ],
                 ),
               ),
-               Padding(
-                 padding: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
-                 child: Container(
-                   decoration: new BoxDecoration(
-                     boxShadow: [
-                       BoxShadow(
-                         color: Colors.grey.shade700.withOpacity(0.5),
-                         // blurRadius: 25.0, // soften the shadow
-                         // spreadRadius: 10.0, //extend the shadow
-                       )
-                     ],
-                     borderRadius: BorderRadius.circular(8),
-                     color: Colors.orange,
-                   ),
-                   child: Padding(
+              Padding(
+                padding: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+                child: Container(
+                  decoration: new BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade700.withOpacity(0.5),
+                        // blurRadius: 25.0, // soften the shadow
+                        // spreadRadius: 10.0, //extend the shadow
+                      )
+                    ],
+                    borderRadius: BorderRadius.circular(8),
+                    color: kPrimaryColor,
+                  ),
+                  child: Padding(
                     padding: const EdgeInsets.fromLTRB(3.0, 0.0, 8.0, 0.0),
                     child: Row(
                       children: <Widget>[
                         Expanded(
-                          child:   Text(
-                         'BIT MESRA (D)',
+                          child: Text(
+                            'BIT MESRA (D)',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 13,
@@ -818,26 +931,33 @@ BusList list=BusList();
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(right:6.0),
-                          child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                          padding: const EdgeInsets.only(right: 6.0),
+                          child: Container(
+                            color: Colors.grey.shade700,
+                            height: 50,
+                            width: 2,
+                          ),
                         ),
                         Expanded(
-                          child:   Text(
+                          child: Text(
                             'DORANDA (D)',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.bold,
-
                             ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(right:6.0),
-                          child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                          padding: const EdgeInsets.only(right: 6.0),
+                          child: Container(
+                            color: Colors.grey.shade700,
+                            height: 50,
+                            width: 2,
+                          ),
                         ),
                         Expanded(
-                          child:   Text(
+                          child: Text(
                             'ST. XAVIER’S COLLEGE (D)',
                             textAlign: TextAlign.center,
                             style: TextStyle(
@@ -847,53 +967,62 @@ BusList list=BusList();
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(right:6.0),
-                          child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                          padding: const EdgeInsets.only(right: 6.0),
+                          child: Container(
+                            color: Colors.grey.shade700,
+                            height: 50,
+                            width: 2,
+                          ),
                         ),
                         Expanded(
-                          child:   Text(
-                         'LALPUR     (D)',
+                          child: Text(
+                            'LALPUR     (D)',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.bold,
-
                             ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(right:6.0),
-                          child: Container(color: Colors.grey.shade700, height: 50, width: 2,),
+                          padding: const EdgeInsets.only(right: 6.0),
+                          child: Container(
+                            color: Colors.grey.shade700,
+                            height: 50,
+                            width: 2,
+                          ),
                         ),
                         Expanded(
-                          child:   Text(
-                        'BIT MESRA (A)',
+                          child: Text(
+                            'BIT MESRA (A)',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.bold,
-
                             ),
                           ),
                         ),
                       ],
                     ),
+                  ),
+                ),
               ),
-                 ),
-               ),
-
-
-              ((day == 'MONDAY')&&(busType=='STUDENT'))?busBody11()
-              :((day == 'MONDAY')&&(busType=='STAFF'))?busBody12()
-                  :((day == 'SATURDAY')&&(busType=='STUDENT'))?busBody21()
-                  :((day == 'SATURDAY')&&(busType=='STAFF'))?busBody22()
-                  :((day == 'SUNDAY')&&(busType=='STUDENT'))?busBody31()
-                  :((day == 'SUNDAY')&&(busType=='STAFF'))?busBody32()
-                  :((day == 'HOLIDAY')&&(busType=='STUDENT'))?busBody31()
-                  :busBody32()
-
-
-
+              ((day == 'MONDAY') && (busType == 'STUDENT'))
+                  ? busBody11()
+                  : ((day == 'MONDAY') && (busType == 'STAFF'))
+                      ? busBody12()
+                      : ((day == 'SATURDAY') && (busType == 'STUDENT'))
+                          ? busBody21()
+                          : ((day == 'SATURDAY') && (busType == 'STAFF'))
+                              ? busBody22()
+                              : ((day == 'SUNDAY') && (busType == 'STUDENT'))
+                                  ? busBody31()
+                                  : ((day == 'SUNDAY') && (busType == 'STAFF'))
+                                      ? busBody32()
+                                      : ((day == 'HOLIDAY') &&
+                                              (busType == 'STUDENT'))
+                                          ? busBody31()
+                                          : busBody32()
             ],
           ),
         ),

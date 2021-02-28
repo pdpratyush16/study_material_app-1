@@ -18,7 +18,10 @@ class _BookHomeState extends State<BookHome> {
 
   Future<void> _getUserDetails() async {
     String uid = FirebaseAuth.instance.currentUser.uid;
-    DocumentSnapshot doc = await FirebaseFirestore.instance.collection('UserDatabase').doc(uid).get();
+    DocumentSnapshot doc = await FirebaseFirestore.instance
+        .collection('UserDatabase')
+        .doc(uid)
+        .get();
 
     if (doc.exists) {
       // this will check availability of document
@@ -224,16 +227,26 @@ class _BookHomeState extends State<BookHome> {
       height4: 100.0,
     ));
     tileList.add(SizedBox(height: 50.0));
-
     for (int i = 0; i < subjectList.length; i++) {
-      tileList.add(CustomTileDesign(
-        name: subjectList[i],
-        onPressed: () => Navigator.pushNamed(context, Aids.id, arguments: ScreenArguments(subjectList[i])),
+      tileList.add(
+        CustomTileDesign(
+          name: subjectList[i],
+          onPressed: () => Navigator.pushNamed(context, Aids.id,
+              arguments: ScreenArguments(subjectList[i])),
+        ),
+      );
+    }
+    int l = tileList.length;
+    if (l == 2) {
+      tileList.add(EmptyState(
+        title: 'Coming Soon',
+        message: 'The database for your semester is not available.',
       ));
     }
     return SingleChildScrollView(
       child: Center(
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: tileList),
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center, children: tileList),
       ),
     );
   }

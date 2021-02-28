@@ -1,27 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
-import 'package:study_material_app/database/videoDatabase.dart';
+import 'package:study_material_app/database/notesDatabase.dart';
 
-class VideoHome extends StatefulWidget {
-  static const String id = 'VideoHome';
+class NotesHome extends StatefulWidget {
+  static const String id = 'NotesHome';
   @override
-  _VideoHomeState createState() => _VideoHomeState();
+  _NotesHomeState createState() => _NotesHomeState();
 }
 
-class _VideoHomeState extends State<VideoHome> {
+class _NotesHomeState extends State<NotesHome> {
   @override
   Widget build(BuildContext context) {
     final Map args = ModalRoute.of(context).settings.arguments;
     String subject = args['Subject'];
-    int module = args['Module'];
-    VideoDatabase ob = new VideoDatabase();
-    List<Map<String, String>> list = ob.getList(subject, module);
+    NotesDataabse ob = new NotesDataabse();
+    List<Map<String, String>> list = ob.getList(subject);
 
     Widget data() {
       if (list.isEmpty == true) {
         return EmptyState(
           title: 'Coming soon',
-          message: 'The videos for your subject are not available.',
+          message: 'The notes for your subject are not available.',
         );
       } else {
         return ListView.builder(
@@ -32,7 +31,7 @@ class _VideoHomeState extends State<VideoHome> {
           itemBuilder: (BuildContext context, int position) => Tile(
             title: list[position].keys.elementAt(0),
             url: list[position].values.elementAt(0),
-            type: 1,
+            type: 0,
           ),
         );
       }

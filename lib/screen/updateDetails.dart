@@ -73,10 +73,10 @@ class _UpdateScreenState extends State<UpdateScreen> {
           child: Column(
             children: <Widget>[
               Background(
-                height1: 400.0,
-                height2: 200.0,
-                height3: 150.0,
-                height4: 150.0,
+                height1: 280.0,
+                height2: 150.0,
+                height3: 100.0,
+                height4: 100.0,
               ),
               Padding(
                 padding: EdgeInsets.all(30.0),
@@ -146,7 +146,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 40),
+                    SizedBox(height: 140),
                     FadeAnimation(
                       2,
                       Container(

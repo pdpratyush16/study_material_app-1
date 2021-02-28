@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:study_material_app/Animation/ComingSoon.dart';
+import 'package:study_material_app/Books/notesHome.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:study_material_app/Books/ebookHome.dart';
@@ -19,9 +21,14 @@ class Aids extends StatelessWidget {
 
     Future<void> _launchInApp(String url) async {
       if (await canLaunch(url)) {
-        await launch(url, forceSafariVC: true, forceWebView: true, enableJavaScript: true);
+        await launch(url,
+            forceSafariVC: true, forceWebView: true, enableJavaScript: true);
       } else {
-        Alert(context: context, title: 'Error occured', desc: "Check your connections").show();
+        Alert(
+                context: context,
+                title: 'Error occured',
+                desc: "Check your connections")
+            .show();
       }
     }
 
@@ -44,13 +51,20 @@ class Aids extends StatelessWidget {
                 onPressed: () {
                   Syllabus ob = new Syllabus();
                   String url = ob.getSyllabus(subjectCode);
-                  if (url != '') {
+                  if (url == '') {
+                    Navigator.pushNamed(context, ComingSoon.id);
+                  } else {
                     _launchInApp(url);
                   }
                 },
               ),
               CustomTileDesign(
                 name: 'NOTES',
+                onPressed: () {
+                  Navigator.pushNamed(context, NotesHome.id, arguments: {
+                    'Subject': subject,
+                  });
+                },
               ),
               CustomTileDesign(
                 name: 'E-BOOK',

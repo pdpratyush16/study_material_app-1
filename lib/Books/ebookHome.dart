@@ -14,7 +14,7 @@ class _EbookHomeState extends State<EbookHome> {
     final Map args = ModalRoute.of(context).settings.arguments;
     String subject = args['Subject'];
 
-    List<Map<String, String>> list;
+    List<Map<String, String>> list = [];
     //SEM-1
     if (subject == 'BECE') list = EC101().books;
     if (subject == 'BME') list = ME101().books;
@@ -27,7 +27,12 @@ class _EbookHomeState extends State<EbookHome> {
     if (subject == 'PPS') list = CS101().books;
 
     Widget data() {
-      // print(list);
+      if (list.isEmpty) {
+        return EmptyState(
+          title: 'Coming soon',
+          message: 'The e-books for your subject are not available.',
+        );
+      }
       return ListView.builder(
         physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,

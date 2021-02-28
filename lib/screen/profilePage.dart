@@ -20,13 +20,16 @@ class _ProfilePageState extends State<ProfilePage> {
 
   Future<void> _getUserDetails() async {
     String uid = FirebaseAuth.instance.currentUser.uid;
-    DocumentSnapshot doc = await FirebaseFirestore.instance.collection('UserDatabase').doc(uid).get();
+    DocumentSnapshot doc = await FirebaseFirestore.instance
+        .collection('UserDatabase')
+        .doc(uid)
+        .get();
 
     if (doc.exists) {
       // this will check availability of document
-      if(mounted) {
+      if (mounted) {
         setState(
-              () {
+          () {
             branch = doc.data()['Branch'];
             semester = doc.data()['Semester'];
             name = doc.data()['Name'];
@@ -36,9 +39,9 @@ class _ProfilePageState extends State<ProfilePage> {
         );
       }
     } else {
-      if(mounted) {
+      if (mounted) {
         setState(
-              () {
+          () {
             branch = 'User is not available';
             semester = 'User is not available';
             name = 'User is not available';
@@ -66,10 +69,10 @@ class _ProfilePageState extends State<ProfilePage> {
           child: Column(
             children: <Widget>[
               Background(
-                height1: 400.0,
-                height2: 200.0,
-                height3: 150.0,
-                height4: 150.0,
+                height1: 280.0,
+                height2: 150.0,
+                height3: 100.0,
+                height4: 100.0,
               ),
               Padding(
                 padding: EdgeInsets.all(0.0),
@@ -94,20 +97,31 @@ class _ProfilePageState extends State<ProfilePage> {
                           CustomTileDesign(
                             name: 'E-mail  :  $email',
                           ),
+                          SizedBox(
+                            height: 60.0,
+                          ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
+                              ProfileIconButton(
+                                  icon: FontAwesomeIcons.userEdit,
+                                  onPressed: () async {
+                                    Navigator.pushNamed(
+                                        context, UpdateScreen.id);
+                                  }),
 
-                              ProfileIconButton(icon: FontAwesomeIcons.userEdit, onPressed: () async{
-                                Navigator.pushNamed(context, UpdateScreen.id);
-                              }),
-
-                              ProfileIconButton(icon: FontAwesomeIcons.signOutAlt, onPressed: () async{
-                                SharedPreferences sharedPreference = await SharedPreferences.getInstance();
-                                sharedPreference.remove('email');
-                                Navigator.pushReplacement(context,
-                                    MaterialPageRoute(builder: (BuildContext context) => LoginPage()));
-                              }),
+                              ProfileIconButton(
+                                  icon: FontAwesomeIcons.signOutAlt,
+                                  onPressed: () async {
+                                    SharedPreferences sharedPreference =
+                                        await SharedPreferences.getInstance();
+                                    sharedPreference.remove('email');
+                                    Navigator.pushReplacement(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (BuildContext context) =>
+                                                LoginPage()));
+                                  }),
                               //SizedBox(width: 20.0)
                             ],
                           )

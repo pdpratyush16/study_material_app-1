@@ -55,7 +55,7 @@ class MA103 {
 class EE101 {
   List<Map<String, String>> books = [
     {
-      ' Electrical & Electronics Tech: \nHUGHES':
+      'Electrical & Electronics Tech: \nHUGHES':
           'https://drive.google.com/file/d/1utSZdP-t1uNISekKv_FlMiTukgC4ZlZm/view?usp=sharing',
     },
     {

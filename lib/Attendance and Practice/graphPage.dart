@@ -35,13 +35,13 @@ class _GraphPageState extends State<GraphPage> {
     String days(double present, double total) {
       int count = 0;
       if (present / total > 0.75) {
-        while (present / total > 0.75) {
+        while (present - 1 / total > 0.75) {
           count++;
           total++;
         }
         return ('$count absent possible');
       } else {
-        while (present / total < 0.75) {
+        while (present - 1 / total < 0.75) {
           count++;
           total++;
           present++;
@@ -56,13 +56,13 @@ class _GraphPageState extends State<GraphPage> {
       updateListView();
     }
 
-    void _showAlertDialog(String title, String message) {
-      AlertDialog alertDialog = AlertDialog(
-        title: Text(title),
-        content: Text(message),
-      );
-      showDialog(context: context, builder: (_) => alertDialog);
-    }
+    // void _showAlertDialog(String title, String message) {
+    //   AlertDialog alertDialog = AlertDialog(
+    //     title: Text(title),
+    //     content: Text(message),
+    //   );
+    //   showDialog(context: context, builder: (_) => alertDialog);
+    // }
 
     void goToForm(User user) async {
       await Navigator.push(
@@ -101,20 +101,21 @@ class _GraphPageState extends State<GraphPage> {
               });
             },
             child: Material(
-              color: Colors.white,
+              //color: Colors.white,
+              color: kSecondColor,
               elevation: 2,
               clipBehavior: Clip.antiAlias,
               borderRadius: BorderRadius.circular(8),
               child: Container(
-                decoration: new BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.shade400.withOpacity(0.5),
-                      blurRadius: 25.0, // soften the shadow
-                      spreadRadius: 10.0, //extend the shadow
-                    )
-                  ],
-                ),
+                // decoration: new BoxDecoration(
+                //   boxShadow: [
+                //     BoxShadow(
+                //       color: Colors.grey.shade400.withOpacity(0.5),
+                //       blurRadius: 25.0, // soften the shadow
+                //       spreadRadius: 10.0, //extend the shadow
+                //     )
+                //   ],
+                // ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
@@ -128,6 +129,7 @@ class _GraphPageState extends State<GraphPage> {
                             children: <Widget>[
                               Icon(
                                 Icons.subject,
+                                color: Colors.white,
                               ),
                               SizedBox(
                                 width: 30,
@@ -136,6 +138,7 @@ class _GraphPageState extends State<GraphPage> {
                                 userList[position].subject,
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
+                                  color: Colors.white,
                                 ),
                               ),
                             ],
@@ -149,16 +152,26 @@ class _GraphPageState extends State<GraphPage> {
                                 'Attendance :    ',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
+                                  color: Colors.white,
                                 ),
                               ),
                               Text(
                                 userList[position].present.toString(),
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
                               ),
                               Text(
                                 '/',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
                               ),
                               Text(
                                 userList[position].total.toString(),
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
                               ),
                             ],
                           ),
@@ -171,6 +184,7 @@ class _GraphPageState extends State<GraphPage> {
                                 'Status :    ',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
+                                  color: Colors.white,
                                 ),
                               ),
                             ],
@@ -183,6 +197,9 @@ class _GraphPageState extends State<GraphPage> {
                               Text(
                                 days(userList[position].present.toDouble(),
                                     userList[position].total.toDouble()),
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
                               ),
                             ],
                           ),
@@ -209,8 +226,10 @@ class _GraphPageState extends State<GraphPage> {
                                           (userList[position].total))
                                       .toStringAsFixed(2),
                                   style: new TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20.0),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Colors.white,
+                                  ),
                                 ),
                                 circularStrokeCap: CircularStrokeCap.square,
                                 progressColor: getColor(userList[position]),
