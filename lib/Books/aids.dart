@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:study_material_app/Books/ebookHome.dart';
 import 'package:study_material_app/Videos/module.dart';
 import 'package:study_material_app/database/subjectCodeDatabase.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
+import 'package:study_material_app/database/syllabusDatabase.dart';
 
 class Aids extends StatelessWidget {
   static const String id = 'Aids';
@@ -13,6 +16,14 @@ class Aids extends StatelessWidget {
 
     SubjectCode ob = new SubjectCode();
     String subjectCode = ob.subjectCode[subject];
+
+    Future<void> _launchInApp(String url) async {
+      if (await canLaunch(url)) {
+        await launch(url, forceSafariVC: true, forceWebView: true, enableJavaScript: true);
+      } else {
+        Alert(context: context, title: 'Error occured', desc: "Check your connections").show();
+      }
+    }
 
     return Scaffold(
       backgroundColor: Colors.black,
@@ -30,6 +41,13 @@ class Aids extends StatelessWidget {
               SizedBox(height: 50.0),
               CustomTileDesign(
                 name: 'SYLLABUS',
+                onPressed: () {
+                  Syllabus ob = new Syllabus();
+                  String url = ob.getSyllabus(subjectCode);
+                  if (url != '') {
+                    _launchInApp(url);
+                  }
+                },
               ),
               CustomTileDesign(
                 name: 'NOTES',
