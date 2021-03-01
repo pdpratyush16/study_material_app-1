@@ -25,6 +25,7 @@ import 'package:study_material_app/screen/signUpDetails.dart';
 import 'screen/FrontPage.dart';
 import 'screen/loginPage.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+import 'package:study_material_app/screen/aboutUs.dart';
 import 'user.dart';
 
 String finalEmail;
@@ -65,6 +66,7 @@ class MyApp extends StatelessWidget {
         EbookHome.id: (context) => EbookHome(),
         NotesHome.id: (context) => NotesHome(),
         ComingSoon.id: (context) => ComingSoon(),
+        AboutUs.id: (context) => AboutUs(),
       },
       home: HomePage(),
     );

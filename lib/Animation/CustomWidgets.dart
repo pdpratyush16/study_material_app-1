@@ -201,7 +201,7 @@ class EmptyState extends StatelessWidget {
           children: <Widget>[
             Text(
               title,
-              style: TextStyle(color: Colors.white, fontSize: 26.0),
+              style: TextStyle(color: Colors.white, fontSize: 24.0),
             ),
             Padding(
               padding: EdgeInsets.all(8.0),
@@ -406,30 +406,31 @@ class Info extends StatelessWidget {
       return Icon(
         FontAwesomeIcons.user,
         color: Colors.white,
-        size: 35.0,
+        size: 22.5,
       );
     } else if (type == 2) {
       return Icon(
         FontAwesomeIcons.instagram,
         color: Colors.white,
-        size: 35.0,
+        size: 22.5,
       );
     } else {
       return Icon(
         Icons.mail,
         color: Colors.white,
-        size: 35.0,
+        size: 22.5,
       );
     }
   }
 
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(16.0),
+      padding: EdgeInsets.all(5.0),
       child: Material(
-        elevation: 2,
+        elevation: 7,
         clipBehavior: Clip.antiAlias,
-        borderRadius: BorderRadius.circular(8),
+        shadowColor: Colors.white,
+        borderRadius: BorderRadius.circular(10),
         child: Container(
           decoration: new BoxDecoration(
             boxShadow: [
@@ -439,14 +440,14 @@ class Info extends StatelessWidget {
                 spreadRadius: 10.0,
               )
             ],
-            color: kSecondColor,
+            color: Color(0xca30363A),
           ),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: <Widget>[
                 Expanded(
-                  flex: 5,
+                  flex: 3,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10.0), //or 15.0
                     child: Container(
@@ -454,19 +455,21 @@ class Info extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
-                  // For divider uncomment the following lines
-                  // child: VerticalDivider(
-                  //   thickness: 10.0,
-                  //   color: Colors.white,
-                  // ),
-                  width: 10,
+                Expanded(
+                  child: SizedBox(
+                    child: VerticalDivider(
+                      thickness: 10.0,
+                      color: Colors.white,
+                    ),
+                    width: 10,
+                  ),
                 ),
                 Expanded(
                   flex: 11,
                   child: Text(
                     text,
                     style: TextStyle(
+                      fontSize: 11.5,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                       // fontSize: 18,
@@ -477,6 +480,104 @@ class Info extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+
+class DevsTileDesign extends StatelessWidget {
+  final String name;
+
+  DevsTileDesign({
+    @required this.name,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+      margin: EdgeInsets.only(bottom: 16),
+      width: 180,
+      decoration: BoxDecoration(
+        color: kSecondColor,
+        borderRadius: BorderRadius.circular(38.5),
+        boxShadow: [
+          BoxShadow(
+            offset: Offset(5, 5),
+            blurRadius: 5,
+            color: Color(0xFFD3D3D3).withOpacity(.45),
+          ),
+        ],
+      ),
+      child: Center(
+        child: Text(
+          name,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 16,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class UsersGuide extends StatelessWidget {
+  final String message;
+  UsersGuide({this.message});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Material(
+        borderRadius: BorderRadius.circular(16.0),
+        elevation: 5,
+        color: Color(0xca30363A),
+        shadowColor: Colors.white,
+        child: Padding(
+          padding: EdgeInsets.all(16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Text(
+                message,
+                style: TextStyle(color: Colors.white, fontSize: 9.0),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class InfoIconButton extends StatelessWidget {
+  final IconData icon;
+  final Function onPressed;
+
+  InfoIconButton({@required this.icon, @required this.onPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.fromLTRB(30, 5, 30, 10),
+      child: RawMaterialButton(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30.0),
+        ),
+        child: Icon(icon, color: Colors.white),
+        onPressed: onPressed,
+        elevation: 0.0,
+        constraints: BoxConstraints.tightFor(
+          width: 44.0,
+          height: 44.0,
+        ),
+        fillColor: kPrimaryColor,
       ),
     );
   }
