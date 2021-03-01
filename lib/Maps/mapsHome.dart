@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class MapsHome extends StatefulWidget {
   static const String id = 'MapsHome';
@@ -12,18 +10,8 @@ class MapsHome extends StatefulWidget {
 class _MapsHomeState extends State<MapsHome> {
   String _mainBuilding =
       'https://drive.google.com/file/d/1a_y83mKSVsfJZAuBsGh64BaIUFYnlIaP/view?usp=sharing';
-  Future<void> _launchInApp(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url,
-          forceSafariVC: true, forceWebView: true, enableJavaScript: true);
-    } else {
-      Alert(
-              context: context,
-              title: 'Error occured',
-              desc: "Check your connections")
-          .show();
-    }
-  }
+  String _campus =
+      'https://drive.google.com/file/d/1-JF_a4ctWFA0dDuEU-B5_cpQcGA4Y8xG/view?usp=sharing';
 
   @override
   Widget build(BuildContext context) {
@@ -43,11 +31,14 @@ class _MapsHomeState extends State<MapsHome> {
               url: _mainBuilding,
               type: 0,
             ),
+            Tile(
+              title: 'Campus Plan',
+              url: _campus,
+              type: 0,
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-//

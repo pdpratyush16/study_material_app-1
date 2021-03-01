@@ -396,3 +396,88 @@ class Tile extends StatelessWidget {
     );
   }
 }
+
+class Info extends StatelessWidget {
+  final int type;
+  final String text;
+  Info({this.type, this.text});
+  Icon getIcon(int type) {
+    if (type == 1) {
+      return Icon(
+        FontAwesomeIcons.user,
+        color: Colors.white,
+        size: 35.0,
+      );
+    } else if (type == 2) {
+      return Icon(
+        FontAwesomeIcons.instagram,
+        color: Colors.white,
+        size: 35.0,
+      );
+    } else {
+      return Icon(
+        Icons.mail,
+        color: Colors.white,
+        size: 35.0,
+      );
+    }
+  }
+
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(16.0),
+      child: Material(
+        elevation: 2,
+        clipBehavior: Clip.antiAlias,
+        borderRadius: BorderRadius.circular(8),
+        child: Container(
+          decoration: new BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.shade400.withOpacity(0.5),
+                blurRadius: 25.0,
+                spreadRadius: 10.0,
+              )
+            ],
+            color: kSecondColor,
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                  flex: 5,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10.0), //or 15.0
+                    child: Container(
+                      child: getIcon(type),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  // For divider uncomment the following lines
+                  // child: VerticalDivider(
+                  //   thickness: 10.0,
+                  //   color: Colors.white,
+                  // ),
+                  width: 10,
+                ),
+                Expanded(
+                  flex: 11,
+                  child: Text(
+                    text,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      // fontSize: 18,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
