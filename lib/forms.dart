@@ -23,7 +23,7 @@ class _UserFormState extends State<UserForm> {
     Navigator.pop(context);
   }
 
-  void _showAlertDialog(String title, String message) {
+  void showAlertDialog(String title, String message) {
     AlertDialog alertDialog = AlertDialog(
       title: Text(title),
       content: Text(message),
@@ -36,16 +36,16 @@ class _UserFormState extends State<UserForm> {
     if (widget.user.id == null) {
       result = await helper.insert(widget.user);
       if (result != 0) {
-        _showAlertDialog('Status', 'Note Saved Successfully');
+        showAlertDialog('Status', 'Subject added successfully');
       } else {
-        _showAlertDialog('Status', 'Problem Saving Note');
+        showAlertDialog('Status', 'Problem Saving Subject');
       }
     } else {
       result = await helper.update(widget.user);
       if (result > 0) {
-        _showAlertDialog('Status', 'Note updated Successfully');
+        showAlertDialog('Status', 'Subject updated Successfully');
       } else {
-        _showAlertDialog('Status', 'Problem updating Note');
+        showAlertDialog('Status', 'Problem updating Subject');
       }
     }
   }
@@ -136,7 +136,7 @@ class _UserFormState extends State<UserForm> {
                               onPressed: () async {
                                 await helper.delete(widget.user.id);
                                 moveBack();
-                                _showAlertDialog(
+                                showAlertDialog(
                                     'Status', 'Subject deleted successfully.');
                               },
                             ),
@@ -148,6 +148,7 @@ class _UserFormState extends State<UserForm> {
                             children: <Widget>[
                               Expanded(
                                 child: TextFormField(
+                                  keyboardType: TextInputType.number,
                                   style: TextStyle(
                                     color: Colors.white,
                                   ),
@@ -168,7 +169,7 @@ class _UserFormState extends State<UserForm> {
                                       color: Colors.white,
                                     ),
                                     icon: Icon(
-                                      Icons.copy,
+                                      Icons.calendar_today,
                                       color: Colors.white,
                                     ),
                                     isDense: true,
@@ -180,6 +181,7 @@ class _UserFormState extends State<UserForm> {
                               ),
                               Expanded(
                                 child: TextFormField(
+                                  keyboardType: TextInputType.number,
                                   style: TextStyle(
                                     color: Colors.white,
                                   ),
@@ -219,9 +221,21 @@ class _UserFormState extends State<UserForm> {
         backgroundColor: kPrimaryColor,
         onPressed: () {
           setState(() {
-            //print(widget.user);
-            onSave();
-            moveBack();
+            if (widget.user.present < 0) {
+              showAlertDialog(
+                  'Invalid entry', 'Number of days cannot be negative.');
+            } else if (widget.user.total < 0) {
+              showAlertDialog(
+                  'Invalid entry', 'Number of days cannot be negative.');
+            } else if (widget.user.present > widget.user.total) {
+              showAlertDialog('Invalid entry',
+                  'Number of days present cannot be more than total number of days.');
+            } else if (widget.user.subject.length < 1) {
+              showAlertDialog('Invalid entry', 'Enter a subject name.');
+            } else {
+              onSave();
+              moveBack();
+            }
           });
         },
         child: Icon(Icons.save),

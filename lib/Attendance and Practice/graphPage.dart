@@ -34,18 +34,11 @@ class _GraphPageState extends State<GraphPage> {
 
     String days(double present, double total) {
       int count = 0;
-      if (present / total > 0.75) {
-        while (present  / total > 0.75) {
-          count++;
-          total++;
-        }
+      if (present / total >= 0.75) {
+        count = (present / 0.75 - total).floor();
         return ('$count absent possible');
       } else {
-        while (present / total < 0.75) {
-          count++;
-          total++;
-          present++;
-        }
+        count = (3 * total - present / 0.25).ceil();
         return ('$count present required');
       }
     }
@@ -240,7 +233,7 @@ class _GraphPageState extends State<GraphPage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               RoundIconButton(
-                                  icon: Icons.check,
+                                  icon: Icons.add,
                                   onPressed: () {
                                     setState(() {
                                       userList[position].present++;
@@ -252,7 +245,7 @@ class _GraphPageState extends State<GraphPage> {
                               //   width: 0.0,
                               // ),
                               RoundIconButton1(
-                                  icon: Icons.cancel_sharp,
+                                  icon: Icons.remove,
                                   onPressed: () {
                                     setState(() {
                                       userList[position].total++;
