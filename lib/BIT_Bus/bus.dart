@@ -844,7 +844,7 @@ class _BusState extends State<Bus> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 15.0),
+                    SizedBox(height: 5.0),
                     Center(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -897,7 +897,8 @@ class _BusState extends State<Bus> {
                           ),
                         ],
                       ),
-                    )
+                    ),
+                    SizedBox(height: 20.0),
                   ],
                 ),
               ),

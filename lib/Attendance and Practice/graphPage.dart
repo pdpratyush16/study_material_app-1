@@ -35,13 +35,13 @@ class _GraphPageState extends State<GraphPage> {
     String days(double present, double total) {
       int count = 0;
       if (present / total > 0.75) {
-        while (present - 1 / total > 0.75) {
+        while (present  / total > 0.75) {
           count++;
           total++;
         }
         return ('$count absent possible');
       } else {
-        while (present - 1 / total < 0.75) {
+        while (present / total < 0.75) {
           count++;
           total++;
           present++;
