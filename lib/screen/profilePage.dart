@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
+import 'package:study_material_app/screen/aboutUs.dart';
 import 'package:study_material_app/screen/loginPage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:study_material_app/screen/updateDetails.dart';
@@ -20,10 +21,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
   Future<void> _getUserDetails() async {
     String uid = FirebaseAuth.instance.currentUser.uid;
-    DocumentSnapshot doc = await FirebaseFirestore.instance
-        .collection('UserDatabase')
-        .doc(uid)
-        .get();
+    DocumentSnapshot doc = await FirebaseFirestore.instance.collection('UserDatabase').doc(uid).get();
 
     if (doc.exists) {
       // this will check availability of document
@@ -78,10 +76,22 @@ class _ProfilePageState extends State<ProfilePage> {
                 padding: EdgeInsets.all(0.0),
                 child: Column(
                   children: <Widget>[
+                    SizedBox(height: 20.0),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        InfoIconButton(
+                            icon: FontAwesomeIcons.info,
+                            onPressed: () async {
+                              Navigator.pushNamed(context, AboutUs.id);
+                            }),
+                      ],
+                    ),
                     FadeAnimation(
                       1.8,
                       Column(
                         children: [
+
                           CustomTileDesign(
                             name: 'Name  :  $name',
                           ),
@@ -97,17 +107,13 @@ class _ProfilePageState extends State<ProfilePage> {
                           CustomTileDesign(
                             name: 'E-mail  :  $email',
                           ),
-                          SizedBox(
-                            height: 60.0,
-                          ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               ProfileIconButton(
                                   icon: FontAwesomeIcons.userEdit,
                                   onPressed: () async {
-                                    Navigator.pushNamed(
-                                        context, UpdateScreen.id);
+                                    Navigator.pushNamed(context, UpdateScreen.id);
                                   }),
 
                               ProfileIconButton(
@@ -116,11 +122,8 @@ class _ProfilePageState extends State<ProfilePage> {
                                     SharedPreferences sharedPreference =
                                         await SharedPreferences.getInstance();
                                     sharedPreference.remove('email');
-                                    Navigator.pushReplacement(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (BuildContext context) =>
-                                                LoginPage()));
+                                    Navigator.pushReplacement(context,
+                                        MaterialPageRoute(builder: (BuildContext context) => LoginPage()));
                                   }),
                               //SizedBox(width: 20.0)
                             ],

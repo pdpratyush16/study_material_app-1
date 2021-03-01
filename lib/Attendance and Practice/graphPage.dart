@@ -271,7 +271,7 @@ class _GraphPageState extends State<GraphPage> {
       if (count == 0)
         return Center(
           child: EmptyState(
-            title: 'Oops',
+            title: 'No Subject Added',
             message: 'Add your subjects by tapping add button below',
           ),
         );
