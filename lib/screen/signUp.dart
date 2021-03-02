@@ -183,6 +183,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                       break;
                                     default:
                                       status = 'Undefined error';
+                                      break;
                                   }
                                   setState(() {
                                     showSpinner = false;
