@@ -7,6 +7,7 @@ import 'package:study_material_app/BIT_Bus/bus.dart';
 import 'package:study_material_app/Books/ebookHome.dart';
 import 'package:study_material_app/Books/notesHome.dart';
 import 'package:study_material_app/Videos/module.dart';
+import 'package:study_material_app/screen/passwordReset.dart';
 import 'package:study_material_app/screen/updateDetails.dart';
 import 'Holiday Calendar/HolidayPage.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/graphPage.dart';
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
       routes: {
         SignUpPage.id: (context) => SignUpPage(),
         LoginPage.id: (context) => LoginPage(),
+        PasswordReset.id: (context) => PasswordReset(),
         FrontPage.id: (context) => FrontPage(),
         ProfilePage.id: (context) => ProfilePage(),
         SignupPageDetails.id: (context) => SignupPageDetails(),

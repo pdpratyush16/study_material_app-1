@@ -3,6 +3,7 @@ import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:study_material_app/screen/FrontPage.dart';
+import 'package:study_material_app/screen/passwordReset.dart';
 import 'package:study_material_app/screen/signUp.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
@@ -109,20 +110,30 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
-                      /* FadeAnimation(
-                          1.5,
-                          Container(
-                            child: InkWell(
+                      SizedBox(width: double.infinity, height: 20.0),
+                      FadeAnimation(
+                        1.5,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            InkWell(
+                              onTap: () {
+                                Navigator.pushNamed(context, PasswordReset.id);
+                              },
                               child: Text(
                                 "Forgot Password?",
                                 style: TextStyle(
                                   color: Color.fromRGBO(143, 148, 251, 1),
+                                  fontWeight: FontWeight.bold,
+                                  decoration: TextDecoration.underline,
                                 ),
                               ),
                             ),
-                          )),*/
+                          ],
+                        ),
+                      ),
                       SizedBox(
-                        height: 70,
+                        height: 40,
                       ),
                       FadeAnimation(
                         2,
@@ -142,10 +153,8 @@ class _LoginPageState extends State<LoginPage> {
                                   showSpinner = true;
                                 });
                                 try {
-                                  final oldUser =
-                                      await _auth.signInWithEmailAndPassword(
-                                          email: emailVal,
-                                          password: passwordVal);
+                                  final oldUser = await _auth.signInWithEmailAndPassword(
+                                      email: emailVal, password: passwordVal);
                                   if (oldUser != null) {
                                     final SharedPreferences sharedPref =
                                         await SharedPreferences.getInstance();
@@ -175,24 +184,19 @@ class _LoginPageState extends State<LoginPage> {
                                       break;
                                     default:
                                       status = 'Undefined error';
+                                      break;
                                   }
                                   setState(() {
                                     showSpinner = false;
                                   });
-                                  Alert(
-                                          context: context,
-                                          title: status,
-                                          desc: "Please try again")
-                                      .show();
+                                  Alert(context: context, title: status, desc: "Please try again").show();
                                 }
                               }
                             },
                             child: Center(
                               child: Text(
                                 "Login",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
+                                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                               ),
                             ),
                           ),
