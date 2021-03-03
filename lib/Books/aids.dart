@@ -75,7 +75,7 @@ class Aids extends StatelessWidget {
                 },
               ),
               CustomTileDesign(
-                name: 'VIDEO LINK',
+                name: 'VIDEO',
                 onPressed: () {
                   Navigator.pushNamed(context, ModulePage.id, arguments: {
                     'Subject': subject,
