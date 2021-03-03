@@ -233,6 +233,7 @@ class _HolidayPageState extends State<HolidayPage> {
               ),
             ),
             calendarBody(),
+            SizedBox(height: 25.0,),
             Center(
               child: Text(
                 'Restricted Holidays',

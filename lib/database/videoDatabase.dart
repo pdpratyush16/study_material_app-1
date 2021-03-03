@@ -4,10 +4,7 @@ class VideoDatabase {
       'Neso Academy':
           'https://www.youtube.com/watch?v=7jaa1rlW7Ak&list=PLBlnK6fEyqRiw-GZRqfnlVIBz9dxrqHJS&index=1'
     },
-    {
-      'All about Electronics':
-          'https://www.youtube.com/playlist?list=PLwjK_iyK4LLBj2yTYPYKFKdF6kIg0ccP2'
-    },
+    {'All about Electronics': 'https://www.youtube.com/playlist?list=PLwjK_iyK4LLBj2yTYPYKFKdF6kIg0ccP2'},
     {'NPTEL': 'https://www.youtube.com/watch?v=TXjHWGngsME'},
     {'NPTEL Applications': 'https://www.youtube.com/watch?v=qhXZuVFhVzo'},
   ];
@@ -17,12 +14,10 @@ class VideoDatabase {
           'https://www.youtube.com/watch?v=KFCgeI4j-Ig&list=PLBlnK6fEyqRiw-GZRqfnlVIBz9dxrqHJS&index=64'
     },
     {
-      'All about Electronics(BJT)':
-          'https://www.youtube.com/playlist?list=PLwjK_iyK4LLDoFG8FeiKAr3IStRkPSxqq'
+      'All about Electronics(BJT)': 'https://www.youtube.com/playlist?list=PLwjK_iyK4LLDoFG8FeiKAr3IStRkPSxqq'
     },
     {
-      'All about Electronics(FET)':
-          'https://www.youtube.com/playlist?list=PLwjK_iyK4LLC-tRT_Uml3T-ifdcmuykjV'
+      'All about Electronics(FET)': 'https://www.youtube.com/playlist?list=PLwjK_iyK4LLC-tRT_Uml3T-ifdcmuykjV'
     },
   ];
   List<Map<String, String>> BECE3 = [
@@ -34,34 +29,19 @@ class VideoDatabase {
       'All about Electronics (OP-AMP)':
           'https://www.youtube.com/playlist?list=PLwjK_iyK4LLDBB1E9MFbxGCEnmMMOAXOH'
     },
-    {
-      'Khan Academy (OP-AMP)':
-          'https://www.youtube.com/playlist?list=PLzUN9-WgjT3PcvDFD5cI9COE9E53CrcgA'
-    },
+    {'Khan Academy (OP-AMP)': 'https://www.youtube.com/playlist?list=PLzUN9-WgjT3PcvDFD5cI9COE9E53CrcgA'},
   ];
   List<Map<String, String>> BECE4 = [
-    {
-      'Neso Academy':
-          'https://www.youtube.com/playlist?list=PLBlnK6fEyqRjMH3mWf6kwqiTbT798eAOm'
-    },
+    {'Neso Academy': 'https://www.youtube.com/playlist?list=PLBlnK6fEyqRjMH3mWf6kwqiTbT798eAOm'},
     {
       'Tutorials Point (Video 85 onwards)':
           'https://www.youtube.com/playlist?list=PLWPirh4EWFpHk70zwYoHu87uVsCC8E2S-'
     },
-    {
-      'Easy Engineering classes':
-          'https://www.youtube.com/playlist?list=PLV8vIYTIdSnbLjHPYh02qjw8D9HAvhB0L'
-    },
+    {'Easy Engineering classes': 'https://www.youtube.com/playlist?list=PLV8vIYTIdSnbLjHPYh02qjw8D9HAvhB0L'},
   ];
   List<Map<String, String>> BECE5 = [
-    {
-      'Gate Academy':
-          'https://www.youtube.com/playlist?list=PLb2wGSuEdRG8lKGO4q7NXE6QDWISAsBkZ'
-    },
-    {
-      'All about Electronics':
-          'https://www.youtube.com/playlist?list=PLwjK_iyK4LLArUHRm3SvPLT0XWlVhpl4h'
-    },
+    {'Gate Academy': 'https://www.youtube.com/playlist?list=PLb2wGSuEdRG8lKGO4q7NXE6QDWISAsBkZ'},
+    {'All about Electronics': 'https://www.youtube.com/playlist?list=PLwjK_iyK4LLArUHRm3SvPLT0XWlVhpl4h'},
   ];
 
   List<Map<String, String>> BME1 = [
@@ -93,8 +73,7 @@ class VideoDatabase {
   ];
   List<Map<String, String>> BME4 = [
     {
-      'Boilers':
-          'https://www.youtube.com/watch?v=Sg0-TatDxkU&list=PLjk-OqI4WmPKvHbIDXJ-BnCzghRE7c8bE&index=1'
+      'Boilers': 'https://www.youtube.com/watch?v=Sg0-TatDxkU&list=PLjk-OqI4WmPKvHbIDXJ-BnCzghRE7c8bE&index=1'
     },
     {
       'IC Engine':
@@ -102,55 +81,45 @@ class VideoDatabase {
     },
   ];
   List<Map<String, String>> BME5 = [
-    {
-      'Energy Sources: UNACADEMY': 'https://www.youtube.com/watch?v=gKvq0ECLUpk'
-    },
+    {'Energy Sources: UNACADEMY': 'https://www.youtube.com/watch?v=gKvq0ECLUpk'},
   ];
 
   List<Map<String, String>> CHE1 = [
-    {
-      'Chemical Bonding':
-          'https://www.youtube.com/playlist?list=PL4BETMztLJZbw5PUGSH8u4GiZOt4NG64x'
-    },
+    {'Chemical Bonding': 'https://www.youtube.com/playlist?list=PL4BETMztLJZbw5PUGSH8u4GiZOt4NG64x'},
   ];
   List<Map<String, String>> CHE2 = [
     {'Stereochemistry': 'https://www.youtube.com/watch?v=ze8vOcb8clY'},
   ];
   List<Map<String, String>> CHE3 = [
-    {
-      'Chemical Kinetics':
-          'https://www.youtube.com/playlist?list=PLQVGcyFvFGFP0AQfRrqSNigiU_KpS_uY_'
-    },
+    {'Chemical Kinetics': 'https://www.youtube.com/playlist?list=PLQVGcyFvFGFP0AQfRrqSNigiU_KpS_uY_'},
   ];
   List<Map<String, String>> CHE4 = [
+    {
+      'MadChem Classes Chemistry':
+          'https://www.youtube.com/watch?v=UHa5w6uuF3M&list=PLMJcvTKXTrZ5dVJgZW0kF0uPasH5KNHgP'
+    },
     {'Spectroscopic Techniques': 'https://www.youtube.com/watch?v=a2trGykVkgc'},
   ];
   List<Map<String, String>> CHE5 = [
     {
       'Phase Rule': 'https://www.youtube.com/watch?v=UvHd5cBZBnM',
     },
-    {
-      'Chemical Equilibrium':
-          'https://www.youtube.com/playlist?list=PLHWPZcIu1IxDH4XC6TZ-753wkjSS44q9R'
-    },
+    {'Chemical Equilibrium': 'https://www.youtube.com/playlist?list=PLHWPZcIu1IxDH4XC6TZ-753wkjSS44q9R'},
   ];
 
   List<Map<String, String>> MAI1 = [
     {
-      'Gajendra Purohit':
-          'https://www.youtube.com/playlist?list=PLU6SqdYcYsfJqbZvQECrwnlQrp4fg6isX',
+      'Gajendra Purohit': 'https://www.youtube.com/playlist?list=PLU6SqdYcYsfJqbZvQECrwnlQrp4fg6isX',
     },
   ];
   List<Map<String, String>> MAI2 = [
     {
-      'Gajendra Purohit':
-          'https://www.youtube.com/playlist?list=PLU6SqdYcYsfI34zVjDYDCZ6KLAifHmN1v',
+      'Gajendra Purohit': 'https://www.youtube.com/playlist?list=PLU6SqdYcYsfI34zVjDYDCZ6KLAifHmN1v',
     },
   ];
   List<Map<String, String>> MAI3 = [
     {
-      'LIMITS: Gajendra Purohit':
-          'https://www.youtube.com/playlist?list=PLU6SqdYcYsfKqEg7zbrek8fh8TbxayiGr',
+      'LIMITS: Gajendra Purohit': 'https://www.youtube.com/playlist?list=PLU6SqdYcYsfKqEg7zbrek8fh8TbxayiGr',
     },
     {
       'Maxima-Minima: Gajendra Purohit':
@@ -163,14 +132,12 @@ class VideoDatabase {
   ];
   List<Map<String, String>> MAI4 = [
     {
-      'Gajendra Purohit':
-          'https://www.youtube.com/playlist?list=PLU6SqdYcYsfLoKyzF_dwxAQf8lIi6VC54',
+      'Gajendra Purohit': 'https://www.youtube.com/playlist?list=PLU6SqdYcYsfLoKyzF_dwxAQf8lIi6VC54',
     },
   ];
   List<Map<String, String>> MAI5 = [
     {
-      'Gajendra Purohit':
-          'https://www.youtube.com/playlist?list=PLU6SqdYcYsfJz9FAzbgocIjlkw4NXAar-',
+      'Gajendra Purohit': 'https://www.youtube.com/playlist?list=PLU6SqdYcYsfJz9FAzbgocIjlkw4NXAar-',
     },
   ];
 
@@ -180,10 +147,7 @@ class VideoDatabase {
       'Lecturs in Electrical engineering':
           'https://www.youtube.com/watch?v=IZA_bJiGiJc&list=PL_mruqjnuVd8LP2z0c4yBwKAGEiEW_Si9',
     },
-    {
-      'Gate Acadeny':
-          'https://www.youtube.com/watch?v=Vd2UJiIPbag&list=PL9RcWoqXmzaLTYUdnzKhF4bYug3GjGcEc'
-    }
+    {'Gate Acadeny': 'https://www.youtube.com/watch?v=Vd2UJiIPbag&list=PL9RcWoqXmzaLTYUdnzKhF4bYug3GjGcEc'}
   ];
   List<Map<String, String>> BEE2 = [
     {
@@ -284,10 +248,7 @@ class VideoDatabase {
     }
   ];
   List<Map<String, String>> PHY2 = [
-    {
-      'Gate Academy':
-          'https://www.youtube.com/watch?v=hWd8FTYsKbE&list=PLgzsL8klq6DIHSngsEx5W0E5VWncy-FfO'
-    },
+    {'Gate Academy': 'https://www.youtube.com/watch?v=hWd8FTYsKbE&list=PLgzsL8klq6DIHSngsEx5W0E5VWncy-FfO'},
     {
       'Easy Engineering':
           'https://www.youtube.com/watch?v=CKzTqYTenyg&list=PLH_3y9dQOwL27UryO-jxHbs2MVJcgbToX&index=10'
@@ -312,10 +273,7 @@ class VideoDatabase {
       'Engineering Physics by Sanjiv':
           'https://www.youtube.com/watch?v=QGqtQnBGrE4&list=PLQzUXa8lZVq8MoyLXLDGhNsLnKyuvTazk'
     },
-    {
-      'NPTEL':
-          'https://www.youtube.com/watch?v=TcmGYe39XG0&list=PLE0334305C5C04C30&index=1'
-    }
+    {'NPTEL': 'https://www.youtube.com/watch?v=TcmGYe39XG0&list=PLE0334305C5C04C30&index=1'}
   ];
   List<Map<String, String>> PHY5 = [
     {
@@ -326,61 +284,31 @@ class VideoDatabase {
       'Technical Physics':
           'https://www.youtube.com/watch?v=2BzQYDwZeZk&list=PL5zwY2E7i60XzRPOrKzvSzjvxnyK6jQB3&index=1'
     },
-    {
-      'NPTEL':
-          'https://www.youtube.com/watch?v=PK4yFaGHSFc&list=PLU0oJASIjGxdZMtypwhvGrnmuzNnNdcKt&index=1'
-    }
+    {'NPTEL': 'https://www.youtube.com/watch?v=PK4yFaGHSFc&list=PLU0oJASIjGxdZMtypwhvGrnmuzNnNdcKt&index=1'}
   ];
 
   List<Map<String, String>> MAII1 = [
-    {
-      'Gajendra Purohit':
-          'https://www.youtube.com/playlist?list=PLU6SqdYcYsfJmqo86d12EoNNWKtAZqu8q'
-    },
-    {
-      'Bhagwan Singh Vishwakarma':
-          'https://www.youtube.com/playlist?list=PLdM-WZokR4tbGKbeK8fDIdEN0NEcvAQlC'
-    }
+    {'Gajendra Purohit': 'https://www.youtube.com/playlist?list=PLU6SqdYcYsfJmqo86d12EoNNWKtAZqu8q'},
+    {'Bhagwan Singh Vishwakarma': 'https://www.youtube.com/playlist?list=PLdM-WZokR4tbGKbeK8fDIdEN0NEcvAQlC'}
   ];
   List<Map<String, String>> MAII2 = [
-    {
-      'Gajendra Purohit':
-          'https://www.youtube.com/playlist?list=PLU6SqdYcYsfJmqo86d12EoNNWKtAZqu8q'
-    },
+    {'Gajendra Purohit': 'https://www.youtube.com/playlist?list=PLU6SqdYcYsfJmqo86d12EoNNWKtAZqu8q'},
   ];
   List<Map<String, String>> MAII3 = [
-    {
-      'Gajendra Purohit':
-          'https://www.youtube.com/playlist?list=PLU6SqdYcYsfJmqo86d12EoNNWKtAZqu8q'
-    },
+    {'Gajendra Purohit': 'https://www.youtube.com/playlist?list=PLU6SqdYcYsfJmqo86d12EoNNWKtAZqu8q'},
     {
       'Gajendra Purohit (Fourier Series)':
           'https://www.youtube.com/playlist?list=PLU6SqdYcYsfIXjT49bVTz4KjqHD5fGQY8'
     }
   ];
   List<Map<String, String>> MAII4 = [
-    {
-      'Gajendra Purohit':
-          'https://www.youtube.com/playlist?list=PLU6SqdYcYsfI3sh-ho_iiTkCGsTbVh_Sw'
-    },
-    {
-      'MKS Tutorials':
-          'https://www.youtube.com/playlist?list=PLhSp9OSVmeyITvYvCWwrYBiPkzsCNSOWu'
-    },
-    {
-      'MathCom Mentors':
-          'https://www.youtube.com/playlist?list=PLVCBPCYGv7bBYULot9GNR0AW8ukryUplx'
-    }
+    {'Gajendra Purohit': 'https://www.youtube.com/playlist?list=PLU6SqdYcYsfI3sh-ho_iiTkCGsTbVh_Sw'},
+    {'MKS Tutorials': 'https://www.youtube.com/playlist?list=PLhSp9OSVmeyITvYvCWwrYBiPkzsCNSOWu'},
+    {'MathCom Mentors': 'https://www.youtube.com/playlist?list=PLVCBPCYGv7bBYULot9GNR0AW8ukryUplx'}
   ];
   List<Map<String, String>> MAII5 = [
-    {
-      'Gajendra Purohit':
-          'https://www.youtube.com/playlist?list=PLU6SqdYcYsfLRq3tu-g_hvkHDcorrtcBK'
-    },
-    {
-      'NPTEL':
-          'https://www.youtube.com/playlist?list=PLyqSpQzTE6M_JcleDbrVyPnE0PixKs2JE'
-    }
+    {'Gajendra Purohit': 'https://www.youtube.com/playlist?list=PLU6SqdYcYsfLRq3tu-g_hvkHDcorrtcBK'},
+    {'NPTEL': 'https://www.youtube.com/playlist?list=PLyqSpQzTE6M_JcleDbrVyPnE0PixKs2JE'}
   ];
 
   List getList(String subject, int module) {
