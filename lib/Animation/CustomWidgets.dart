@@ -296,13 +296,24 @@ class Tile extends StatelessWidget {
   final int type;
   Tile({@required this.title, @required this.url, this.type});
   Future<void> _launchInApp(String url) async {
-    if (await canLaunch(url)) {
-      await launch(
-        url,
-        forceSafariVC: true,
-        forceWebView: true,
-        enableJavaScript: true,
-      );
+    if (type == 1) {
+      if (await canLaunch(url)) {
+        await launch(
+          url,
+          forceSafariVC: true,
+          forceWebView: false,
+          enableJavaScript: true,
+        );
+      }
+    } else {
+      if (await canLaunch(url)) {
+        await launch(
+          url,
+          forceSafariVC: true,
+          forceWebView: true,
+          enableJavaScript: true,
+        );
+      }
     }
     // else {
     //   Alert(
@@ -485,7 +496,6 @@ class Info extends StatelessWidget {
   }
 }
 
-
 class DevsTileDesign extends StatelessWidget {
   final String name;
 
@@ -495,7 +505,6 @@ class DevsTileDesign extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
       padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
       margin: EdgeInsets.only(bottom: 16),

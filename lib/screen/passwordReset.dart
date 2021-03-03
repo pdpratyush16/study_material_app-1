@@ -15,6 +15,14 @@ class _PasswordResetState extends State<PasswordReset> {
   final _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
+    void showAlertDialog(String title, String message) {
+      AlertDialog alertDialog = AlertDialog(
+        title: Text(title),
+        content: Text(message),
+      );
+      showDialog(context: context, builder: (_) => alertDialog);
+    }
+
     return Scaffold(
       backgroundColor: kBgColor,
       body: SingleChildScrollView(
@@ -97,9 +105,12 @@ class _PasswordResetState extends State<PasswordReset> {
                           onPressed: () async {
                             if (emailVal != null) {
                               try {
-                                await _auth.sendPasswordResetEmail(email: emailVal);
-                                //Alert(context: context, title: 'Link sent', desc: "Please try again").show();
+                                await _auth.sendPasswordResetEmail(
+                                    email: emailVal);
+
                                 Navigator.pop(context);
+                                showAlertDialog(
+                                    'Done', 'Recovery link has been sent.');
                               } catch (error) {
                                 switch (error.code) {
                                   case "invalid-email":
@@ -115,15 +126,20 @@ class _PasswordResetState extends State<PasswordReset> {
                                     status = 'Undefined error';
                                     break;
                                 }
-                                Alert(context: context, title: status, desc: "Please try again").show();
+                                Alert(
+                                        context: context,
+                                        title: status,
+                                        desc: "Please try again")
+                                    .show();
                               }
-
                             }
                           },
                           child: Center(
                             child: Text(
                               "Reset Password",
-                              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),
