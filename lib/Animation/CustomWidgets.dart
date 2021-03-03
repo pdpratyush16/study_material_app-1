@@ -445,7 +445,7 @@ class Info extends StatelessWidget {
           enableJavaScript: true,
         );
       }
-    } else {
+    } else if(type == 3){
       String url = 'mailto:$text?subject=BitHub feedback';
       if (await canLaunch(url)) {
         await launch(
