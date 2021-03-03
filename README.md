@@ -1,4 +1,4 @@
-# study_material_app
+# BitHuB
 
 A new Flutter project.
 
