@@ -434,60 +434,84 @@ class Info extends StatelessWidget {
     }
   }
 
+  void onTap() async {
+    if (type == 2) {
+      String url = 'https://www.instagram.com/$text/';
+      if (await canLaunch(url)) {
+        await launch(
+          url,
+          forceSafariVC: true,
+          forceWebView: false,
+          enableJavaScript: true,
+        );
+      }
+    } else {
+      String url = 'mailto:$text?subject=BitHub feedback';
+      if (await canLaunch(url)) {
+        await launch(
+          url,
+        );
+      }
+    }
+  }
+
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(5.0),
-      child: Material(
-        elevation: 7,
-        clipBehavior: Clip.antiAlias,
-        shadowColor: Colors.white,
-        borderRadius: BorderRadius.circular(10),
-        child: Container(
-          decoration: new BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.shade400.withOpacity(0.5),
-                blurRadius: 25.0,
-                spreadRadius: 10.0,
-              )
-            ],
-            color: Color(0xca30363A),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  flex: 3,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10.0), //or 15.0
-                    child: Container(
-                      child: getIcon(type),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: SizedBox(
-                    child: VerticalDivider(
-                      thickness: 10.0,
-                      color: Colors.white,
-                    ),
-                    width: 10,
-                  ),
-                ),
-                Expanded(
-                  flex: 11,
-                  child: Text(
-                    text,
-                    style: TextStyle(
-                      fontSize: 11.5,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      // fontSize: 18,
-                    ),
-                  ),
-                ),
+      child: GestureDetector(
+        onTap: onTap,
+        child: Material(
+          elevation: 7,
+          clipBehavior: Clip.antiAlias,
+          shadowColor: Colors.white,
+          borderRadius: BorderRadius.circular(10),
+          child: Container(
+            decoration: new BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.shade400.withOpacity(0.5),
+                  blurRadius: 25.0,
+                  spreadRadius: 10.0,
+                )
               ],
+              color: Color(0xca30363A),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    flex: 3,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10.0), //or 15.0
+                      child: Container(
+                        child: getIcon(type),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: SizedBox(
+                      child: VerticalDivider(
+                        thickness: 10.0,
+                        color: Colors.white,
+                      ),
+                      width: 10,
+                    ),
+                  ),
+                  Expanded(
+                    flex: 11,
+                    child: Text(
+                      text,
+                      style: TextStyle(
+                        fontSize: 11.5,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        // fontSize: 18,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
