@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.study_material_app">
    <application
-        android:label="study_material_app"
+        android:label="BitHuB"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

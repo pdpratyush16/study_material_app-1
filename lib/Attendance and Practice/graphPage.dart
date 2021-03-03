@@ -71,8 +71,8 @@ class _GraphPageState extends State<GraphPage> {
 
     Color getColor(User user) {
       double percent = user.present / user.total;
-      if (percent >= 0.75) return Colors.green[300];
-      return Colors.red[300];
+      if (percent >= 0.75) return Colors.green;
+      return Colors.red;
     }
 
     Widget graphList() {
@@ -84,7 +84,7 @@ class _GraphPageState extends State<GraphPage> {
         itemBuilder: (BuildContext context, int position) => Padding(
           padding: EdgeInsets.all(16.0),
           child: GestureDetector(
-            onTap: () {
+            onLongPress: () {
               setState(() {
                 goToForm(User.withId(
                     userList[position].id,
@@ -229,30 +229,32 @@ class _GraphPageState extends State<GraphPage> {
                               ),
                             ],
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              RoundIconButton(
-                                  icon: Icons.add,
-                                  onPressed: () {
-                                    setState(() {
-                                      userList[position].present++;
-                                      userList[position].total++;
-                                      databaseHelper.update(userList[position]);
-                                    });
-                                  }),
-                              // SizedBox(
-                              //   width: 0.0,
-                              // ),
-                              RoundIconButton1(
-                                  icon: Icons.remove,
-                                  onPressed: () {
-                                    setState(() {
-                                      userList[position].total++;
-                                      databaseHelper.update(userList[position]);
-                                    });
-                                  }),
-                            ],
+                          Center(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                RoundIconButton(
+                                    icon: Icons.add,
+                                    onPressed: () {
+                                      setState(() {
+                                        userList[position].present++;
+                                        userList[position].total++;
+                                        databaseHelper.update(userList[position]);
+                                      });
+                                    }),
+                                // SizedBox(
+                                //   width: 0.0,
+                                // ),
+                                RoundIconButton1(
+                                    icon: Icons.remove,
+                                    onPressed: () {
+                                      setState(() {
+                                        userList[position].total++;
+                                        databaseHelper.update(userList[position]);
+                                      });
+                                    }),
+                              ],
+                            ),
                           ),
                         ],
                       ),
