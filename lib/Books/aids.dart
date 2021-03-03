@@ -67,7 +67,7 @@ class Aids extends StatelessWidget {
                 },
               ),
               CustomTileDesign(
-                name: 'E-BOOK',
+                name: 'E-BOOKS',
                 onPressed: () {
                   Navigator.pushNamed(context, EbookHome.id, arguments: {
                     'Subject': subject,
@@ -75,7 +75,7 @@ class Aids extends StatelessWidget {
                 },
               ),
               CustomTileDesign(
-                name: 'VIDEO',
+                name: 'VIDEOS',
                 onPressed: () {
                   Navigator.pushNamed(context, ModulePage.id, arguments: {
                     'Subject': subject,
