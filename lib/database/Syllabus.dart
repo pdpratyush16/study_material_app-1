@@ -1,296 +1,183 @@
 class Syllabus {
-
-  var EC101 = {
+  List<Map<String, String>> EC101 = [
     {
-      {"Module-1"},
-      {
-        "Diodes and Applications: Introduction to PN junction diodes; Characteristics of semiconductor diodes: V-I characteristics, diode-resistance, temperature-dependence, diode-capacitance; DC & AC load lines; Breakdown Mechanisms; Zener Diode – Operation and Applications; Diode as a Rectifier: Half Wave and Full Wave Rectifiers with and without C-Filters."
-      }
+      "Module-1":
+          "Diodes and Applications: Introduction to PN junction diodes; Characteristics of semiconductor diodes: V-I characteristics, diode-resistance, temperature-dependence, diode-capacitance; DC & AC load lines; Breakdown Mechanisms; Zener Diode – Operation and Applications; Diode as a Rectifier: Half Wave and Full Wave Rectifiers with and without C-Filters."
     },
-
     {
-      {"Module-2"},
-      {
-        "Bipolar Junction Transistors (BJT): PNP and NPN Transistors, Basic Transistor Action, Input and Output Characteristics of CB, CE and CC Configurations, dc and ac load line analysis, operating point, Transistor biasing: Fixed bias, emitter bias/self-bias, Low-frequency response of CE amplifier. \nField Effect Transistors: JFET, Idea of Channel Formation, Pinch-Off and saturation Voltage, Current-Voltage Output Characteristics; MOSFET: Basic structure, operation and characteristics."
-      }
+      "Module-2":
+          "Bipolar Junction Transistors (BJT): PNP and NPN Transistors, Basic Transistor Action, Input and Output Characteristics of CB, CE and CC Configurations, dc and ac load line analysis, operating point, Transistor biasing: Fixed bias, emitter bias/self-bias, Low-frequency response of CE amplifier. \nField Effect Transistors: JFET, Idea of Channel Formation, Pinch-Off and saturation Voltage, Current-Voltage Output Characteristics; MOSFET: Basic structure, operation and characteristics."
     },
-
     {
-      {"Module-3"},
-      {
-        "Sinusoidal Oscillators: Concept of positive and negative feedback, Barkhausen criterion for sustained oscillations, Determination of Frequency and Condition of oscillation, Hartley and Colpitt’s oscillator. \nOperational Amplifiers: Characteristics of an Ideal and Practical Operational Amplifier (IC 741), Inverting and non-inverting amplifiers, Offset error voltages and currents; Power supply rejection ratio, Slew Rate and concept of Virtual Ground, Summing and Difference Amplifiers, Differentiator and Integrator, RC phase shift oscillator."
-      }
+      "Module-3":
+          "Sinusoidal Oscillators: Concept of positive and negative feedback, Barkhausen criterion for sustained oscillations, Determination of Frequency and Condition of oscillation, Hartley and Colpitt’s oscillator. \nOperational Amplifiers: Characteristics of an Ideal and Practical Operational Amplifier (IC 741), Inverting and non-inverting amplifiers, Offset error voltages and currents; Power supply rejection ratio, Slew Rate and concept of Virtual Ground, Summing and Difference Amplifiers, Differentiator and Integrator, RC phase shift oscillator."
     },
-
     {
-      {"Module-4"},
-      {
-        "Logic Gates and Boolean algebra: Introduction to Boolean Algebra and Boolean operators, Symbolic representation, Boolean algebraic function and Truth table of different Digital logic Gates (AND, OR, NOT, NAND, NOR, EX-OR, EX-NOR); Realization of Basic logic gates using universal gates, Adder, Subtractor, adder/subtractor"
-      }
+      "Module-4":
+          "Logic Gates and Boolean algebra: Introduction to Boolean Algebra and Boolean operators, Symbolic representation, Boolean algebraic function and Truth table of different Digital logic Gates (AND, OR, NOT, NAND, NOR, EX-OR, EX-NOR); Realization of Basic logic gates using universal gates, Adder, Subtractor, adder/subtractor"
     },
-
     {
-      {"Module-5"},
-      {
-        "Electronic communication: Introduction to electronic communication system, Electromagnetic Communication spectrum band and applications, Elements of Electronic Communication System; Merits and demerits of analog and digital communication, Modes of communication; Signal radiation and propagation; Need for modulation; Introduction to Amplitude modulation and Angle modulation."
-      }
+      "Module-5":
+          "Electronic communication: Introduction to electronic communication system, Electromagnetic Communication spectrum band and applications, Elements of Electronic Communication System; Merits and demerits of analog and digital communication, Modes of communication; Signal radiation and propagation; Need for modulation; Introduction to Amplitude modulation and Angle modulation."
     }
-  };
-  var ME101 = {
+  ];
+  List<Map<String, String>> ME101 = [
     {
-      {"Module 1: System of Forces and Structure Mechanics"},
-      {
-        "Addition of Forces, Moment of a Force, Couple, Varignon’s theorem, Free Body Diagram, Equilibrium in Two and Three Dimensions, Equivalent Forces and Moment. Types of Trusses, Plane and Space Trusses. Analysis of Plane Trusses by: Method of Joints and Method of Sections, Analysis of Frames with Hinged Joints. Hooke’s Law of elasticity, Stress and Strain, Relation between elastic constants, Thermal Stresses, Properties of surfaces such as centroid and area moment of inertia."
-      }
+      "Module 1: System of Forces and Structure Mechanics":
+          "Addition of Forces, Moment of a Force, Couple, Varignon’s theorem, Free Body Diagram, Equilibrium in Two and Three Dimensions, Equivalent Forces and Moment. Types of Trusses, Plane and Space Trusses. Analysis of Plane Trusses by: Method of Joints and Method of Sections, Analysis of Frames with Hinged Joints. Hooke’s Law of elasticity, Stress and Strain, Relation between elastic constants, Thermal Stresses, Properties of surfaces such as centroid and area moment of inertia."
     },
-
     {
-      {"Module 2: Kinematics & Kinetics of rigid bodies"},
-      {
-        "Types of rigid body motion– translation, rotation about fixed axis, equations defining the rotation of a rigid body about a fixed axis, plane motion, absolute and relative velocity in plane motion, instantaneous center of rotation. Equation of translational and rotational motion, Newton’s law and D’Alembert’s principle –inertia force and inertia couple. "
-      }
+      "Module 2: Kinematics & Kinetics of rigid bodies":
+          "Types of rigid body motion– translation, rotation about fixed axis, equations defining the rotation of a rigid body about a fixed axis, plane motion, absolute and relative velocity in plane motion, instantaneous center of rotation. Equation of translational and rotational motion, Newton’s law and D’Alembert’s principle –inertia force and inertia couple. "
     },
-
     {
-      {"Module 3: Friction and Vibration"},
-      {
-        "Interfacial Friction (a) Laws of dry friction, static & kinetic co-efficient of friction, Analysis of static, kinetic and rolling friction.(b) Analysis of frictional forces in inclined planes, wedges, screw jacks and belt drives. \nVibrations: Types of vibration, free un-damped longitudinal vibrations, free damped longitudinal vibrations."
-      }
+      "Module 3: Friction and Vibration":
+          "Interfacial Friction (a) Laws of dry friction, static & kinetic co-efficient of friction, Analysis of static, kinetic and rolling friction.(b) Analysis of frictional forces in inclined planes, wedges, screw jacks and belt drives. \nVibrations: Types of vibration, free un-damped longitudinal vibrations, free damped longitudinal vibrations."
     },
-
     {
-      {"Module 4: Boilers and Internal Combustion Engine"},
-      {
-        "Boiler Mountings and Accessories, Fire Tube and Water Tube Boilers, Cochran Boiler, Babcock and Wilcox Boiler. \nBasic components and terminology of IC engines, working of four stroke/two stroke - petrol/diesel engine, classification and application of IC engines. \nHeat transfer: various modes of heat transfer, one dimensional steady state conduction, Application to composite walls and cylinder."
-      }
+      "Module 4: Boilers and Internal Combustion Engine":
+          "Boiler Mountings and Accessories, Fire Tube and Water Tube Boilers, Cochran Boiler, Babcock and Wilcox Boiler. \nBasic components and terminology of IC engines, working of four stroke/two stroke - petrol/diesel engine, classification and application of IC engines. \nHeat transfer: various modes of heat transfer, one dimensional steady state conduction, Application to composite walls and cylinder."
     },
-
     {
-      {"Module 5: Non-Conventional Energy and their resources"},
-      {
-        "Renewable and Non-renewable Energy Resources, Advantages and Disadvantages of Renewable Resources, Renewable Energy Forms and Conversion, Solar Energy, Wind Energy, Tidal Energy, Ocean Thermal Energy; Geothermal Energy, Nuclear Energy, Hydro Energy"
-      }
+      "Module 5: Non-Conventional Energy and their resources":
+          "Renewable and Non-renewable Energy Resources, Advantages and Disadvantages of Renewable Resources, Renewable Energy Forms and Conversion, Solar Energy, Wind Energy, Tidal Energy, Ocean Thermal Energy; Geothermal Energy, Nuclear Energy, Hydro Energy"
     }
-  };
-  var CH101 = {
+  ];
+  List<Map<String, String>> CH101 = [
     {
-      {"Module I: Chemical Bonding "},
-      {
-        "Ionic bond: Radius ratio rule, Born-Landé equation, Born-Haber cycle. \nMetallic Bond: valence bond and band theories, defects in solids, Werner's Theory, Bonding in Transition metal complexes, Ligands, coordination complexes, Ligand Field, Crystal Field Theory, Octahedral, Tetrahedral and square planar complexes, CFSE, Jahn Teller theorem, electronic spectra, magnetism, and isomerization in coordination compounds."
-      }
+      "Module I: Chemical Bonding ":
+          "Ionic bond: Radius ratio rule, Born-Landé equation, Born-Haber cycle. \nMetallic Bond: valence bond and band theories, defects in solids, Werner's Theory, Bonding in Transition metal complexes, Ligands, coordination complexes, Ligand Field, Crystal Field Theory, Octahedral, Tetrahedral and square planar complexes, CFSE, Jahn Teller theorem, electronic spectra, magnetism, and isomerization in coordination compounds."
     },
-
     {
-      {"Module II: Organic Structure and Stereochemistry"},
-      {
-        "Covalent bond: Lewis structure, Valence Bond theory, Molecular orbital theory, Molecular orbital of diatomic and polyatomic system, hybridization, conjugated molecules, Huckel molecular orbital theory of conjugated systems. Isomerism, Geometrical isomerism: cis–trans and syn-anti isomerism; Optical isomerism & Chirality; Wedge, Fischer, Newmann and Sawhorse Projection formulae and interconversions; E/Z, D/L, R/S nomenclature system; Conformational studies of ethane, n-butane, Cyclohexane."
-      }
+      "Module II: Organic Structure and Stereochemistry":
+          "Covalent bond: Lewis structure, Valence Bond theory, Molecular orbital theory, Molecular orbital of diatomic and polyatomic system, hybridization, conjugated molecules, Huckel molecular orbital theory of conjugated systems. Isomerism, Geometrical isomerism: cis–trans and syn-anti isomerism; Optical isomerism & Chirality; Wedge, Fischer, Newmann and Sawhorse Projection formulae and interconversions; E/Z, D/L, R/S nomenclature system; Conformational studies of ethane, n-butane, Cyclohexane."
     },
-
     {
-      {"Module III: Kinetics and Catalysis"},
-      {
-        "Order & molecularity of reactions: chain, parallel, Competing, Side, Consecutive reactions; Kinetics of Fast reactions, Characteristics of catalyst, types of catalysis, catalytic poison; Theories of catalysis; Acid base catalysis: including kinetics, Enzyme catalysis, Mechanism and kinetics of enzyme catalyzed reaction, Michaelis-Menten equation, Important catalysts in industrial processes; Hydrogenation using Wilkinsons catalyst, Hydroformylation by using Cobalt-catalyst, Phase transfer catalyst."
-      }
+      "Module III: Kinetics and Catalysis":
+          "Order & molecularity of reactions: chain, parallel, Competing, Side, Consecutive reactions; Kinetics of Fast reactions, Characteristics of catalyst, types of catalysis, catalytic poison; Theories of catalysis; Acid base catalysis: including kinetics, Enzyme catalysis, Mechanism and kinetics of enzyme catalyzed reaction, Michaelis-Menten equation, Important catalysts in industrial processes; Hydrogenation using Wilkinsons catalyst, Hydroformylation by using Cobalt-catalyst, Phase transfer catalyst."
     },
-
     {
-      {"Module-IV: Spectroscopic Techniques"},
-      {
-        "Absorption and emission Spectroscopy, Lambert-Beers Law, Principles and applications of UV-Visible, Factors influencing for UV-VIS spectrum; Rotational and Vibrational spectroscopy, Principle of FT-IR, and NMR spectroscopy; Modern techniques in structural elucidation of compounds by UV-VIS, IR, & NMR Spectroscopy."
-      }
+      "Module-IV: Spectroscopic Techniques":
+          "Absorption and emission Spectroscopy, Lambert-Beers Law, Principles and applications of UV-Visible, Factors influencing for UV-VIS spectrum; Rotational and Vibrational spectroscopy, Principle of FT-IR, and NMR spectroscopy; Modern techniques in structural elucidation of compounds by UV-VIS, IR, & NMR Spectroscopy."
     },
-
     {
-      {"Module V: Phase and Chemical equilibrium"},
-      {
-        "Phase Rule: Terms Involved, Phase diagram of one component (Water) & two component (Pb/Ag) system & their applications. Law of chemical equilibrium, equilibrium constants and their significance, Weak and strong electrolytes, Standard electrode potential and its application to different kinds of half cells, EMF and its measurement and application, Batteries and Fuel Cells, Chemical and Electrochemical corrosion, Factors affecting the rate of corrosion. "
-      }
+      "Module V: Phase and Chemical equilibrium":
+          "Phase Rule: Terms Involved, Phase diagram of one component (Water) & two component (Pb/Ag) system & their applications. Law of chemical equilibrium, equilibrium constants and their significance, Weak and strong electrolytes, Standard electrode potential and its application to different kinds of half cells, EMF and its measurement and application, Batteries and Fuel Cells, Chemical and Electrochemical corrosion, Factors affecting the rate of corrosion. "
     }
-  };
-  var MA103 = {
+  ];
+  List<Map<String, String>> MA103 = [
     {
-      {"Module 1: Sequences and Series"},
-      {
-        "Sequences, Convergence of Sequence. Series, Convergence of Series, Tests for Convergence: Comparison tests, Ratio test, Cauchy’s root test, Raabe’s test, Gauss test, Cauchy's Integral test, Alternating series, Leibnitz test, Absolute and Conditional Convergence."
-      }
+      "Module 1: Sequences and Series":
+          "Sequences, Convergence of Sequence. Series, Convergence of Series, Tests for Convergence: Comparison tests, Ratio test, Cauchy’s root test, Raabe’s test, Gauss test, Cauchy's Integral test, Alternating series, Leibnitz test, Absolute and Conditional Convergence."
     },
-
     {
-      {"Module 2: Matrices"},
-      {
-        "Rank of a Matrix, elementary transformations, Row - reduced Echelon form. Vectors, Linear Independence and Dependence of Vectors. Consistency of system of linear equations. Eigenvalues, Eigenvectors, Cayley - Hamilton theorem."
-      }
+      "Module 2: Matrices":
+          "Rank of a Matrix, elementary transformations, Row - reduced Echelon form. Vectors, Linear Independence and Dependence of Vectors. Consistency of system of linear equations. Eigenvalues, Eigenvectors, Cayley - Hamilton theorem."
     },
-
     {
-      {"Module 3 : Advance Differential Calculus"},
-      {
-        "Function of several variables, Limit, Continuity, Partial derivatives, Euler’s theorem for homogeneous functions, Total derivatives, Chain rules, Jacobians and its properties, Taylor series for function of two variables, Maxima – Minima, Lagrange’s method of multipliers."
-      }
+      "Module 3 : Advance Differential Calculus":
+          "Function of several variables, Limit, Continuity, Partial derivatives, Euler’s theorem for homogeneous functions, Total derivatives, Chain rules, Jacobians and its properties, Taylor series for function of two variables, Maxima – Minima, Lagrange’s method of multipliers."
     },
-
     {
-      {"Module 4: Advance Integral Calculus"},
-      {
-        "Beta and Gamma functions: definition and properties. Double integrals, double integrals in polar coordinates, Change of order of integration, Triple Integrals, cylindrical and spherical coordinate systems, transformation of coordinates, Applications of double and triple integrals in areas and volumes."
-      }
+      "Module 4: Advance Integral Calculus":
+          "Beta and Gamma functions: definition and properties. Double integrals, double integrals in polar coordinates, Change of order of integration, Triple Integrals, cylindrical and spherical coordinate systems, transformation of coordinates, Applications of double and triple integrals in areas and volumes."
     },
-
     {
-      {"Module 5 : Vector Calculus"},
-      {
-        "Scalar and vector point functions, gradient, directional derivative, divergence, curl, vector equations and identities. Line Integral, Work done, Conservative field, Green’s theorem in a plane, Surface and volume integrals, Gauss – divergence theorem, Stoke ’s theorem."
-      }
+      "Module 5 : Vector Calculus":
+          "Scalar and vector point functions, gradient, directional derivative, divergence, curl, vector equations and identities. Line Integral, Work done, Conservative field, Green’s theorem in a plane, Surface and volume integrals, Gauss – divergence theorem, Stoke ’s theorem."
     }
-  };
+  ];
 
-  var EE101 = {
+  List<Map<String, String>> EE101 = [
     {
-      {"Module 1"},
-      {
-        "Introduction: Importance of Electrical Engineering in day-to-day life, Electrical elements,properties and their classification, Ideal and Real Sources, Source Conversion.\nD.C. Circuits: KCL and KVL, Loop current and Nodal voltage method Steady state analysis withindependent and dependent sources, Star-Delta conversion.\nMagnetic Circuits: Introduction, Series-parallel magnetic circuits, Analysis of Linear and Nonlinear magnetic circuits, Energy storage, A.C. excitation, Eddy currents and Hysteresis losses."
-      }
+      "Module 1":
+          "Introduction: Importance of Electrical Engineering in day-to-day life, Electrical elements,properties and their classification, Ideal and Real Sources, Source Conversion.\nD.C. Circuits: KCL and KVL, Loop current and Nodal voltage method Steady state analysis withindependent and dependent sources, Star-Delta conversion.\nMagnetic Circuits: Introduction, Series-parallel magnetic circuits, Analysis of Linear and Nonlinear magnetic circuits, Energy storage, A.C. excitation, Eddy currents and Hysteresis losses."
     },
-
     {
-      {"Module 2"},
-      {
-        "Single-phase AC Circuits: Series Circuits: Common signals and their waveforms, RMS andAverage value, Form factor & Peak factor of sinusoidal waveform, Impedance of Series circuits.\nPhasor diagram, Active Power, Power factor. Power triangle.\nParallel Circuits: Admittance method, Phasor diagram. Power, Power factor. Power triangle,Series- parallel Circuit, Power factor improvement,\nSeries and Parallel Resonance: Resonance curve, Q–factor, Dynamic Impedance and Bandwidth."
-      }
+      "Module 2":
+          "Single-phase AC Circuits: Series Circuits: Common signals and their waveforms, RMS andAverage value, Form factor & Peak factor of sinusoidal waveform, Impedance of Series circuits.\nPhasor diagram, Active Power, Power factor. Power triangle.\nParallel Circuits: Admittance method, Phasor diagram. Power, Power factor. Power triangle,Series- parallel Circuit, Power factor improvement,\nSeries and Parallel Resonance: Resonance curve, Q–factor, Dynamic Impedance and Bandwidth."
     },
-
     {
-      {"Module 3"},
-      {
-        "Three-Phase Circuits: Line and Phase relation for Star and Delta connection, Power relations,Analysis of balanced and unbalanced 3 phase circuits, Measurement of Power."
-      }
+      "Module 3":
+          "Three-Phase Circuits: Line and Phase relation for Star and Delta connection, Power relations,Analysis of balanced and unbalanced 3 phase circuits, Measurement of Power."
     },
-
     {
-      {"Module 4"},
-      {
-        "Circuit Theorems: Superposition theorem, Thevenin’s & Norton’s Theorem, Maximum PowerTransfer theorem for Independent and Dependent Sources for DC and AC circuits.\n Coupled Circuits (Dot rule), Self and mutual inductances, Coefficient of coupling. ("
-      }
+      "Module 4":
+          "Circuit Theorems: Superposition theorem, Thevenin’s & Norton’s Theorem, Maximum PowerTransfer theorem for Independent and Dependent Sources for DC and AC circuits.\n Coupled Circuits (Dot rule), Self and mutual inductances, Coefficient of coupling. ("
     },
-
     {
-      {"Module 5"},
-      {
-        "Working principles of AC Generators, motors and transformers, working principles of measuringequipments such as digital voltmeter, ammeter, power factor meter and wattmeter. "
-      }
+      "Module 5":
+          "Working principles of AC Generators, motors and transformers, working principles of measuringequipments such as digital voltmeter, ammeter, power factor meter and wattmeter. "
     }
-  };
-  var MA107 = {
+  ];
+  List<Map<String, String>> MA107 = [
     {
-      {"Module 1: Ordinary Differential Equations – I"},
-      {
-        "Linear differential equations, Wronskian, Linear independence and dependence of solutions,Linear differential equations of second and higher order, Operator method, Legendre’s andEuler – Cauchy’s form of linear differential equation, Method of variation of parameters"
-      }
+      "Module 1: Ordinary Differential Equations – I":
+          "Linear differential equations, Wronskian, Linear independence and dependence of solutions,Linear differential equations of second and higher order, Operator method, Legendre’s andEuler – Cauchy’s form of linear differential equation, Method of variation of parameters"
     },
-
     {
-      {"Module 2: Ordinary Differential Equations – II"},
-      {
-        "Ordinary and singular points of differential equation, Power and Frobenius series solutions.Bessel’s differential equation, Bessel function of first kind and its properties. Legendre’sdifferential equation, Legendre’s polynomial and its properties."
-      }
+      "Module 2: Ordinary Differential Equations – II":
+          "Ordinary and singular points of differential equation, Power and Frobenius series solutions.Bessel’s differential equation, Bessel function of first kind and its properties. Legendre’sdifferential equation, Legendre’s polynomial and its properties."
     },
-
     {
-      {"Module 3: Fourier series and Partial Differential Equations"},
-      {
-        "Fourier series: Euler formulae for Fourier series, Dirichlet conditions, Half range Fourierseries.\n Partial Differential Equations: Linear partial differential equations, Lagrange’s method.Method of separation of variables and its application in solving one dimensional wave andheat equations. "
-      }
+      "Module 3: Fourier series and Partial Differential Equations":
+          "Fourier series: Euler formulae for Fourier series, Dirichlet conditions, Half range Fourierseries.\n Partial Differential Equations: Linear partial differential equations, Lagrange’s method.Method of separation of variables and its application in solving one dimensional wave andheat equations. "
     },
-
     {
-      {"Module 4: Complex Variable-Differentiation & Integration"},
-      {
-        "Function of a complex variable, Limit, Continuity, Differentiability, Analyticity, Analyticfunctions, Cauchy – Riemann equations. Harmonic functions, Harmonic Conjugate.\n Cauchy’s theorem, Cauchy’s Integral formula, Taylor and Laurent series expansions.Singularities and its types, Residues, Residue theorem. "
-      }
+      "Module 4: Complex Variable-Differentiation & Integration":
+          "Function of a complex variable, Limit, Continuity, Differentiability, Analyticity, Analyticfunctions, Cauchy – Riemann equations. Harmonic functions, Harmonic Conjugate.\n Cauchy’s theorem, Cauchy’s Integral formula, Taylor and Laurent series expansions.Singularities and its types, Residues, Residue theorem. "
     },
-
     {
-      {"Module 5: Applied Probability "},
-      {
-        "Discrete and continuous random variables, cumulative distribution function, probability massand density functions, expectation, variance, moment generating function. Introduction toBinomial, Poisson and Normal Distribution."
-      }
+      "Module 5: Applied Probability ":
+          "Discrete and continuous random variables, cumulative distribution function, probability massand density functions, expectation, variance, moment generating function. Introduction toBinomial, Poisson and Normal Distribution."
     }
-  };
-  var PH113 = {
+  ];
+  List<Map<String, String>> PH113 = [
     {
-      {"Module-1 Physical Optics:"},
-      {
-        "Polarization, Malus’ Law, Brewster’s Law, Double Refraction, Interference inthin films (Parallel films), Interference in wedge-shaped layers, Newton’srings, Fraunhofer diffraction by single slit, Double slit."
-      }
+      "Module-1 Physical Optics:":
+          "Polarization, Malus’ Law, Brewster’s Law, Double Refraction, Interference inthin films (Parallel films), Interference in wedge-shaped layers, Newton’srings, Fraunhofer diffraction by single slit, Double slit."
     },
-
     {
-      {"Module-2 Electromagnetic Theory:"},
-      {
-        "Curl, Gradient, Divergence, Gauss theorem, Stokes theorem, Gauss’s law,Applications, Concept of electric potential, Relationship between E and V,Polarization of dielectrics, dielectric constant, Boundary conditions for E & D,Gauss’s law in magnetostatics, Ampere’s circuital law, Boundary conditionsfor B & H, Equation of continuity of charge, Displacement current, Maxwell’sequations. "
-      }
+      "Module-2 Electromagnetic Theory:":
+          "Curl, Gradient, Divergence, Gauss theorem, Stokes theorem, Gauss’s law,Applications, Concept of electric potential, Relationship between E and V,Polarization of dielectrics, dielectric constant, Boundary conditions for E & D,Gauss’s law in magnetostatics, Ampere’s circuital law, Boundary conditionsfor B & H, Equation of continuity of charge, Displacement current, Maxwell’sequations. "
     },
-
     {
-      {"Module-3 Special Theory of Relativity:"},
-      {
-        "Introduction, Inertial frame of reference, Galilean transformations, Postulates,Lorentz transformations and its conclusions, Length contraction, time dilation,velocity addition, Mass change, Einstein's mass energy relation."
-      }
+      "Module-3 Special Theory of Relativity:":
+          "Introduction, Inertial frame of reference, Galilean transformations, Postulates,Lorentz transformations and its conclusions, Length contraction, time dilation,velocity addition, Mass change, Einstein's mass energy relation."
     },
-
     {
-      {"Module-4 Quantum Mechanics:"},
-      {
-        "Planck's theory of black-body radiation, Compton effect, Wave particle duality,De Broglie waves, Davisson and Germer's experiment, Uncertainty principle,physical interpretation of wave function, Schrodinger equation in onedimension, free particle, particle in an infinite square well."
-      }
+      "Module-4 Quantum Mechanics:":
+          "Planck's theory of black-body radiation, Compton effect, Wave particle duality,De Broglie waves, Davisson and Germer's experiment, Uncertainty principle,physical interpretation of wave function, Schrodinger equation in onedimension, free particle, particle in an infinite square well."
     },
-
     {
-      {"Module-5 Lasers:"},
-      {
-        "Spontaneous and stimulated emission, Einstein's A and B coefficients,Population-inversion, Light amplification, Basic laser action, Ruby and He-Nelasers, Properties and applications of laser radiation, Elementary ideas of fiberoptics and application of fiber optic cables."
-      }
+      "Module-5 Lasers:":
+          "Spontaneous and stimulated emission, Einstein's A and B coefficients,Population-inversion, Light amplification, Basic laser action, Ruby and He-Nelasers, Properties and applications of laser radiation, Elementary ideas of fiberoptics and application of fiber optic cables."
     }
-  };
-  var CS101 = {
+  ];
+  List<Map<String, String>> CS101 = [
     {
-      {"Module I Introduction to Programming:"},
-      {
-        "Introduction to components of a computer system (disks, memory, processor, where a program isstored and executed, operating system, compilers etc.)\n Problem Solving: Steps to solve logical and numerical problems.\n Representation of Algorithm: Flowchart/Pseudo code with examples. From algorithms toprograms; source code, variables (with data types) variables and memory locations, Syntax andLogical Errors in compilation, object and executable code"
-      }
+      "Module I Introduction to Programming:":
+          "Introduction to components of a computer system (disks, memory, processor, where a program isstored and executed, operating system, compilers etc.)\n Problem Solving: Steps to solve logical and numerical problems.\n Representation of Algorithm: Flowchart/Pseudo code with examples. From algorithms toprograms; source code, variables (with data types) variables and memory locations, Syntax andLogical Errors in compilation, object and executable code"
     },
-
     {
-      {"Module II"},
-      {
-        "Arithmetic expressions and precedence, Conditional Branching and Loops, Writing andevaluation of conditionals, Iterations, Loops."
-      }
+      "Module II":
+          "Arithmetic expressions and precedence, Conditional Branching and Loops, Writing andevaluation of conditionals, Iterations, Loops."
     },
-
     {
-      {"Module III"},
-      {
-        "Array, Character array, strings. Case studies to discuss the various Problems related to Basicscience (Matrix addition, Matrix-matrix multiplication, Roots of an equation etc.), Sorting,Searching."
-      }
+      "Module III":
+          "Array, Character array, strings. Case studies to discuss the various Problems related to Basicscience (Matrix addition, Matrix-matrix multiplication, Roots of an equation etc.), Sorting,Searching."
     },
-
     {
-      {"Module IV"},
-      {
-        "Functions (including using built in libraries), Parameter passing in functions, call by value, callby reference. Passing arrays to functions, Recursion (Finding Factorial, Fibonacci series,Ackerman function etc.)."
-      }
+      "Module IV":
+          "Functions (including using built in libraries), Parameter passing in functions, call by value, callby reference. Passing arrays to functions, Recursion (Finding Factorial, Fibonacci series,Ackerman function etc.)."
     },
-
     {
-      {"Module V"},
-      {
-        "Structures, Defining structures and Array of Structures\n Pointers: Defining pointers, Use of Pointers in self-referential structures, File Handling"
-      }
+      "Module V":
+          "Structures, Defining structures and Array of Structures\n Pointers: Defining pointers, Use of Pointers in self-referential structures, File Handling"
     }
-  };
+  ];
 
-  dynamic getSyllabus(String code) {
+  List<Map<String, String>> getSyllabus(String code) {
     if (code == 'EC101')
       return EC101;
     else if (code == 'ME101')
@@ -424,7 +311,7 @@ class Syllabus {
     else if (code == 'BE210')
       return BE210;*/
     else
-      return '';
+      return new List<Map<String, String>>();
   }
 }
 
@@ -464,7 +351,6 @@ class Syllabus {
     }
   }
 };*/
-
 
 /*
 class Syllabus {

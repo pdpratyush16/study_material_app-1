@@ -7,14 +7,35 @@ class SyllabusScreen extends StatelessWidget {
   static const String id = 'SyllabusScreen';
   @override
   Widget build(BuildContext context) {
-    final ScreenArguments args = ModalRoute.of(context).settings.arguments;
-    String subject = args.subject;
+    final Map args = ModalRoute.of(context).settings.arguments;
+    String subject = args['Subject'];
 
     SubjectCode ob = new SubjectCode();
     String subjectCode = ob.subjectCode[subject];
 
-    // Syllabus ob2 = new Syllabus();
-    // var syllabus = ob2.getSyllabus("EC101");
+    Syllabus ob2 = new Syllabus();
+    List<Map<String, String>> list = ob2.getSyllabus(subjectCode);
+
+    Widget data() {
+      if (list.isEmpty == true) {
+        return EmptyState(
+          title: 'Coming soon',
+          message: 'The syllabus for your subject is not available.',
+        );
+      } else {
+        return ListView.builder(
+          physics: NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          addAutomaticKeepAlives: true,
+          itemCount: list.length,
+          itemBuilder: (BuildContext context, int position) => SyllabusTile(
+            heading: list[position].keys.elementAt(0),
+            message: list[position].values.elementAt(0),
+          ),
+        );
+      }
+    }
+
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
@@ -29,9 +50,7 @@ class SyllabusScreen extends StatelessWidget {
                 height4: 100.0,
               ),
               SizedBox(height: 50.0),
-              //SyllabusTile(heading: syllabus[0][0], message: syllabus[0][1]),
-
-
+              data(),
             ],
           ),
         ),
