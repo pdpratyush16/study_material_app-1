@@ -103,7 +103,7 @@ class Syllabus {
     },
     {
       "Module 4":
-          "Circuit Theorems: Superposition theorem, Thevenin’s & Norton’s Theorem, Maximum PowerTransfer theorem for Independent and Dependent Sources for DC and AC circuits.\n Coupled Circuits (Dot rule), Self and mutual inductances, Coefficient of coupling. ("
+          "Circuit Theorems: Superposition theorem, Thevenin’s & Norton’s Theorem, Maximum PowerTransfer theorem for Independent and Dependent Sources for DC and AC circuits.\nCoupled Circuits (Dot rule), Self and mutual inductances, Coefficient of coupling. "
     },
     {
       "Module 5":

@@ -617,13 +617,17 @@ class SyllabusTile extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              Text(
-                heading,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                ),
+              Row(
+                children: [
+                  Text(
+                    heading,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 12.0,
@@ -632,7 +636,7 @@ class SyllabusTile extends StatelessWidget {
                 message,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 15.0,
+                  fontSize: 14.0,
                   //letterSpacing: 1,
                   wordSpacing: 1.0,
                 ),
