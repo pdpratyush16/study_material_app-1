@@ -619,12 +619,14 @@ class SyllabusTile extends StatelessWidget {
             children: <Widget>[
               Row(
                 children: [
-                  Text(
-                    heading,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
+                  Expanded(
+                    child: Text(
+                      heading,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ],
