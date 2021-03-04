@@ -6,6 +6,7 @@ import 'package:study_material_app/Animation/ComingSoon.dart';
 import 'package:study_material_app/BIT_Bus/bus.dart';
 import 'package:study_material_app/Books/ebookHome.dart';
 import 'package:study_material_app/Books/notesHome.dart';
+import 'package:study_material_app/Books/syllabus.dart';
 import 'package:study_material_app/Videos/module.dart';
 import 'package:study_material_app/screen/passwordReset.dart';
 import 'package:study_material_app/screen/updateDetails.dart';
@@ -69,6 +70,7 @@ class MyApp extends StatelessWidget {
         NotesHome.id: (context) => NotesHome(),
         ComingSoon.id: (context) => ComingSoon(),
         AboutUs.id: (context) => AboutUs(),
+        SyllabusScreen.id: (context) => SyllabusScreen(),
       },
       home: HomePage(),
     );

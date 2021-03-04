@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:study_material_app/Animation/ComingSoon.dart';
 import 'package:study_material_app/Books/notesHome.dart';
+import 'package:study_material_app/Books/syllabus.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:study_material_app/Books/ebookHome.dart';
 import 'package:study_material_app/Videos/module.dart';
 import 'package:study_material_app/database/subjectCodeDatabase.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
-import 'package:study_material_app/database/syllabusDatabase.dart';
+import 'package:study_material_app/database/Syllabus.dart';
 
 class Aids extends StatelessWidget {
   static const String id = 'Aids';
@@ -49,13 +50,9 @@ class Aids extends StatelessWidget {
               CustomTileDesign(
                 name: 'SYLLABUS',
                 onPressed: () {
-                  Syllabus ob = new Syllabus();
-                  String url = ob.getSyllabus(subjectCode);
-                  if (url == '') {
-                    Navigator.pushNamed(context, ComingSoon.id);
-                  } else {
-                    _launchInApp(url);
-                  }
+                  Navigator.pushNamed(context, SyllabusScreen.id, arguments: {
+                    'Subject': subject,
+                  });
                 },
               ),
               CustomTileDesign(

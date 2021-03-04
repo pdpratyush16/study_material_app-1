@@ -1,4 +1,4 @@
-class syll {
+class Syllabus {
 
   var EC101 = {
     {
@@ -141,6 +141,151 @@ class syll {
       {"Module 5 : Vector Calculus"},
       {
         "Scalar and vector point functions, gradient, directional derivative, divergence, curl, vector equations and identities. Line Integral, Work done, Conservative field, Green’s theorem in a plane, Surface and volume integrals, Gauss – divergence theorem, Stoke ’s theorem."
+      }
+    }
+  };
+
+  var EE101 = {
+    {
+      {"Module 1"},
+      {
+        "Introduction: Importance of Electrical Engineering in day-to-day life, Electrical elements,properties and their classification, Ideal and Real Sources, Source Conversion.\nD.C. Circuits: KCL and KVL, Loop current and Nodal voltage method Steady state analysis withindependent and dependent sources, Star-Delta conversion.\nMagnetic Circuits: Introduction, Series-parallel magnetic circuits, Analysis of Linear and Nonlinear magnetic circuits, Energy storage, A.C. excitation, Eddy currents and Hysteresis losses."
+      }
+    },
+
+    {
+      {"Module 2"},
+      {
+        "Single-phase AC Circuits: Series Circuits: Common signals and their waveforms, RMS andAverage value, Form factor & Peak factor of sinusoidal waveform, Impedance of Series circuits.\nPhasor diagram, Active Power, Power factor. Power triangle.\nParallel Circuits: Admittance method, Phasor diagram. Power, Power factor. Power triangle,Series- parallel Circuit, Power factor improvement,\nSeries and Parallel Resonance: Resonance curve, Q–factor, Dynamic Impedance and Bandwidth."
+      }
+    },
+
+    {
+      {"Module 3"},
+      {
+        "Three-Phase Circuits: Line and Phase relation for Star and Delta connection, Power relations,Analysis of balanced and unbalanced 3 phase circuits, Measurement of Power."
+      }
+    },
+
+    {
+      {"Module 4"},
+      {
+        "Circuit Theorems: Superposition theorem, Thevenin’s & Norton’s Theorem, Maximum PowerTransfer theorem for Independent and Dependent Sources for DC and AC circuits.\n Coupled Circuits (Dot rule), Self and mutual inductances, Coefficient of coupling. ("
+      }
+    },
+
+    {
+      {"Module 5"},
+      {
+        "Working principles of AC Generators, motors and transformers, working principles of measuringequipments such as digital voltmeter, ammeter, power factor meter and wattmeter. "
+      }
+    }
+  };
+  var MA107 = {
+    {
+      {"Module 1: Ordinary Differential Equations – I"},
+      {
+        "Linear differential equations, Wronskian, Linear independence and dependence of solutions,Linear differential equations of second and higher order, Operator method, Legendre’s andEuler – Cauchy’s form of linear differential equation, Method of variation of parameters"
+      }
+    },
+
+    {
+      {"Module 2: Ordinary Differential Equations – II"},
+      {
+        "Ordinary and singular points of differential equation, Power and Frobenius series solutions.Bessel’s differential equation, Bessel function of first kind and its properties. Legendre’sdifferential equation, Legendre’s polynomial and its properties."
+      }
+    },
+
+    {
+      {"Module 3: Fourier series and Partial Differential Equations"},
+      {
+        "Fourier series: Euler formulae for Fourier series, Dirichlet conditions, Half range Fourierseries.\n Partial Differential Equations: Linear partial differential equations, Lagrange’s method.Method of separation of variables and its application in solving one dimensional wave andheat equations. "
+      }
+    },
+
+    {
+      {"Module 4: Complex Variable-Differentiation & Integration"},
+      {
+        "Function of a complex variable, Limit, Continuity, Differentiability, Analyticity, Analyticfunctions, Cauchy – Riemann equations. Harmonic functions, Harmonic Conjugate.\n Cauchy’s theorem, Cauchy’s Integral formula, Taylor and Laurent series expansions.Singularities and its types, Residues, Residue theorem. "
+      }
+    },
+
+    {
+      {"Module 5: Applied Probability "},
+      {
+        "Discrete and continuous random variables, cumulative distribution function, probability massand density functions, expectation, variance, moment generating function. Introduction toBinomial, Poisson and Normal Distribution."
+      }
+    }
+  };
+  var PH113 = {
+    {
+      {"Module-1 Physical Optics:"},
+      {
+        "Polarization, Malus’ Law, Brewster’s Law, Double Refraction, Interference inthin films (Parallel films), Interference in wedge-shaped layers, Newton’srings, Fraunhofer diffraction by single slit, Double slit."
+      }
+    },
+
+    {
+      {"Module-2 Electromagnetic Theory:"},
+      {
+        "Curl, Gradient, Divergence, Gauss theorem, Stokes theorem, Gauss’s law,Applications, Concept of electric potential, Relationship between E and V,Polarization of dielectrics, dielectric constant, Boundary conditions for E & D,Gauss’s law in magnetostatics, Ampere’s circuital law, Boundary conditionsfor B & H, Equation of continuity of charge, Displacement current, Maxwell’sequations. "
+      }
+    },
+
+    {
+      {"Module-3 Special Theory of Relativity:"},
+      {
+        "Introduction, Inertial frame of reference, Galilean transformations, Postulates,Lorentz transformations and its conclusions, Length contraction, time dilation,velocity addition, Mass change, Einstein's mass energy relation."
+      }
+    },
+
+    {
+      {"Module-4 Quantum Mechanics:"},
+      {
+        "Planck's theory of black-body radiation, Compton effect, Wave particle duality,De Broglie waves, Davisson and Germer's experiment, Uncertainty principle,physical interpretation of wave function, Schrodinger equation in onedimension, free particle, particle in an infinite square well."
+      }
+    },
+
+    {
+      {"Module-5 Lasers:"},
+      {
+        "Spontaneous and stimulated emission, Einstein's A and B coefficients,Population-inversion, Light amplification, Basic laser action, Ruby and He-Nelasers, Properties and applications of laser radiation, Elementary ideas of fiberoptics and application of fiber optic cables."
+      }
+    }
+  };
+  var CS101 = {
+    {
+      {"Module I Introduction to Programming:"},
+      {
+        "Introduction to components of a computer system (disks, memory, processor, where a program isstored and executed, operating system, compilers etc.)\n Problem Solving: Steps to solve logical and numerical problems.\n Representation of Algorithm: Flowchart/Pseudo code with examples. From algorithms toprograms; source code, variables (with data types) variables and memory locations, Syntax andLogical Errors in compilation, object and executable code"
+      }
+    },
+
+    {
+      {"Module II"},
+      {
+        "Arithmetic expressions and precedence, Conditional Branching and Loops, Writing andevaluation of conditionals, Iterations, Loops."
+      }
+    },
+
+    {
+      {"Module III"},
+      {
+        "Array, Character array, strings. Case studies to discuss the various Problems related to Basicscience (Matrix addition, Matrix-matrix multiplication, Roots of an equation etc.), Sorting,Searching."
+      }
+    },
+
+    {
+      {"Module IV"},
+      {
+        "Functions (including using built in libraries), Parameter passing in functions, call by value, callby reference. Passing arrays to functions, Recursion (Finding Factorial, Fibonacci series,Ackerman function etc.)."
+      }
+    },
+
+    {
+      {"Module V"},
+      {
+        "Structures, Defining structures and Array of Structures\n Pointers: Defining pointers, Use of Pointers in self-referential structures, File Handling"
       }
     }
   };
