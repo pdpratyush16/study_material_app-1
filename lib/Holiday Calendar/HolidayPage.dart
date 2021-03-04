@@ -227,20 +227,24 @@ class _HolidayPageState extends State<HolidayPage> {
                 'Holidays',
                 style: TextStyle(
                   fontSize: 40.0,
-                  color: Colors.deepPurpleAccent,
+                  color: kPrimaryColor,
                   fontWeight: FontWeight.w500,
+                  fontFamily: 'Oswald',
                 ),
               ),
             ),
             calendarBody(),
-            SizedBox(height: 25.0,),
+            SizedBox(
+              height: 25.0,
+            ),
             Center(
               child: Text(
                 'Restricted Holidays',
                 style: TextStyle(
                   fontSize: 40.0,
-                  color: Colors.deepPurpleAccent,
+                  color: kPrimaryColor,
                   fontWeight: FontWeight.w500,
+                  fontFamily: 'Oswald',
                 ),
               ),
             ),

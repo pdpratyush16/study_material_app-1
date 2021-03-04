@@ -36,3 +36,9 @@ flutter:
   assets:
     - assets/images/
     - assets/avatar/
+  fonts:
+    - family: Oswald
+      fonts:
+        # - asset: assets/fonts/Oswald-Regular.ttf
+        - asset: assets/fonts/AkayaTelivigala-Regular.ttf
+  #         style: italic

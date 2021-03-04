@@ -606,7 +606,7 @@ class SyllabusTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(16.0),
       child: Material(
         borderRadius: BorderRadius.circular(16.0),
         elevation: 5,
@@ -626,11 +626,16 @@ class SyllabusTile extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20.0,
+                height: 12.0,
               ),
               Text(
                 message,
-                style: TextStyle(color: Colors.white, fontSize: 10.0),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15.0,
+                  //letterSpacing: 1,
+                  wordSpacing: 1.0,
+                ),
               ),
             ],
           ),
