@@ -445,7 +445,7 @@ class Info extends StatelessWidget {
           enableJavaScript: true,
         );
       }
-    } else if(type == 3){
+    } else if (type == 3) {
       String url = 'mailto:$text?subject=BitHub feedback';
       if (await canLaunch(url)) {
         await launch(
@@ -561,7 +561,8 @@ class DevsTileDesign extends StatelessWidget {
 
 class UsersGuide extends StatelessWidget {
   final String message;
-  UsersGuide({this.message});
+  final String heading;
+  UsersGuide({this.message, this.heading});
 
   @override
   Widget build(BuildContext context) {
@@ -579,7 +580,57 @@ class UsersGuide extends StatelessWidget {
             children: <Widget>[
               Text(
                 message,
-                style: TextStyle(color: Colors.white, fontSize: 9.0),
+                style: TextStyle(color: Colors.white, fontSize: 10.0),
+              ),
+              // Text(
+              //   heading,
+              //   style: TextStyle(
+              //     color: Colors.white,
+              //     fontSize: 20.0,
+              //     fontWeight: FontWeight.bold,
+              //   ),
+              // ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class SyllabusTile extends StatelessWidget {
+  final String message;
+  final String heading;
+  SyllabusTile({this.heading, this.message});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Material(
+        borderRadius: BorderRadius.circular(16.0),
+        elevation: 5,
+        color: Color(0xca30363A),
+        shadowColor: Colors.white,
+        child: Padding(
+          padding: EdgeInsets.all(16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Text(
+                heading,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Text(
+                message,
+                style: TextStyle(color: Colors.white, fontSize: 10.0),
               ),
             ],
           ),
