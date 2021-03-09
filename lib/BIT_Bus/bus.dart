@@ -771,8 +771,8 @@ class _BusState extends State<Bus> {
                                 borderRadius: BorderRadius.circular(6.0),
                               ),
                               fillColor: (day == 'MONDAY')
-                                  ? kPrimaryColorActive
-                                  : kPrimaryColor,
+                                  ? kPrimaryColor
+                                  : kPrimaryColorActive,
                             ),
                             SizedBox(
                               width: 10,
@@ -793,8 +793,8 @@ class _BusState extends State<Bus> {
                                 borderRadius: BorderRadius.circular(6.5),
                               ),
                               fillColor: (day == 'SATURDAY')
-                                  ? kPrimaryColorActive
-                                  : kPrimaryColor,
+                                  ? kPrimaryColor
+                                  : kPrimaryColorActive,
                             ),
                             SizedBox(
                               width: 10,
@@ -815,8 +815,8 @@ class _BusState extends State<Bus> {
                                 borderRadius: BorderRadius.circular(6.5),
                               ),
                               fillColor: (day == 'SUNDAY')
-                                  ? kPrimaryColorActive
-                                  : kPrimaryColor,
+                                  ? kPrimaryColor
+                                  : kPrimaryColorActive,
                             ),
                             SizedBox(
                               width: 10,
@@ -837,8 +837,8 @@ class _BusState extends State<Bus> {
                                 borderRadius: BorderRadius.circular(6.5),
                               ),
                               fillColor: (day == 'HOLIDAY')
-                                  ? kPrimaryColorActive
-                                  : kPrimaryColor,
+                                  ? kPrimaryColor
+                                  : kPrimaryColorActive,
                             ),
                           ],
                         ),
@@ -869,8 +869,8 @@ class _BusState extends State<Bus> {
                                     borderRadius: BorderRadius.circular(6.0),
                                   ),
                                   fillColor: (busType == 'STUDENT')
-                                      ? kPrimaryColorActive
-                                      : kPrimaryColor,
+                                      ? kPrimaryColor
+                                      : kPrimaryColorActive,
                                 ),
                                 SizedBox(width: 7.5),
                                 RawMaterialButton(
@@ -889,8 +889,8 @@ class _BusState extends State<Bus> {
                                     borderRadius: BorderRadius.circular(6.0),
                                   ),
                                   fillColor: (busType == 'STAFF')
-                                      ? kPrimaryColorActive
-                                      : kPrimaryColor,
+                                      ? kPrimaryColor
+                                      : kPrimaryColorActive,
                                 ),
                               ],
                             ),
@@ -944,7 +944,7 @@ class _BusState extends State<Bus> {
                             'DORANDA (D)',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontSize: 13,
+                              fontSize: 12,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

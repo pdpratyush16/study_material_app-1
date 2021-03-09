@@ -121,11 +121,11 @@ class Syllabus {
     },
     {
       "Module 3: Fourier series and Partial Differential Equations":
-          "Fourier series: Euler formulae for Fourier series, Dirichlet conditions, Half range Fourierseries.\n Partial Differential Equations: Linear partial differential equations, Lagrange’s method.Method of separation of variables and its application in solving one dimensional wave andheat equations. "
+          "Fourier series: Euler formulae for Fourier series, Dirichlet conditions, Half range Fourierseries.\nPartial Differential Equations: Linear partial differential equations, Lagrange’s method.Method of separation of variables and its application in solving one dimensional wave andheat equations. "
     },
     {
       "Module 4: Complex Variable-Differentiation & Integration":
-          "Function of a complex variable, Limit, Continuity, Differentiability, Analyticity, Analyticfunctions, Cauchy – Riemann equations. Harmonic functions, Harmonic Conjugate.\n Cauchy’s theorem, Cauchy’s Integral formula, Taylor and Laurent series expansions.Singularities and its types, Residues, Residue theorem. "
+          "Function of a complex variable, Limit, Continuity, Differentiability, Analyticity, Analyticfunctions, Cauchy – Riemann equations. Harmonic functions, Harmonic Conjugate.\nCauchy’s theorem, Cauchy’s Integral formula, Taylor and Laurent series expansions.Singularities and its types, Residues, Residue theorem. "
     },
     {
       "Module 5: Applied Probability ":
@@ -157,7 +157,7 @@ class Syllabus {
   List<Map<String, String>> CS101 = [
     {
       "Module I Introduction to Programming:":
-          "Introduction to components of a computer system (disks, memory, processor, where a program isstored and executed, operating system, compilers etc.)\n Problem Solving: Steps to solve logical and numerical problems.\n Representation of Algorithm: Flowchart/Pseudo code with examples. From algorithms toprograms; source code, variables (with data types) variables and memory locations, Syntax andLogical Errors in compilation, object and executable code"
+          "Introduction to components of a computer system (disks, memory, processor, where a program isstored and executed, operating system, compilers etc.)\nProblem Solving: Steps to solve logical and numerical problems.\nRepresentation of Algorithm: Flowchart/Pseudo code with examples. From algorithms toprograms; source code, variables (with data types) variables and memory locations, Syntax andLogical Errors in compilation, object and executable code"
     },
     {
       "Module II":
@@ -173,7 +173,7 @@ class Syllabus {
     },
     {
       "Module V":
-          "Structures, Defining structures and Array of Structures\n Pointers: Defining pointers, Use of Pointers in self-referential structures, File Handling"
+          "Structures, Defining structures and Array of Structures\nPointers: Defining pointers, Use of Pointers in self-referential structures, File Handling"
     }
   ];
 
@@ -202,11 +202,11 @@ class Syllabus {
   List<Map<String, String>> IT201 = [
     {
       "Module I":
-          "Introduction: Definition of Computing, Conventional Computing vs. Intelligent Computing, Necessity of Intelligent Computing, Current trends in Intelligent Computing.\n AI Concepts: Introduction to AI, AI problems and Solution approaches, Fundamentals of problem solving using Search and Heuristics, Overview of Knowledge-base creation, and Intelligent Agents, Classification of AI."
+          "Introduction: Definition of Computing, Conventional Computing vs. Intelligent Computing, Necessity of Intelligent Computing, Current trends in Intelligent Computing.\nAI Concepts: Introduction to AI, AI problems and Solution approaches, Fundamentals of problem solving using Search and Heuristics, Overview of Knowledge-base creation, and Intelligent Agents, Classification of AI."
     },
     {
       "Module II":
-          "Introduction to Soft Computing: Hard Computing vs. Soft Computing, Paradigms of Soft Computing, Real Life applications of Soft Computing\n Fuzzy Logic: Classical Sets Vs Fuzzy Sets, Membership Functions, Fuzzy operations, Fuzzy Relations, Fuzzy Composition (Max-Min, Max-Product), Defuzzification, Fuzzy Inference System\n Genetic Algorithm: Principle of Optimization, Traditional vs Evolutionary optimization, Genetic Algorithm: Working Cycle of GA, Encoding, Crossover, Mutation."
+          "Introduction to Soft Computing: Hard Computing vs. Soft Computing, Paradigms of Soft Computing, Real Life applications of Soft Computing\nFuzzy Logic: Classical Sets Vs Fuzzy Sets, Membership Functions, Fuzzy operations, Fuzzy Relations, Fuzzy Composition (Max-Min, Max-Product), Defuzzification, Fuzzy Inference System\nGenetic Algorithm: Principle of Optimization, Traditional vs Evolutionary optimization, Genetic Algorithm: Working Cycle of GA, Encoding, Crossover, Mutation."
     },
     {
       "Module III":
@@ -272,7 +272,7 @@ class Syllabus {
     },
     {
       "Module II":
-          "Stack and Queue\n  Stack ADT: basic operations, Queue ADT: basic operations, Circular Queue, Evaluation of Expressions, Another application or Mazing Problem."
+          "Stack and Queue\nStack ADT: basic operations, Queue ADT: basic operations, Circular Queue, Evaluation of Expressions, Another application or Mazing Problem."
     },
     {
       "Module III":
@@ -298,7 +298,7 @@ class Syllabus {
     },
     {
       "Module III":
-          "Basic Processing Unit: Some Fundamental Concepts, Instruction Execution, Hardware Components, Instruction Fetch and Execution Steps, Control Signals, Hardwired Control, CISCStyle Processors.\n Pipelining: Basic Concept, Pipeline Organization, Pipelining Issues, Data Dependencies, Memory Delays, Branch Delays, Pipeline Performance Evaluation"
+          "Basic Processing Unit: Some Fundamental Concepts, Instruction Execution, Hardware Components, Instruction Fetch and Execution Steps, Control Signals, Hardwired Control, CISCStyle Processors.\nPipelining: Basic Concept, Pipeline Organization, Pipelining Issues, Data Dependencies, Memory Delays, Branch Delays, Pipeline Performance Evaluation"
     },
     {
       "Module IV":
@@ -306,7 +306,7 @@ class Syllabus {
     },
     {
       "Module V":
-          "Input Output & Parallel Processing:\n Basic Input Output: Accessing I/O Devices, Interrupts Input Output Organization: Bus Structure, Bus Operation, Arbitration, Interface, Interconnection Standards.\n Parallel Processing: Hardware Multithreading, Vector (SIMD) Processing, Shared-Memory Multiprocessors, Cache Coherence, Message-Passing Multicomputers, Parallel Programming for Multiprocessors, Performance Modeling."
+          "Input Output & Parallel Processing:\nBasic Input Output: Accessing I/O Devices, Interrupts Input Output Organization: Bus Structure, Bus Operation, Arbitration, Interface, Interconnection Standards.\nParallel Processing: Hardware Multithreading, Vector (SIMD) Processing, Shared-Memory Multiprocessors, Cache Coherence, Message-Passing Multicomputers, Parallel Programming for Multiprocessors, Performance Modeling."
     },
   ];
   List<Map<String, String>> CS206 = [
@@ -356,7 +356,7 @@ class Syllabus {
   List<Map<String, String>> MA203 = [
     {
       "Module I":
-          "Errors and Nonlinear Equations\n Error Analysis: Definition and sources of errors, propagation of errors, floating-point arithmetic\n Solution of Nonlinear equations: Bisection method, Regula-Falsi method, Secant method, Newton-Raphson method and its variants, General Iterative method."
+          "Errors and Nonlinear Equations\nError Analysis: Definition and sources of errors, propagation of errors, floating-point arithmetic\nSolution of Nonlinear equations: Bisection method, Regula-Falsi method, Secant method, Newton-Raphson method and its variants, General Iterative method."
     },
     {
       "Module II":
@@ -386,7 +386,7 @@ class Syllabus {
     },
     {
       "Module III":
-          "Object Oriented Concepts: Polymorphism & Inheritance\n  Controlling access to class members, the use of this keyword, getters and setters, Composition, enum, the use of static and final, Garbage collection. Superclass and subclass, protected members, constructors in subclass, the Object class, Introduction to polymorphism, Abstract classes and methods, Assignment between subclass and superclass variables, Creating and using interfaces."
+          "Object Oriented Concepts: Polymorphism & Inheritance\nControlling access to class members, the use of this keyword, getters and setters, Composition, enum, the use of static and final, Garbage collection. Superclass and subclass, protected members, constructors in subclass, the Object class, Introduction to polymorphism, Abstract classes and methods, Assignment between subclass and superclass variables, Creating and using interfaces."
     },
     {
       "Module IV":
@@ -400,7 +400,7 @@ class Syllabus {
   List<Map<String, String>> CS211 = [
     {
       "Module I":
-          "Operating system Overview: Operating system Objective and Functions, Evolution of Operating System, Major Advances in OS Components, Characteristics of Modern Operating Systems\n Process Description and Control: Process Concept, Process States, Process Description, Process Control, Threads, Types of Threads, Multicore and Multithreading "
+          "Operating system Overview: Operating system Objective and Functions, Evolution of Operating System, Major Advances in OS Components, Characteristics of Modern Operating Systems\nProcess Description and Control: Process Concept, Process States, Process Description, Process Control, Threads, Types of Threads, Multicore and Multithreading "
     },
     {
       "Module II":
@@ -408,15 +408,15 @@ class Syllabus {
     },
     {
       "Module III":
-          "Concurrency: Mutual Exclusion and Synchronization\n Principle of Concurrency, Mutual Exclusion, Hardware Support, Semaphores, Monitors, Message Passing, Readers/Writers Problem\n Deadlock and Starvation: Principle of Deadlock, Deadlock Prevention, Deadlock Avoidance, Deadlock Detection, Dining Philosopher Problem"
+          "Concurrency: Mutual Exclusion and Synchronization\nPrinciple of Concurrency, Mutual Exclusion, Hardware Support, Semaphores, Monitors, Message Passing, Readers/Writers Problem\nDeadlock and Starvation: Principle of Deadlock, Deadlock Prevention, Deadlock Avoidance, Deadlock Detection, Dining Philosopher Problem"
     },
     {
       "Module IV":
-          "Memory Management: Memory Management Requirements, Memory Partitioning, Paging, Segmentation\n Virtual Memory:  Hardware and Control Structures, Operating System Policies for Virtual Memory"
+          "Memory Management: Memory Management Requirements, Memory Partitioning, Paging, Segmentation\nVirtual Memory:  Hardware and Control Structures, Operating System Policies for Virtual Memory"
     },
     {
       "Module V":
-          "I/O Management and Disk Scheduling: I/O device, Organization of the I/O Function, Operating System Design Issues, I/O Buffering, Disk Scheduling, RAID, Disk Cache\n File Management:  Overview, File Organization and Access, File Directories, File Sharing, Record Blocking, File Allocation and Free Space Management"
+          "I/O Management and Disk Scheduling: I/O device, Organization of the I/O Function, Operating System Design Issues, I/O Buffering, Disk Scheduling, RAID, Disk Cache\nFile Management:  Overview, File Organization and Access, File Directories, File Sharing, Record Blocking, File Allocation and Free Space Management"
     },
   ];
 //ECE
@@ -467,23 +467,23 @@ class Syllabus {
   List<Map<String, String>> EC205 = [
     {
       "Module I":
-          "INTRODUCTION TO SIGNALS AND SYSTEMS:\n Signals and systems as seen in everyday life and in various branches of engineering and science, Signal properties: periodicity, absolute integrability, determinism, and stochastic character. Some special signals of importance: the unit step, the unit impulse, the sinusoid, the complex exponential, some special time-limited signals; continuous and discrete time signals, continuous and discrete amplitude signals. System properties: linearity: additivity and homogeneity, shift-invariance, causality, stability, realizability. "
+          "INTRODUCTION TO SIGNALS AND SYSTEMS:\nSignals and systems as seen in everyday life and in various branches of engineering and science, Signal properties: periodicity, absolute integrability, determinism, and stochastic character. Some special signals of importance: the unit step, the unit impulse, the sinusoid, the complex exponential, some special time-limited signals; continuous and discrete time signals, continuous and discrete amplitude signals. System properties: linearity: additivity and homogeneity, shift-invariance, causality, stability, realizability. "
     },
     {
       "Module II":
-          "BEHAVIOR OF CONTINUOUS AND DISCRETE-TIME LTI SYSTEMS:\n Impulse response and step response, convolution, input-output behavior with aperiodic convergent inputs, cascade interconnections. Characterization of causality and stability of LTI systems. System representation through differential equations and difference equations. State-space Representation of systems. State-Space Analysis, Multi-input, multi-output representation. State Transition Matrix and its Role. Periodic inputs to an LTI system, the notion of frequency response and its relation to the impulse response. "
+          "BEHAVIOR OF CONTINUOUS AND DISCRETE-TIME LTI SYSTEMS:\nImpulse response and step response, convolution, input-output behavior with aperiodic convergent inputs, cascade interconnections. Characterization of causality and stability of LTI systems. System representation through differential equations and difference equations. State-space Representation of systems. State-Space Analysis, Multi-input, multi-output representation. State Transition Matrix and its Role. Periodic inputs to an LTI system, the notion of frequency response and its relation to the impulse response. "
     },
     {
       "Module III":
-          "FOURIER AND LAPLACE TRANSFORMS:\n Fourier series representation of periodic signals, Waveform Symmetries, Calculation of Fourier Coefficients. Fourier Transform, convolution/multiplication and their effect in the frequency domain, magnitude and phase response, Fourier domain duality, Laplace Transform for continuous-time signals and systems, Transfer/system functions, poles and zeros of system functions and signals, Laplace domain analysis, the solution to differential equations and system behavior."
+          "FOURIER AND LAPLACE TRANSFORMS:\nFourier series representation of periodic signals, Waveform Symmetries, Calculation of Fourier Coefficients. Fourier Transform, convolution/multiplication and their effect in the frequency domain, magnitude and phase response, Fourier domain duality, Laplace Transform for continuous-time signals and systems, Transfer/system functions, poles and zeros of system functions and signals, Laplace domain analysis, the solution to differential equations and system behavior."
     },
     {
       "Module IV":
-          "Z-TRANSFORM, DTFT, AND DFT:\n Z-transform, Region of convergence and its properties, Inverse Z transform, properties of ZT, The Discrete-Time Fourier Transform (DTFT) and the Discrete Fourier Transform (DFT), Parseval's Theorem., Properties of DTFT and DFT, convolution property, multiplication property, Duality, Systems Characterized by Linear Constant Coefficient Difference Equation, The z-Transform for discrete time signals and systems, system functions, poles and zeros of systems and sequences, zdomain analysis."
+          "Z-TRANSFORM, DTFT, AND DFT:\nZ-transform, Region of convergence and its properties, Inverse Z transform, properties of ZT, The Discrete-Time Fourier Transform (DTFT) and the Discrete Fourier Transform (DFT), Parseval's Theorem., Properties of DTFT and DFT, convolution property, multiplication property, Duality, Systems Characterized by Linear Constant Coefficient Difference Equation, The z-Transform for discrete time signals and systems, system functions, poles and zeros of systems and sequences, zdomain analysis."
     },
     {
       "Module V":
-          "SAMPLING AND RECONSTRUCTION:\n The Sampling Theorem and its implications. Spectra of sampled signals. Reconstruction: ideal interpolator, zero-order hold, first-order hold. Aliasing and its effects. The relation between continuous and discrete time systems. Applications ofsignal and system theory: modulation for communication, filtering, feedback control systems."
+          "SAMPLING AND RECONSTRUCTION:\nThe Sampling Theorem and its implications. Spectra of sampled signals. Reconstruction: ideal interpolator, zero-order hold, first-order hold. Aliasing and its effects. The relation between continuous and discrete time systems. Applications ofsignal and system theory: modulation for communication, filtering, feedback control systems."
     },
   ];
   List<Map<String, String>> EC253 = [
@@ -497,7 +497,7 @@ class Syllabus {
     },
     {
       "Module III":
-          "Feedback Amplifiers: Classification of amplifiers, feedback concept, transfer gain with feedback, characteristics of negative-feedback amplifier, method of analysis of feedback amplifiers, voltage-series feedback, current-series feedback, current-shunt feedback, voltage-shunt feedback. Concept of stability, gain margin and phase margin.\n Oscillators: RC phase shift oscillator, Wien bridge oscillator, crystal oscillator. Current mirror circuits."
+          "Feedback Amplifiers: Classification of amplifiers, feedback concept, transfer gain with feedback, characteristics of negative-feedback amplifier, method of analysis of feedback amplifiers, voltage-series feedback, current-series feedback, current-shunt feedback, voltage-shunt feedback. Concept of stability, gain margin and phase margin.\nOscillators: RC phase shift oscillator, Wien bridge oscillator, crystal oscillator. Current mirror circuits."
     },
     {
       "Module IV":
@@ -511,11 +511,11 @@ class Syllabus {
   List<Map<String, String>> EC255 = [
     {
       "Module I":
-          "Signal analysis\n Time domain and frequency domain representation of a signal, fourier series, complex fourier spectrum (discrete spectrum or line spectrum), fourier transform, properties of fourier transform, energy and power spectral density spectrum, distortion less transmission, causality and physical realizability, pre-envelope and canonical representation of band pass signals."
+          "Signal analysis\nTime domain and frequency domain representation of a signal, fourier series, complex fourier spectrum (discrete spectrum or line spectrum), fourier transform, properties of fourier transform, energy and power spectral density spectrum, distortion less transmission, causality and physical realizability, pre-envelope and canonical representation of band pass signals."
     },
     {
       "Module II":
-          "Amplitude modulation- demodulation communication systems\n Amplitude modulation, square law modulator, switching modulator, square law demodulator, envelope detector, double side band suppressed carrier modulation, balanced and ring modulators, single side band modulation, frequency discrimination and phase discrimination modulators, coherent detection of SSB, frequency division multiplexing and time division multiplexing, super heterodyne AM receiver and its characteristics. "
+          "Amplitude modulation- demodulation communication systems\nAmplitude modulation, square law modulator, switching modulator, square law demodulator, envelope detector, double side band suppressed carrier modulation, balanced and ring modulators, single side band modulation, frequency discrimination and phase discrimination modulators, coherent detection of SSB, frequency division multiplexing and time division multiplexing, super heterodyne AM receiver and its characteristics. "
     },
     {
       "Module III":
@@ -555,7 +555,7 @@ class Syllabus {
   List<Map<String, String>> EC251 = [
     {
       "Module I":
-          "Randomness, Uncertainty and its Description\n Random experiments/phenomenon, outcomes of the random experiment, Sample Space, Events, Probability of an event, Concepts of sets and probability theory to explain Random experiments, Probability space; Conditional probability, Independence and Bayes theorem; Combinatorial probability and sampling models."
+          "Randomness, Uncertainty and its Description\nRandom experiments/phenomenon, outcomes of the random experiment, Sample Space, Events, Probability of an event, Concepts of sets and probability theory to explain Random experiments, Probability space; Conditional probability, Independence and Bayes theorem; Combinatorial probability and sampling models."
     },
     {
       "Module II":
@@ -1089,11 +1089,11 @@ class Syllabus {
     },
     {
       "Module II":
-          "Chlor-alkali industries: Manufacture of Soda Ash, Caustic Soda and Chlorine. Bleaching Powder, Calcium Hypochlorite, Sodium Hypochlorite. Manufacture of chlorine caustic soda, Mercury cathode and membrane process, hydrochloric acid.\n Pulp and Paper Industries: Manufacture of pulp (Kraft pulping and Sulfite pulping), Manufacture of paper."
+          "Chlor-alkali industries: Manufacture of Soda Ash, Caustic Soda and Chlorine. Bleaching Powder, Calcium Hypochlorite, Sodium Hypochlorite. Manufacture of chlorine caustic soda, Mercury cathode and membrane process, hydrochloric acid.\nPulp and Paper Industries: Manufacture of pulp (Kraft pulping and Sulfite pulping), Manufacture of paper."
     },
     {
       "Module III":
-          "Nitrogen industries: Manufacturing of Ammonia; ammonium nitrate, ammonium sulphate; Manufacturing of Urea and Nitric acid.\n Fertilizer Industries: Manufacturing of Single Superphosphate (SSP), Triple Superphosphate (TSP) and ammonium phosphate.\n Mixed fertilizers: NPK – Manufacturing process and details of major equipments. "
+          "Nitrogen industries: Manufacturing of Ammonia; ammonium nitrate, ammonium sulphate; Manufacturing of Urea and Nitric acid.\nFertilizer Industries: Manufacturing of Single Superphosphate (SSP), Triple Superphosphate (TSP) and ammonium phosphate.\nMixed fertilizers: NPK – Manufacturing process and details of major equipments. "
     },
     {
       "Module IV":
@@ -1277,7 +1277,7 @@ class Syllabus {
     },
     {
       "Module 4: Sequencing and Queuing Model ":
-          "Processing of n jobs through two machines, processing n jobs through three machines; Processing of 2 jobs through m machines –graphical method, numerical problems based on these methods\n  Basis of Queuing theory, elements of queuing theory, Kendall’s Notation, Operating characteristics of a queuing system, Classification of Queuing models, Queuing system and their characteristics of M/M/1/FIFO/ Queuing system"
+          "Processing of n jobs through two machines, processing n jobs through three machines; Processing of 2 jobs through m machines –graphical method, numerical problems based on these methods\nBasis of Queuing theory, elements of queuing theory, Kendall’s Notation, Operating characteristics of a queuing system, Classification of Queuing models, Queuing system and their characteristics of M/M/1/FIFO/ Queuing system"
     },
     {
       "Module 5: Games Theory":
@@ -1296,22 +1296,22 @@ class Syllabus {
     },
     {
       "Module 3: Welding":
-          "Welding introduction and classification of welding processes, welding terminology, general principles, welding positions, welding join types, welding edge preparation. Gas welding and gas cutting, principles of oxy-fuel welding and cutting\n Arc Welding: Power sources and arc welding electrodes and its coating, working principles and applications of SMAW, welding characteristic curve, GMAW, GTAW, SAW; Modes of metal transfer in GMAW and their applications Soldering and brazing "
+          "Welding introduction and classification of welding processes, welding terminology, general principles, welding positions, welding join types, welding edge preparation. Gas welding and gas cutting, principles of oxy-fuel welding and cutting\nArc Welding: Power sources and arc welding electrodes and its coating, working principles and applications of SMAW, welding characteristic curve, GMAW, GTAW, SAW; Modes of metal transfer in GMAW and their applications Soldering and brazing "
     },
     {
       "Module 4: Welding Processes and NDT inspection ":
-          "Working principles and applications of thermit welding, resistance welding; spot, seam, projection and butt welding, plasma arc welding, electroslag welding, Ultrasonic welding,  electron beam welding (EBM), Laser beam Welding (LBW)\n Introduction to Non-Destructive Testing (NDT) testing: Dye penetration testing, eddy current testing, magnetic particles tesing, x-ray inspection, and ultrasound testing "
+          "Working principles and applications of thermit welding, resistance welding; spot, seam, projection and butt welding, plasma arc welding, electroslag welding, Ultrasonic welding,  electron beam welding (EBM), Laser beam Welding (LBW)\nIntroduction to Non-Destructive Testing (NDT) testing: Dye penetration testing, eddy current testing, magnetic particles tesing, x-ray inspection, and ultrasound testing "
     },
     {
       "Module 5: Forming processes":
-          "Introduction to recovery, recrystallization and grain growth; hot working and cold working Rolling: Classification of rolling processes, rolling mills, products of rolling and main variables \n Drawing: Drawing of rods, wires and tubes\n Forging: Open and closed die forging, forging operations, hammer forging, press forging and drop forging\n Extrusion: Classification of extrusion processes, hot and cold extrusion processes\n Sheet metal forming operations: Blanking, piercing, deep drawing, bending."
+          "Introduction to recovery, recrystallization and grain growth; hot working and cold working Rolling: Classification of rolling processes, rolling mills, products of rolling and main variables \nDrawing: Drawing of rods, wires and tubes\nForging: Open and closed die forging, forging operations, hammer forging, press forging and drop forging\nExtrusion: Classification of extrusion processes, hot and cold extrusion processes\nSheet metal forming operations: Blanking, piercing, deep drawing, bending."
     },
   ];
 
   List<Map<String, String>> PE206 = [
     {
       "Module – I: Introduction":
-          "Historical development, Basics of Metrology, Need for Inspection, Accuracy and Precision, Standards of measurements, system of measurement, line, end & wavelength standards, type and source of measurement errors\n Linear metrology: Steel rule, callipers, Vernier calliper, Vernier height gauge, Vernier depth gauge, micrometres, universal calliper. \n Miscellaneous measurements: Taper measurement, angle measurement, radius measurement, sine bar & Angle gauges "
+          "Historical development, Basics of Metrology, Need for Inspection, Accuracy and Precision, Standards of measurements, system of measurement, line, end & wavelength standards, type and source of measurement errors\nLinear metrology: Steel rule, callipers, Vernier calliper, Vernier height gauge, Vernier depth gauge, micrometres, universal calliper. \nMiscellaneous measurements: Taper measurement, angle measurement, radius measurement, sine bar & Angle gauges "
     },
     {
       "Module – 2: Limit Fits and Gauge":
@@ -1319,15 +1319,15 @@ class Syllabus {
     },
     {
       "Module – 3: Comparator and Optical gauges":
-          "Principle and uses of mechanical, optical, Electrical, electronic and pneumatic Comparators Principle of interferometer, concept of optical flat, projector, microscope, autocollimator and interferometer\n Types of machine tool tests, alignment tests for lathe, milling and drilling machine tools"
+          "Principle and uses of mechanical, optical, Electrical, electronic and pneumatic Comparators Principle of interferometer, concept of optical flat, projector, microscope, autocollimator and interferometer\nTypes of machine tool tests, alignment tests for lathe, milling and drilling machine tools"
     },
     {
       "Module – 4: Form Measurement":
-          "Terminology of screw threads, Measurement of minor, major, thread angle and effective diameter of screw threads by 2-wire and 3- wire methods, best size wire. Screw thread gauges, Tool maker's microscope\n Gear tooth terminology, gear tooth thickness & pitch measurement, involutes profile testing of gear\n Straightness, flatness and squareness and circularity tests, numerical evaluation, measurement of surface finish, related instruments.\n Automated inspection system, Introduction & applications of Co-ordinate Measuring Machine (CMM)"
+          "Terminology of screw threads, Measurement of minor, major, thread angle and effective diameter of screw threads by 2-wire and 3- wire methods, best size wire. Screw thread gauges, Tool maker's microscope\nGear tooth terminology, gear tooth thickness & pitch measurement, involutes profile testing of gear\nStraightness, flatness and squareness and circularity tests, numerical evaluation, measurement of surface finish, related instruments.\nAutomated inspection system, Introduction & applications of Co-ordinate Measuring Machine (CMM)"
     },
     {
       "Module – 5: Dynamic measurement ":
-          "Sensors and Transducers: Types of Sensors, types of transducers and their characteristics Force and Torque measurement: Direct methods and indirect method, force measuring instruments-load cells, Dynamometer, Power Measurements\nMeasurement of strain: types of strain gauges, gauge factors, theory of strain gauges and method of measurement, Wheatstone bridge circuit\n  Vibration and Noise Measurement: Piezoelectric Accelerometer and decibel meters"
+          "Sensors and Transducers: Types of Sensors, types of transducers and their characteristics Force and Torque measurement: Direct methods and indirect method, force measuring instruments-load cells, Dynamometer, Power Measurements\nMeasurement of strain: types of strain gauges, gauge factors, theory of strain gauges and method of measurement, Wheatstone bridge circuit\nVibration and Noise Measurement: Piezoelectric Accelerometer and decibel meters"
     },
   ];
 

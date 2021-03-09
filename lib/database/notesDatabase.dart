@@ -247,31 +247,31 @@ class NotesDataabse {
   ];
   List<Map<String, String>> MA2 = [
     {
-      'Module 1 Handwwritten':
+      'Module 1 Handwritten':
           'https://drive.google.com/file/d/1eqIYgyOa06GZWeIe-70Q0DfuqV7bm0e8/view?usp=sharing'
     },
     {
-      'Module 1 Handwwritten (2)':
+      'Module 1 Handwritten (2)':
           'https://drive.google.com/file/d/1S3-dpNZuVBVF1mYVSuq0sl57cYVQjKLa/view?usp=sharing'
     },
     {
-      'Module 2 Handwwritten':
+      'Module 2 Handwritten':
           'https://drive.google.com/file/d/1N2ZpboScCy63JByV7zGWj3w88byMIZGc/view?usp=sharing'
     },
     {
-      'Module 2 Handwwritten (2)':
+      'Module 2 Handwritten (2)':
           'https://drive.google.com/file/d/1fgbyT1XGBshH-9ZR7ePfKeh15WUJzQaX/view?usp=sharing'
     },
     {
-      'Module 4 Handwwritten':
+      'Module 4 Handwritten':
           'https://drive.google.com/file/d/1IV-hmyS2wTmkyAOGS23S9U3IQs4OZ-jy/view?usp=sharing'
     },
     {
-      'Module 4 Handwwritten (2)':
+      'Module 4 Handwritten (2)':
           'https://drive.google.com/file/d/1H3oqd7lNTs31EiNp3mQ3GLQdIk_bDJB-/view?usp=sharing'
     },
     {
-      'Module 5 Handwwritten':
+      'Module 5 Handwritten':
           'https://drive.google.com/file/d/1-aQOleyoxtFqN9V2YfDBqYcgXwYtLXWF/view?usp=sharing'
     },
     {

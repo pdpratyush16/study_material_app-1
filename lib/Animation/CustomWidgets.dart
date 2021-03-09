@@ -372,12 +372,12 @@ class Tile extends StatelessWidget {
                         color: Color(0xaa8f94fb),
                         child: (type == 1)
                             ? Icon(
-                                FontAwesomeIcons.youtube,
+                                FontAwesomeIcons.video,
                                 color: Colors.white,
                                 size: 35.0,
                               )
                             : Icon(
-                                FontAwesomeIcons.filePdf,
+                                FontAwesomeIcons.fileAlt,
                                 color: Colors.white,
                                 size: 35.0,
                               ),
