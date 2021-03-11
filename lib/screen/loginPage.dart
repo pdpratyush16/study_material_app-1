@@ -153,12 +153,15 @@ class _LoginPageState extends State<LoginPage> {
                                   showSpinner = true;
                                 });
                                 try {
-                                  final oldUser = await _auth.signInWithEmailAndPassword(
-                                      email: emailVal, password: passwordVal);
+                                  final oldUser =
+                                      await _auth.signInWithEmailAndPassword(
+                                          email: emailVal,
+                                          password: passwordVal);
                                   if (oldUser != null) {
                                     final SharedPreferences sharedPref =
                                         await SharedPreferences.getInstance();
                                     sharedPref.setString('email', emailVal);
+                                    sharedPref.setBool('isFetched', false);
                                     Navigator.pushNamed(context, FrontPage.id);
                                   }
                                   setState(() {
@@ -189,14 +192,20 @@ class _LoginPageState extends State<LoginPage> {
                                   setState(() {
                                     showSpinner = false;
                                   });
-                                  Alert(context: context, title: status, desc: "Please try again").show();
+                                  Alert(
+                                          context: context,
+                                          title: status,
+                                          desc: "Please try again")
+                                      .show();
                                 }
                               }
                             },
                             child: Center(
                               child: Text(
                                 "Login",
-                                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
                               ),
                             ),
                           ),

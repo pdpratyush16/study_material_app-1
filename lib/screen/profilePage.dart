@@ -20,41 +20,21 @@ class _ProfilePageState extends State<ProfilePage> {
   String branch, semester, name, rollNo, email;
 
   bool loadingComplete() {
-    
-    if(email != 'null')
+    if (email != 'null')
       return true;
     else
       return false;
   }
+
   Future<void> _getUserDetails() async {
-    String uid = FirebaseAuth.instance.currentUser.uid;
-    DocumentSnapshot doc = await FirebaseFirestore.instance.collection('UserDatabase').doc(uid).get();
-    if (doc.exists) {
-      // this will check availability of document
-      if (mounted) {
-        setState(
-          () {
-            branch = doc.data()['Branch'];
-            semester = doc.data()['Semester'];
-            name = doc.data()['Name'];
-            rollNo = doc.data()['RollNo'];
-            email = doc.data()['Email'];
-          },
-        );
-      }
-    } else {
-      if (mounted) {
-        setState(
-          () {
-            branch = 'User is not available';
-            semester = 'User is not available';
-            name = 'User is not available';
-            rollNo = 'User is not available';
-            email = 'User is not available';
-          },
-        );
-      }
-    }
+    final SharedPreferences sharedPref = await SharedPreferences.getInstance();
+    setState(() {
+      branch = sharedPref.getString('branch');
+      semester = sharedPref.getString('semester');
+      name = sharedPref.getString('name');
+      rollNo = sharedPref.getString('roll');
+      email = sharedPref.getString('email');
+    });
   }
 
   @override
@@ -120,7 +100,8 @@ class _ProfilePageState extends State<ProfilePage> {
                                 ProfileIconButton(
                                     icon: FontAwesomeIcons.userEdit,
                                     onPressed: () async {
-                                      Navigator.pushNamed(context, UpdateScreen.id);
+                                      Navigator.pushNamed(
+                                          context, UpdateScreen.id);
                                     }),
 
                                 ProfileIconButton(
@@ -129,8 +110,15 @@ class _ProfilePageState extends State<ProfilePage> {
                                       SharedPreferences sharedPreference =
                                           await SharedPreferences.getInstance();
                                       sharedPreference.remove('email');
-                                      Navigator.pushReplacement(context,
-                                          MaterialPageRoute(builder: (BuildContext context) => LoginPage()));
+                                      sharedPreference.remove('name');
+                                      sharedPreference.remove('branch');
+                                      sharedPreference.remove('semester');
+                                      sharedPreference.remove('roll');
+                                      Navigator.pushReplacement(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (BuildContext context) =>
+                                                  LoginPage()));
                                     }),
                                 //SizedBox(width: 20.0)
                               ],

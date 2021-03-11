@@ -126,9 +126,9 @@ class EEE {
 
 // NON CIRCUITAL...
 class MECH {
-  List<String> sem1 = ['BEE', 'MATHEMATICS - II', 'PHYSICS', 'PPS'];
+  List<String> sem1 = ['BEE', 'MATHEMATICS - I', 'PHYSICS', 'PPS'];
 
-  List<String> sem2 = ['BECE', 'BME', 'CHEMISTRY', 'MATHEMATICS - I'];
+  List<String> sem2 = ['BECE', 'BME', 'CHEMISTRY', 'MATHEMATICS - II'];
 
   List<String> sem3 = [
     'ENVIRONMENTAL SCIENCE',
@@ -157,9 +157,9 @@ class MECH {
 }
 
 class CIV {
-  List<String> sem1 = ['BEE', 'MATHEMATICS - II', 'PPS', 'PHYSICS'];
+  List<String> sem1 = ['BEE', 'MATHEMATICS - I', 'PPS', 'PHYSICS'];
 
-  List<String> sem2 = ['BECE', 'BME', 'CHEMISTRY', 'MATHEMATICS - I'];
+  List<String> sem2 = ['BECE', 'BME', 'CHEMISTRY', 'MATHEMATICS - II'];
 
   List<String> sem3 = [
     'BUILDING MATERIALS & CONSTRUCTION',
@@ -189,9 +189,9 @@ class CIV {
 }
 
 class CHEM {
-  List<String> sem1 = ['BEE', 'MATHEMATICS - II', 'PPS', 'PHYSICS'];
+  List<String> sem1 = ['BEE', 'MATHEMATICS - I', 'PPS', 'PHYSICS'];
 
-  List<String> sem2 = ['BECE', 'BME', 'CHEMISTRY', 'MATHEMATICS - I'];
+  List<String> sem2 = ['BECE', 'BME', 'CHEMISTRY', 'MATHEMATICS - II'];
 
   List<String> sem3 = [
     'CHEMICAL PRINCIPLES FOR CHEMICAL ENGINEERS',
@@ -222,9 +222,9 @@ class CHEM {
 }
 
 class CPP {
-  List<String> sem1 = ['BEE', 'MATHEMATICS - II', 'PPS', 'PHYSICS'];
+  List<String> sem1 = ['BEE', 'MATHEMATICS - I', 'PPS', 'PHYSICS'];
 
-  List<String> sem2 = ['BECE', 'BME', 'CHEMISTRY', 'MATHEMATICS - I'];
+  List<String> sem2 = ['BECE', 'BME', 'CHEMISTRY', 'MATHEMATICS - II'];
 
   List<String> sem3 = [
     'CHEMICAL PROCESS CALCULATIONS',
@@ -255,9 +255,9 @@ class CPP {
 }
 
 class PROD {
-  List<String> sem1 = ['BEE', 'MATHEMATICS - II', 'PPS', 'PHYSICS'];
+  List<String> sem1 = ['BEE', 'MATHEMATICS - I', 'PPS', 'PHYSICS'];
 
-  List<String> sem2 = ['BECE', 'BME', 'CHEMISTRY', 'MATHEMATICS - I'];
+  List<String> sem2 = ['BECE', 'BME', 'CHEMISTRY', 'MATHEMATICS - II'];
 
   List<String> sem3 = [
     'FLUID MECHANICS & HYDRAULIC MACHINES',
@@ -286,9 +286,9 @@ class PROD {
 }
 
 class BIO {
-  List<String> sem1 = ['BEE', 'MATHEMATICS - II', 'PPS', 'PHYSICS'];
+  List<String> sem1 = ['BEE', 'MATHEMATICS - I', 'PPS', 'PHYSICS'];
 
-  List<String> sem2 = ['BECE', 'BME', 'CHEMISTRY', 'MATHEMATICS - I'];
+  List<String> sem2 = ['BECE', 'BME', 'CHEMISTRY', 'MATHEMATICS - II'];
 
   List<String> sem3 = [
     'BASICS OF BIOINFORMATICS',

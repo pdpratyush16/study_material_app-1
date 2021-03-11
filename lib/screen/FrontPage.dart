@@ -1,5 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Attendance%20and%20Practice/graphPage.dart';
 import 'package:study_material_app/Books/bookHome.dart';
@@ -17,16 +20,55 @@ class FrontPage extends StatefulWidget {
 }
 
 class _FrontPageState extends State<FrontPage> {
-  void _openErp() async{
-    await FlutterWebBrowser.openWebPage(
-      url: 'https://erp.bitmesra.ac.in/iitmsv4eGq0RuNHb0G5WbhLmTKLmTO7YBcJ4RHuXxCNPvuIw=?enc=EGbCGWnlHNJ/WdgJnKH8DA==',
-      customTabsOptions: CustomTabsOptions(
-        toolbarColor: kSecondColor,
-        instantAppsEnabled: true,
-      )
-    );
+  String name, semester, branch, email, roll;
+  // String nameSP, semesterSP, branchSP, emailSP, rollSP;
+
+  @override
+  void initState() {
+    getValid().whenComplete(() {});
+    super.initState();
   }
 
+  Future<void> getValid() async {
+    final SharedPreferences sharedPref = await SharedPreferences.getInstance();
+    bool isFetched = sharedPref.getBool('isFetched');
+    if (isFetched == false) {
+      String uid = FirebaseAuth.instance.currentUser.uid;
+      DocumentSnapshot doc = await FirebaseFirestore.instance
+          .collection('UserDatabase')
+          .doc(uid)
+          .get();
+
+      if (doc.exists) {
+        // this will check availability of document
+        setState(() {
+          branch = doc.data()['Branch'];
+          semester = doc.data()['Semester'];
+          roll = doc.data()['RollNo'];
+          name = doc.data()['Name'];
+          email = doc.data()['Email'];
+        });
+
+        sharedPref.setString('name', name);
+        sharedPref.setString('semester', semester);
+        sharedPref.setString('branch', branch);
+        sharedPref.setString('roll', roll);
+        sharedPref.setBool('isFetched', true);
+      }
+    }
+  }
+
+  void _openErp() async {
+    await FlutterWebBrowser.openWebPage(
+        url:
+            'https://erp.bitmesra.ac.in/iitmsv4eGq0RuNHb0G5WbhLmTKLmTO7YBcJ4RHuXxCNPvuIw=?enc=EGbCGWnlHNJ/WdgJnKH8DA==',
+        customTabsOptions: CustomTabsOptions(
+          toolbarColor: kSecondColor,
+          instantAppsEnabled: true,
+        ));
+  }
+
+  Future<void> _getUserDetails() async {}
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +132,7 @@ class _FrontPageState extends State<FrontPage> {
                   child: ReuseCard(
                     gesture: () {
                       setState(() {
-                          Navigator.pushNamed(context, Bus.id);
+                        Navigator.pushNamed(context, Bus.id);
                       });
                     },
                     childCard: IconArea(
@@ -151,4 +193,10 @@ class _FrontPageState extends State<FrontPage> {
       ),
     );
   }
+}
+
+@override
+Widget build(BuildContext context) {
+  // TODO: implement build
+  throw UnimplementedError();
 }

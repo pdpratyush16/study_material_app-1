@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/Animation/FadeAnimation.dart';
 import 'package:study_material_app/database/signupPageDatabase.dart';
@@ -18,32 +19,13 @@ class _UpdateScreenState extends State<UpdateScreen> {
   User loggedInUser;
 
   Future<void> _getUserDetails() async {
-    String uid = FirebaseAuth.instance.currentUser.uid;
-    DocumentSnapshot doc = await FirebaseFirestore.instance
-        .collection('UserDatabase')
-        .doc(uid)
-        .get();
-
-    if (doc.exists) {
-      // this will check availability of document
-      setState(
-        () {
-          nameVal = doc.data()['Name'];
-          rollNoVal = doc.data()['RollNo'];
-          branchVal = doc.data()['Branch'];
-          semesterVal = doc.data()['Semester'];
-        },
-      );
-    } else {
-      setState(
-        () {
-          nameVal = null;
-          rollNoVal = null;
-          branchVal = null;
-          semesterVal = null;
-        },
-      );
-    }
+    final SharedPreferences sharedPref = await SharedPreferences.getInstance();
+    setState(() {
+      branchVal = sharedPref.getString('branch');
+      semesterVal = sharedPref.getString('semester');
+      nameVal = sharedPref.getString('name');
+      rollNoVal = sharedPref.getString('roll');
+    });
   }
 
   void _getCurrentUser() async {
@@ -159,7 +141,9 @@ class _UpdateScreenState extends State<UpdateScreen> {
                           style: ButtonStyle(
                             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                           ),
-                          onPressed: () {
+                          onPressed: () async {
+                            final SharedPreferences sharedPref =
+                                await SharedPreferences.getInstance();
                             setState(() {
                               if (nameVal != null &&
                                   branchVal != null &&
@@ -175,6 +159,9 @@ class _UpdateScreenState extends State<UpdateScreen> {
                                   'Semester': semesterVal,
                                   'Name': nameVal,
                                 });
+
+                                sharedPref.setString('branch', branchVal);
+                                sharedPref.setString('semester', semesterVal);
                                 Navigator.pop(context);
                               }
                             });
